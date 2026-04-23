@@ -1,0 +1,1106 @@
+﻿UniqueID;Title;Primary hostaddress;Host in cluster;Running on host / cluster;CMDB status;Operating system
+10.6.13.12_10.6.13.12_RZ1-ESX-41;10.6.13.12;10.6.13.12;RZ1-ESX-41;CL_BEU;in operation;Linux
+10.6.8.23_10.6.8.23_RZ2-ESX-39;10.6.8.23;10.6.8.23;RZ2-ESX-39;CL_WEB;in operation;Windows Server 2003 Standard
+10.70.150.33_10.70.150.33_RZ2-ESX-41;10.70.150.33;10.70.150.33;RZ2-ESX-41;CL_BEU;in operation;Linux
+10.75.2.10_10.75.2.10_RZ2-ESX-37;10.75.2.10;10.75.2.10;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2008 R2
+10.75.2.31_10.75.2.31_RZ2-ESX-36;10.75.2.31;10.75.2.31;RZ2-ESX-36;CL_DMZ;in operation;Windows
+10.75.2.32_10.75.2.32_RZ1-ESX-37;10.75.2.32;10.75.2.32;RZ1-ESX-37;CL_DMZ;in operation;Windows
+10.75.64.134_10.75.64.134_RZ1-ESX-37;10.75.64.134;10.75.64.134;RZ1-ESX-37;CL_DMZ;in operation;Windows Server 2008
+10.75.64.135_10.75.64.135_RZ2-ESX-37;10.75.64.135;10.75.64.135;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2008
+3PAR-SSMC2_10.3.100.14_rz2-esx-32.bev.int;3PAR-SSMC2;10.3.100.14;rz2-esx-32.bev.int;CL_PU;in operation;Debian GNU/Linux 11
+AC-PU-01_10.1.6.31_RZ2-ESX-59;AC-PU-01;10.1.6.31;RZ2-ESX-59;CL_WEB;in operation;CentOS 4/5
+AC-TU-01_10.1.6.21;AC-TU-01;10.1.6.21;;;in operation;CentOS 4/5
+AC-TU-01_RZ1-ESX-32;AC-TU-01;;RZ1-ESX-32;CL_PU;in operation;Rocky Linux 9.5
+AGIS-G3G4-01.bev.int_RZ1-ESX-33;AGIS-G3G4-01.bev.int;;RZ1-ESX-33;CL_PU;in operation;Windows Server 2019 Datacenter
+AMAP-1;AMAP-1;;;;in operation;Rocky Linux 8.6
+AMAP-2_10.1.42.82;AMAP-2;10.1.42.82;;;in operation;Rocky Linux 8.6
+AMAP-3_10.1.42.85;AMAP-3;10.1.42.85;;;in operation;Rocky Linux 9.2
+apexcentral01_10.2.1.115_RZ1-ESX-50;apexcentral01;10.2.1.115;RZ1-ESX-50;CL_PU;in operation;Windows
+ApexMPN_10.1.37.112;ApexMPN;10.1.37.112;;;in operation;Windows Server 2019
+apexone01_10.2.1.112_RZ1-ESX-34;apexone01;10.2.1.112;RZ1-ESX-34;CL_PU;in operation;Windows
+APOS-CORS-01.bev.int_10.1.4.37_RZ1-ESX-38;APOS-CORS-01.bev.int;10.1.4.37;RZ1-ESX-38;CL_APOS;in operation;Windows Server 2019
+APOS-EXT-BRC-01_10.1.5.121;APOS-EXT-BRC-01;10.1.5.121;;;in operation;CentOS 4/5
+APOS-EXT-BRC-02_10.1.5.122_RZ1-ESX-38;APOS-EXT-BRC-02;10.1.5.122;RZ1-ESX-38;CL_APOS;in operation;CentOS 4/5
+APOS-EXT-CAS-01_10.1.5.41_RZ2-ESX-40;APOS-EXT-CAS-01;10.1.5.41;RZ2-ESX-40;CL_APOS;in operation;Other 4.x or later Linux
+APOS-EXT-CAS-02_10.1.5.42;APOS-EXT-CAS-02;10.1.5.42;;;in operation;Other 4.x or later Linux
+APOS-EXT-CAS-03_10.1.5.43_RZ2-ESX-38;APOS-EXT-CAS-03;10.1.5.43;RZ2-ESX-38;CL_APOS;in operation;CentOS 4/5
+APOS-EXT-GPP-01_10.1.5.71_RZ1-ESX-38;APOS-EXT-GPP-01;10.1.5.71;RZ1-ESX-38;CL_APOS;in operation;Windows Server 2019
+APOS-EXT-GPP-02_10.1.5.72_RZ2-ESX-38;APOS-EXT-GPP-02;10.1.5.72;RZ2-ESX-38;CL_APOS;in operation;Windows Server 2019
+APOS-EXT-GPP-03_10.1.5.73_RZ2-ESX-38;APOS-EXT-GPP-03;10.1.5.73;RZ2-ESX-38;CL_APOS;in operation;Windows Server 2019
+APOS-EXT-GPP-11_10.1.5.81_RZ2-ESX-38;APOS-EXT-GPP-11;10.1.5.81;RZ2-ESX-38;CL_APOS;in operation;Windows Server 2019
+APOS-EXT-GPP-12_10.1.5.82_RZ2-ESX-38;APOS-EXT-GPP-12;10.1.5.82;RZ2-ESX-38;CL_APOS;in operation;Windows Server 2019
+APOS-EXT-GPP-13_10.1.5.83_rz1-esx-22.bev.int;APOS-EXT-GPP-13;10.1.5.83;rz1-esx-22.bev.int;CL_APOS;in operation;Windows Server 2019
+APOS-EXT-GPP-14_10.1.5.84_rz1-esx-22.bev.int;APOS-EXT-GPP-14;10.1.5.84;rz1-esx-22.bev.int;CL_APOS;in operation;Windows Server 2019
+APOS-EXT-GPP-15_10.1.5.85_RZ1-ESX-38;APOS-EXT-GPP-15;10.1.5.85;RZ1-ESX-38;CL_APOS;in operation;Windows Server 2019
+APOS-EXT-GPP-21_10.1.5.91_RZ2-ESX-38;APOS-EXT-GPP-21;10.1.5.91;RZ2-ESX-38;CL_APOS;in operation;Windows Server 2019
+APOS-EXT-GPP-22_10.1.5.92_RZ2-ESX-38;APOS-EXT-GPP-22;10.1.5.92;RZ2-ESX-38;CL_APOS;in operation;Windows Server 2019
+APOS-EXT-GPP-23_10.1.5.93_rz1-esx-22.bev.int;APOS-EXT-GPP-23;10.1.5.93;rz1-esx-22.bev.int;CL_APOS;in operation;Windows Server 2019
+APOS-EXT-GPP-24_10.1.5.94_RZ1-ESX-38;APOS-EXT-GPP-24;10.1.5.94;RZ1-ESX-38;CL_APOS;in operation;Windows Server 2019
+APOS-EXT-GPP-25_10.1.5.95_RZ2-ESX-40;APOS-EXT-GPP-25;10.1.5.95;RZ2-ESX-40;CL_APOS;in operation;Windows Server 2019
+APOS-EXT-GPP-31_10.1.5.101_rz1-esx-22.bev.int;APOS-EXT-GPP-31;10.1.5.101;rz1-esx-22.bev.int;CL_APOS;in operation;Windows Server 2019
+APOS-EXT-GPP-32_10.1.5.102_RZ2-ESX-40;APOS-EXT-GPP-32;10.1.5.102;RZ2-ESX-40;CL_APOS;in operation;Windows Server 2019
+APOS-EXT-GPP-33_10.1.5.103_RZ2-ESX-40;APOS-EXT-GPP-33;10.1.5.103;RZ2-ESX-40;CL_APOS;in operation;Windows Server 2019
+APOS-EXT-LOG-01_10.1.5.21_RZ2-ESX-38;APOS-EXT-LOG-01;10.1.5.21;RZ2-ESX-38;CL_APOS;in operation;Windows Server 2019
+APOS-EXT-TPP-01_10.1.5.51_rz1-esx-22.bev.int;APOS-EXT-TPP-01;10.1.5.51;rz1-esx-22.bev.int;CL_APOS;in operation;Windows Server 2019
+APOS-EXT-TPP-02_10.1.5.52_RZ2-ESX-38;APOS-EXT-TPP-02;10.1.5.52;RZ2-ESX-38;CL_APOS;in operation;Windows Server 2019
+APOS-EXT-TRF-01_10.1.5.141;APOS-EXT-TRF-01;10.1.5.141;;;in operation;CentOS 4/5
+APOS-EXT-TRF-02_10.1.5.142;APOS-EXT-TRF-02;10.1.5.142;;;in operation;CentOS 4/5
+APOS-EXT-TRF-03_10.1.5.143;APOS-EXT-TRF-03;10.1.5.143;;;in operation;CentOS 4/5
+APOS-INT-CAS-01_10.1.4.41_RZ2-ESX-40;APOS-INT-CAS-01;10.1.4.41;RZ2-ESX-40;CL_APOS;in operation;Other 4.x or later Linux
+APOS-INT-CAS-02_10.1.4.42_RZ2-ESX-40;APOS-INT-CAS-02;10.1.4.42;RZ2-ESX-40;CL_APOS;in operation;Other 4.x or later Linux
+APOS-INT-CAS-03_10.1.4.43;APOS-INT-CAS-03;10.1.4.43;;;in operation;CentOS 4/5
+APOS-INT-CTL-01_10.1.4.111_rz1-esx-22.bev.int;APOS-INT-CTL-01;10.1.4.111;rz1-esx-22.bev.int;CL_APOS;in operation;CentOS 4/5
+APOS-INT-CTL-01_10.1.4.111_RZ1-ESX-38;APOS-INT-CTL-01;10.1.4.111;RZ1-ESX-38;CL_APOS;in operation;CentOS 4/5
+APOS-INT-CTL-03_10.1.4.113_rz1-esx-22.bev.int;APOS-INT-CTL-03;10.1.4.113;rz1-esx-22.bev.int;CL_APOS;in operation;CentOS 4/5
+APOS-INT-DBS-03_10.1.4.123_rz1-esx-22.bev.int;APOS-INT-DBS-03;10.1.4.123;rz1-esx-22.bev.int;CL_APOS;in operation;CentOS 4/5
+APOS-INT-GPP-01.bev.int_10.1.4.71_rz2-esx-22.bev.int;APOS-INT-GPP-01.bev.int;10.1.4.71;rz2-esx-22.bev.int;CL_APOS;in operation;Windows Server 2019
+APOS-INT-GPP-02.bev.int_10.1.4.72_RZ1-ESX-40;APOS-INT-GPP-02.bev.int;10.1.4.72;RZ1-ESX-40;CL_APOS;in operation;Windows Server 2019
+APOS-INT-GPP-03.bev.int_10.1.4.73_rz2-esx-21.bev.int;APOS-INT-GPP-03.bev.int;10.1.4.73;rz2-esx-21.bev.int;CL_APOS;in operation;Windows Server 2019
+APOS-INT-GPP-04_10.1.4.74_RZ2-ESX-38;APOS-INT-GPP-04;10.1.4.74;RZ2-ESX-38;CL_APOS;in operation;Windows Server 2019
+APOS-INT-GPP-05.bev.int_10.1.4.75_RZ2-ESX-38;APOS-INT-GPP-05.bev.int;10.1.4.75;RZ2-ESX-38;CL_APOS;in operation;Windows Server 2019
+APOS-INT-GPP-06.bev.int_10.1.4.76_RZ2-ESX-40;APOS-INT-GPP-06.bev.int;10.1.4.76;RZ2-ESX-40;CL_APOS;in operation;Windows Server 2016
+APOS-INT-LOG-01.bev.int_10.1.4.21_RZ1-ESX-38;APOS-INT-LOG-01.bev.int;10.1.4.21;RZ1-ESX-38;CL_APOS;in operation;Windows Server 2019
+APOS-INT-RNX-01_10.1.4.61_rz1-esx-22.bev.int;APOS-INT-RNX-01;10.1.4.61;rz1-esx-22.bev.int;CL_APOS;in operation;CentOS 4/5
+APOS-INT-RNX-02_10.1.4.62;APOS-INT-RNX-02;10.1.4.62;;;in operation;CentOS 4/5
+APOS-INT-RNX-03_10.1.4.63;APOS-INT-RNX-03;10.1.4.63;;;in operation;CentOS 4/5
+APOS-INT-TPP-01.bev.int_10.1.4.51_RZ1-ESX-38;APOS-INT-TPP-01.bev.int;10.1.4.51;RZ1-ESX-38;CL_APOS;in operation;Windows Server 2019
+APOS-INT-TPP-02.bev.int_10.1.4.52_rz1-esx-22.bev.int;APOS-INT-TPP-02.bev.int;10.1.4.52;rz1-esx-22.bev.int;CL_APOS;in operation;Windows Server 2019
+APOS-INT-TPP-03.bev.int_10.1.4.150_RZ2-ESX-40;APOS-INT-TPP-03.bev.int;10.1.4.150;RZ2-ESX-40;CL_APOS;in operation;Windows Server 2019
+APOS-MSSQL-01.bev.int_10.1.4.66_RZ2-ESX-38;APOS-MSSQL-01.bev.int;10.1.4.66;RZ2-ESX-38;CL_APOS;in operation;Windows Server 2019
+APOS-PSQL-01_10.1.4.67;APOS-PSQL-01;10.1.4.67;;;in operation;CentOS 4/5
+APOS-PSQL-03_10.1.4.68_RZ2-ESX-40;APOS-PSQL-03;10.1.4.68;RZ2-ESX-40;CL_APOS;in operation;CentOS 4/5
+APOS-VPN-01_10.1.38.11_RZ2-ESX-40;APOS-VPN-01;10.1.38.11;RZ2-ESX-40;CL_APOS;in operation;CentOS 4/5
+APOSENTRY-01.bev.int_10.1.4.100_RZ2-ESX-40;APOSENTRY-01.bev.int;10.1.4.100;RZ2-ESX-40;CL_APOS;in operation;Windows Server 2019
+APOSENTRY-01old.bev.int_10.1.4.101;APOSENTRY-01old.bev.int;10.1.4.101;;;in operation;Windows Server 2008 R2
+APOSMGNSS-01_10.1.4.69;APOSMGNSS-01;10.1.4.69;;;in operation;CentOS 7
+APOSMON-01_RZ2-ESX-37;APOSMON-01;;RZ2-ESX-37;CL_DMZ;in operation;CentOS Linux 7.7.1908
+APOSTEST.beu.local_10.70.2.38;APOSTEST.beu.local;10.70.2.38;;;in operation;Windows
+AST-01_10.1.15.12_RZ1-ESX-39;AST-01;10.1.15.12;RZ1-ESX-39;CL_WEB;in operation;CentOS 7
+AST-02_10.1.15.112_RZ1-ESX-39;AST-02;10.1.15.112;RZ1-ESX-39;CL_WEB;in operation;CentOS 7
+AST-03_10.1.43.11_RZ1-ESX-39;AST-03;10.1.43.11;RZ1-ESX-39;CL_WEB;in operation;CentOS 4/5
+BEUAMAP-01_10.70.5.51_RZ1-ESX-41;BEUAMAP-01;10.70.5.51;RZ1-ESX-41;CL_BEU;in operation;Rocky Linux 9.4
+BEUAPP-1_10.70.2.37_rz2-esx-51.bev.int;BEUAPP-1;10.70.2.37;rz2-esx-51.bev.int;CL_BEU;in operation;Rocky Linux 9.5
+BEUCIO-01_10.6.13.13_rz2-esx-51.bev.int;BEUCIO-01;10.6.13.13;rz2-esx-51.bev.int;CL_BEU;in operation;CentOS 4/5
+BEUCIO-02_10.6.13.14_rz2-esx-51.bev.int;BEUCIO-02;10.6.13.14;rz2-esx-51.bev.int;CL_BEU;in operation;CentOS 4/5
+BEUCLX-00_RZ2-ESX-41;BEUCLX-00;;RZ2-ESX-41;CL_BEU;in operation;CentOS
+BEUCLX-01_RZ2-ESX-41;BEUCLX-01;;RZ2-ESX-41;CL_BEU;in operation;CentOS
+BEUCLX-01_RZ2-ESX-41;BEUCLX-01;;RZ2-ESX-41;CL_BEU;in operation;CentOS
+BEUCLX-02_10.70.150.32_RZ1-ESX-51.bev.int;BEUCLX-02;10.70.150.32;RZ1-ESX-51.bev.int;CL_BEU;in operation;CentOS 4/5
+BEUCLX-03_10.70.150.33_RZ2-ESX-41;BEUCLX-03;10.70.150.33;RZ2-ESX-41;CL_BEU;in operation;CentOS 4/5
+BEUCLX-04_10.70.150.34_RZ1-ESX-51.bev.int;BEUCLX-04;10.70.150.34;RZ1-ESX-51.bev.int;CL_BEU;in operation;CentOS 4/5
+BEUCLX-05_10.70.150.35_RZ1-ESX-41;BEUCLX-05;10.70.150.35;RZ1-ESX-41;CL_BEU;in operation;CentOS 4/5
+BEUCLX-05_10.70.150.35_rz2-esx-51.bev.int;BEUCLX-05;10.70.150.35;rz2-esx-51.bev.int;CL_BEU;in operation;CentOS 4/5
+BEUCLX-06_RZ2-ESX-41;BEUCLX-06;;RZ2-ESX-41;CL_BEU;in operation;CentOS
+BEUCLX-06_10.70.150.36_RZ1-ESX-51.bev.int;BEUCLX-06;10.70.150.36;RZ1-ESX-51.bev.int;CL_BEU;in operation;CentOS 4/5
+BEUCLX-07_192.168.122.1_RZ2-ESX-41;BEUCLX-07;192.168.122.1;RZ2-ESX-41;CL_BEU;in operation;CentOS 7
+BEUCLX-08_10.70.150.38_RZ2-ESX-41;BEUCLX-08;10.70.150.38;RZ2-ESX-41;CL_BEU;in operation;CentOS 4/5
+BEUCLX-10_10.70.150.40_RZ2-ESX-41;BEUCLX-10;10.70.150.40;RZ2-ESX-41;CL_BEU;in operation;CentOS 4/5
+BEUCLX-10_10.6.19.110_rz2-esx-51.bev.int;BEUCLX-10;10.6.19.110;rz2-esx-51.bev.int;CL_BEU;in operation;CentOS 4/5
+BEUCLX-11_10.70.150.41_RZ1-ESX-51.bev.int;BEUCLX-11;10.70.150.41;RZ1-ESX-51.bev.int;CL_BEU;in operation;CentOS 4/5
+BEUCLX-12_10.70.150.42_rz2-esx-51.bev.int;BEUCLX-12;10.70.150.42;rz2-esx-51.bev.int;CL_BEU;in operation;CentOS 4/5
+BEUCLX-13_10.70.150.43_RZ1-ESX-51.bev.int;BEUCLX-13;10.70.150.43;RZ1-ESX-51.bev.int;CL_BEU;in operation;CentOS 4/5
+BEUCLX-14_10.70.150.44_RZ1-ESX-41;BEUCLX-14;10.70.150.44;RZ1-ESX-41;CL_BEU;in operation;CentOS 4/5
+BEUCLX-15_10.70.150.45_RZ1-ESX-41;BEUCLX-15;10.70.150.45;RZ1-ESX-41;CL_BEU;in operation;CentOS 4/5
+BEUCLX-16_10.70.150.46_RZ1-ESX-41;BEUCLX-16;10.70.150.46;RZ1-ESX-41;CL_BEU;in operation;CentOS 4/5
+BEUCLX-17_10.70.150.47_rz2-esx-51.bev.int;BEUCLX-17;10.70.150.47;rz2-esx-51.bev.int;CL_BEU;in operation;CentOS 4/5
+BEUCLX-18_10.70.150.48_RZ1-ESX-41;BEUCLX-18;10.70.150.48;RZ1-ESX-41;CL_BEU;in operation;CentOS 4/5
+BEUCLX-19_10.70.150.49_rz2-esx-51.bev.int;BEUCLX-19;10.70.150.49;rz2-esx-51.bev.int;CL_BEU;in operation;CentOS 4/5
+BEUCLX-19_10.70.150.49_RZ1-ESX-41;BEUCLX-19;10.70.150.49;RZ1-ESX-41;CL_BEU;in operation;CentOS 4/5
+BEUCLX-20_10.70.150.50_RZ2-ESX-41;BEUCLX-20;10.70.150.50;RZ2-ESX-41;CL_BEU;in operation;CentOS 4/5
+BEUCLX-20_10.70.150.50_RZ2-ESX-41;BEUCLX-20;10.70.150.50;RZ2-ESX-41;CL_BEU;in operation;CentOS 4/5
+BEUCLX-21_10.70.150.51_RZ1-ESX-51.bev.int;BEUCLX-21;10.70.150.51;RZ1-ESX-51.bev.int;CL_BEU;in operation;Linux
+BEUCLX-21_10.70.150.51_RZ1-ESX-41;BEUCLX-21;10.70.150.51;RZ1-ESX-41;CL_BEU;in operation;CentOS 4/5
+BEUCLX-22_10.70.150.52_RZ1-ESX-41;BEUCLX-22;10.70.150.52;RZ1-ESX-41;CL_BEU;in operation;Rocky Linux
+BEUCLX-23_10.70.150.53_RZ1-ESX-41;BEUCLX-23;10.70.150.53;RZ1-ESX-41;CL_BEU;in operation;Rocky Linux
+BEUCLX-24_10.70.150.54_RZ1-ESX-51.bev.int;BEUCLX-24;10.70.150.54;RZ1-ESX-51.bev.int;CL_BEU;in operation;Rocky Linux
+BEUCLX-25_10.70.150.55_RZ1-ESX-51.bev.int;BEUCLX-25;10.70.150.55;RZ1-ESX-51.bev.int;CL_BEU;in operation;Rocky Linux
+BEUCLX-26_10.70.150.56_RZ1-ESX-41;BEUCLX-26;10.70.150.56;RZ1-ESX-41;CL_BEU;in operation;Rocky Linux
+BEUCLX-27_10.70.150.57_RZ1-ESX-51.bev.int;BEUCLX-27;10.70.150.57;RZ1-ESX-51.bev.int;CL_BEU;in operation;Rocky Linux
+BEUCLX-28_10.70.150.58_rz2-esx-51.bev.int;BEUCLX-28;10.70.150.58;rz2-esx-51.bev.int;CL_BEU;in operation;Rocky Linux
+BEUCLX-29_10.70.150.59_rz2-esx-51.bev.int;BEUCLX-29;10.70.150.59;rz2-esx-51.bev.int;CL_BEU;in operation;Rocky Linux
+BEUCLX-30_10.70.150.60_RZ1-ESX-41;BEUCLX-30;10.70.150.60;RZ1-ESX-41;CL_BEU;in operation;Rocky Linux
+BEUCLX-V1-00_RZ1-ESX-41;BEUCLX-V1-00;;RZ1-ESX-41;CL_BEU;in operation;CentOS
+BEUCLX-V1-01_10.6.12.11_RZ2-ESX-41;BEUCLX-V1-01;10.6.12.11;RZ2-ESX-41;CL_BEU;in operation;Rocky Linux
+BEUCLX-V1-02_10.6.12.12_RZ1-ESX-51.bev.int;BEUCLX-V1-02;10.6.12.12;RZ1-ESX-51.bev.int;CL_BEU;in operation;CentOS 4/5
+BEUCLX-V1-03_10.6.12.13_rz2-esx-51.bev.int;BEUCLX-V1-03;10.6.12.13;rz2-esx-51.bev.int;CL_BEU;in operation;CentOS 4/5
+BEUCLX-V1-04_10.6.12.14;BEUCLX-V1-04;10.6.12.14;;;in operation;CentOS 4/5
+BEUCLX-V1-05_10.6.12.15;BEUCLX-V1-05;10.6.12.15;;;in operation;Linux
+BEUCLX-V1-06_10.6.12.16_rz2-esx-51.bev.int;BEUCLX-V1-06;10.6.12.16;rz2-esx-51.bev.int;CL_BEU;in operation;CentOS 4/5
+BEUCLX-V1-07_10.6.12.17;BEUCLX-V1-07;10.6.12.17;;;in operation;CentOS 4/5
+BEUCLX-V1-08_10.6.12.18;BEUCLX-V1-08;10.6.12.18;;;in operation;CentOS 4/5
+BEUDOK-1_10.70.2.40_RZ1-ESX-51.bev.int;BEUDOK-1;10.70.2.40;RZ1-ESX-51.bev.int;CL_BEU;in operation;Rocky Linux 9.2
+BEUGIS-1_172.22.0.1_RZ2-ESX-41;BEUGIS-1;172.22.0.1;RZ2-ESX-41;CL_BEU;in operation;CentOS Linux 7.8.2003
+BEUKFS-1_10.70.5.62_RZ1-ESX-41;BEUKFS-1;10.70.5.62;RZ1-ESX-41;CL_BEU;in operation;Rocky Linux 9.6
+BEULDAP-1_10.70.5.65_rz2-esx-51.bev.int;BEULDAP-1;10.70.5.65;rz2-esx-51.bev.int;CL_BEU;in operation;Rocky Linux 9.6
+BEULDAP-2_10.70.5.66_RZ1-ESX-41;BEULDAP-2;10.70.5.66;RZ1-ESX-41;CL_BEU;in operation;Rocky Linux 9.6
+BEUPOCVMW-03.beu.local_10.70.2.121_RZ2-ESX-41;BEUPOCVMW-03.beu.local;10.70.2.121;RZ2-ESX-41;CL_BEU;in operation;Windows Server 2019
+BEUPTL-2_10.70.5.61_RZ1-ESX-41;BEUPTL-2;10.70.5.61;RZ1-ESX-41;CL_BEU;in operation;Rocky Linux 9.6
+BEUQUEUE-1_10.70.2.51;BEUQUEUE-1;10.70.2.51;;;in operation;Rocky Linux 8.4
+BEUQUEUE-1_10.70.2.51_rz2-esx-51.bev.int;BEUQUEUE-1;10.70.2.51;rz2-esx-51.bev.int;CL_BEU;in operation;Rocky Linux 9.6
+BEUQUEUE-2;BEUQUEUE-2;;;;in operation;Rocky Linux 8.4
+BEUQUEUE-2_10.70.2.52_RZ1-ESX-41;BEUQUEUE-2;10.70.2.52;RZ1-ESX-41;CL_BEU;in operation;Rocky Linux 9.6
+BEUQUEUE-3_10.70.2.53;BEUQUEUE-3;10.70.2.53;;;in operation;Rocky Linux 8.4
+BEUQUEUE-3_10.70.2.53_RZ1-ESX-41;BEUQUEUE-3;10.70.2.53;RZ1-ESX-41;CL_BEU;in operation;Rocky Linux 9.6
+BEUREVDB-01_10.70.5.80_rz2-esx-51.bev.int;BEUREVDB-01;10.70.5.80;rz2-esx-51.bev.int;CL_BEU;in operation;Rocky Linux 9.5
+BEUREVDB-01_10.70.5.80_rz2-esx-51.bev.int;BEUREVDB-01;10.70.5.80;rz2-esx-51.bev.int;CL_BEU;in operation;Rocky Linux 9.5
+BEUSENTRY-1_RZ2-ESX-41;BEUSENTRY-1;;RZ2-ESX-41;CL_BEU;in operation;CentOS Linux 7.9.2009
+BEUVW10-99_10.70.150.99_RZ2-ESX-41;BEUVW10-99;10.70.150.99;RZ2-ESX-41;CL_BEU;in operation;Windows 10
+BEUVW10-99_10.70.150.99_RZ2-ESX-41;BEUVW10-99;10.70.150.99;RZ2-ESX-41;CL_BEU;in operation;Windows 10
+BPUINAPP-01_10.2.6.115_RZ1-ESX-32;BPUINAPP-01;10.2.6.115;RZ1-ESX-32;CL_PU;in operation;Rocky Linux 9.5
+BPUINDB-01_10.2.6.116_RZ1-ESX-33;BPUINDB-01;10.2.6.116;RZ1-ESX-33;CL_PU;in operation;Rocky Linux 9.5
+BTU-KUBCP-01_10.75.1.161_RZ1-ESX-37;BTU-KUBCP-01;10.75.1.161;RZ1-ESX-37;CL_DMZ;in operation;Rocky Linux 9.5
+BTU-KUBLOG-01_10.75.1.163_RZ1-ESX-36;BTU-KUBLOG-01;10.75.1.163;RZ1-ESX-36;CL_DMZ;in operation;Rocky Linux 9.5
+BTU-KUBLOG-01_10.75.1.163_RZ1-ESX-36;BTU-KUBLOG-01;10.75.1.163;RZ1-ESX-36;CL_DMZ;in operation;Rocky Linux 9.5
+BTU-KUBWN-01_10.75.1.162_RZ1-ESX-37;BTU-KUBWN-01;10.75.1.162;RZ1-ESX-37;CL_DMZ;in operation;Rocky Linux 9.5
+BTU-KUBWN-02_10.75.1.164_RZ1-ESX-37;BTU-KUBWN-02;10.75.1.164;RZ1-ESX-37;CL_DMZ;in operation;Rocky Linux 9.5
+BTU-KUBWN-02_10.75.1.164_RZ1-ESX-37;BTU-KUBWN-02;10.75.1.164;RZ1-ESX-37;CL_DMZ;in operation;Rocky Linux 9.5
+BTUAST-01_RZ1-ESX-37;BTUAST-01;;RZ1-ESX-37;CL_DMZ;in operation;CentOS Linux 7.9.2009
+BTUAST-02_10.6.6.13_RZ1-ESX-36;BTUAST-02;10.6.6.13;RZ1-ESX-36;CL_DMZ;in operation;Rocky Linux 8.6
+BTUDBDE-01_10.75.2.37_RZ1-ESX-36;BTUDBDE-01;10.75.2.37;RZ1-ESX-36;CL_DMZ;in operation;Rocky Linux 9.4
+BTUDC-01_10.75.2.81_RZ2-ESX-36;BTUDC-01;10.75.2.81;RZ2-ESX-36;CL_DMZ;in operation;CentOS Linux 7.9.2009
+BTUDCCDB-01_10.75.2.39_RZ1-ESX-36;BTUDCCDB-01;10.75.2.39;RZ1-ESX-36;CL_DMZ;in operation;Rocky Linux 9.6
+BTUESPADM-01.btu.local_10.75.1.150_RZ2-ESX-36;BTUESPADM-01.btu.local;10.75.1.150;RZ2-ESX-36;CL_DMZ;in operation;Windows Server 2008 R2
+BTUESPPRO-01.btu.local_10.75.1.152_RZ1-ESX-36;BTUESPPRO-01.btu.local;10.75.1.152;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2019
+BTUESPPRO-02_10.75.1.154_RZ2-ESX-37;BTUESPPRO-02;10.75.1.154;RZ2-ESX-37;CL_DMZ;in operation;Rocky Linux 9.4
+BTUESPVEI-01_10.75.1.153_RZ1-ESX-37;BTUESPVEI-01;10.75.1.153;RZ1-ESX-37;CL_DMZ;in operation;CentOS Linux 8.2.2004
+BTUESPVMW-01.btu.local_10.75.1.151_RZ1-ESX-36;BTUESPVMW-01.btu.local;10.75.1.151;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2019
+BTUESPVMW-02_10.75.1.155_RZ2-ESX-37;BTUESPVMW-02;10.75.1.155;RZ2-ESX-37;CL_DMZ;in operation;Rocky Linux 9.6
+BTUGIT-1_10.75.2.113_RZ1-ESX-36;BTUGIT-1;10.75.2.113;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.9.2009
+BTUGRUPU-1_RZ1-ESX-36;BTUGRUPU-1;;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.8.2003
+BTUGRUPU-2_10.75.2.62_RZ2-ESX-37;BTUGRUPU-2;10.75.2.62;RZ2-ESX-37;CL_DMZ;in operation;CentOS Linux 7.9.2009
+BTUINAPP-01_10.75.2.115_RZ1-ESX-37;BTUINAPP-01;10.75.2.115;RZ1-ESX-37;CL_DMZ;in operation;Rocky Linux 9.3
+BTUINDB-01_10.75.2.116_RZ2-ESX-37;BTUINDB-01;10.75.2.116;RZ2-ESX-37;CL_DMZ;in operation;Rocky Linux 9.3
+BTUKFS-3_10.6.6.61_RZ1-ESX-37;BTUKFS-3;10.6.6.61;RZ1-ESX-37;CL_DMZ;in operation;Rocky Linux 9.6
+BTUKMORC-01_10.75.1.81_RZ2-ESX-47;BTUKMORC-01;10.75.1.81;RZ2-ESX-47;CL_DB;in operation;Oracle Linux Server 9.5
+BTUKMORC-01_10.75.1.81_RZ2-ESX-46;BTUKMORC-01;10.75.1.81;RZ2-ESX-46;CL_DB;in operation;Oracle Linux Server 9.5
+BTUMMAPP-01_RZ1-ESX-37;BTUMMAPP-01;;RZ1-ESX-37;CL_DMZ;in operation;Rocky Linux 8.7
+BTUMOODLE-01_RZ2-ESX-36;BTUMOODLE-01;;RZ2-ESX-36;CL_DMZ;in operation;Rocky Linux 8.6
+BTUNEX-1_RZ2-ESX-36;BTUNEX-1;;RZ2-ESX-36;CL_DMZ;in operation;Rocky Linux 8.5
+BTUSENTRY-1_10.75.10.11_RZ1-ESX-36;BTUSENTRY-1;10.75.10.11;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.9.2009
+BTUVDE-1_RZ2-ESX-56.bev.int;BTUVDE-1;;RZ2-ESX-56.bev.int;CL_DMZ-TU;in operation;Rocky Linux 8.9
+BTUVDE-2_10.75.2.122_RZ2-ESX-56.bev.int;BTUVDE-2;10.75.2.122;RZ2-ESX-56.bev.int;CL_DMZ-TU;in operation;Rocky Linux 8.9
+BTUVDE-3_RZ2-ESX-56.bev.int;BTUVDE-3;;RZ2-ESX-56.bev.int;CL_DMZ-TU;in operation;Rocky Linux 8.9
+BTUVDE-4_RZ2-ESX-56.bev.int;BTUVDE-4;;RZ2-ESX-56.bev.int;CL_DMZ-TU;in operation;Rocky Linux 8.9
+BTUVDE-5_10.75.2.125_RZ2-ESX-56.bev.int;BTUVDE-5;10.75.2.125;RZ2-ESX-56.bev.int;CL_DMZ-TU;in operation;Rocky Linux 8.9
+BTUVDE-6_RZ2-ESX-56.bev.int;BTUVDE-6;;RZ2-ESX-56.bev.int;CL_DMZ-TU;in operation;Rocky Linux 8.9
+BTUVDE-7_10.75.2.127_RZ2-ESX-56.bev.int;BTUVDE-7;10.75.2.127;RZ2-ESX-56.bev.int;CL_DMZ-TU;in operation;Rocky Linux 8.9
+BTUVDE-8_10.75.2.128_RZ2-ESX-56.bev.int;BTUVDE-8;10.75.2.128;RZ2-ESX-56.bev.int;CL_DMZ-TU;in operation;Rocky Linux 8.9
+BTUVEKDB-01_10.75.2.65_RZ2-ESX-37;BTUVEKDB-01;10.75.2.65;RZ2-ESX-37;CL_DMZ;in operation;CentOS Linux 7.9.2009
+BTUVEKDB-02_RZ1-ESX-36;BTUVEKDB-02;;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.9.2009
+BTUWORKBENCHREPORT-01_10.75.2.38_RZ2-ESX-37;BTUWORKBENCHREPORT-01;10.75.2.38;RZ2-ESX-37;CL_DMZ;in operation;Rocky Linux 9.6
+BTUZDA-03_10.75.2.143_RZ2-ESX-37;BTUZDA-03;10.75.2.143;RZ2-ESX-37;CL_DMZ;in operation;Rocky Linux 8.5
+BTUZDA-03_10.75.2.143_RZ1-ESX-37;BTUZDA-03;10.75.2.143;RZ1-ESX-37;CL_DMZ;in operation;Rocky Linux 9.4
+BUILD-01_10.2.3.18_rz2-esx-32.bev.int;BUILD-01;10.2.3.18;rz2-esx-32.bev.int;CL_PU;in operation;CentOS Linux 7.9.2009
+CAI-01.bev.int_10.2.1.185_rz2-esx-32.bev.int;CAI-01.bev.int;10.2.1.185;rz2-esx-32.bev.int;CL_PU;in operation;Windows Server 2019 Datacenter
+CAI-02.bev.int_10.2.1.186_RZ1-ESX-34;CAI-02.bev.int;10.2.1.186;RZ1-ESX-34;CL_PU;in operation;Windows Server 2019 Datacenter
+CAI-02.bev.int_10.2.1.186_RZ1-ESX-34;CAI-02.bev.int;10.2.1.186;RZ1-ESX-34;CL_PU;in operation;Windows Server 2019 Datacenter
+CAROOT_RZ1-ESX-34;CAROOT;;RZ1-ESX-34;CL_PU;in operation;Windows Server 2019
+CentOS-REPO_RZ1-ESX-34;CentOS-REPO;;RZ1-ESX-34;CL_PU;in operation;CentOS
+CMDBTEST-01_RZ1-ESX-33;CMDBTEST-01;;RZ1-ESX-33;CL_PU;in operation;CentOS
+cpepmgr03_10.2.1.53_rz2-esx-32.bev.int;cpepmgr03;10.2.1.53;rz2-esx-32.bev.int;CL_PU;in operation;Red Hat Enterprise Linux 7
+CPPM01_10.2.1.221_RZ2-ESX-50;CPPM01;10.2.1.221;RZ2-ESX-50;CL_PU;in operation;Other 4.x or later Linux
+CPPM11_10.2.1.211_RZ1-ESX-31;CPPM11;10.2.1.211;RZ1-ESX-31;CL_PU;in operation;Other 4.x or later Linux
+CPPM12_10.2.1.212_RZ2-ESX-31;CPPM12;10.2.1.212;RZ2-ESX-31;CL_PU;in operation;Other 4.x or later Linux
+ctxnsx-01.bev.int_10.2.9.128_RZ2-ESX-31;ctxnsx-01.bev.int;10.2.9.128;RZ2-ESX-31;CL_PU;in operation;Other 4.x or later Linux
+DB2GIS-01;DB2GIS-01;;;;in operation;Rocky Linux 8.7
+DBDE-01_10.2.6.16_rz2-esx-32.bev.int;DBDE-01;10.2.6.16;rz2-esx-32.bev.int;CL_PU;in operation;Rocky Linux 9.4
+DC-1_10.1.6.41;DC-1;10.1.6.41;;;in operation;CentOS 7
+DC-2_10.1.6.32;DC-2;10.1.6.32;;;in operation;CentOS 7
+DC-3_10.1.6.33;DC-3;10.1.6.33;;;in operation;CentOS 7
+DESKTOP-0GKSU9E_10.1.37.201_RZ1-ESX-38;DESKTOP-0GKSU9E;10.1.37.201;RZ1-ESX-38;CL_APOS;in operation;Windows 10
+DESKTOP-5V7AKTM_10.1.37.200_RZ1-ESX-38;DESKTOP-5V7AKTM;10.1.37.200;RZ1-ESX-38;CL_APOS;in operation;Windows 10
+DHCP-01.bev.int_10.2.2.2_RZ1-ESX-34;DHCP-01.bev.int;10.2.2.2;RZ1-ESX-34;CL_PU;in operation;Windows Server 2019 Datacenter
+DHCP-02_10.2.2.102_RZ1-ESX-34;DHCP-02;10.2.2.102;RZ1-ESX-34;CL_PU;in operation;Windows Server 2019
+DHCP-02old_RZ1-ESX-31;DHCP-02old;;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2
+DokuWiki_RZ1-ESX-32;DokuWiki;;RZ1-ESX-32;CL_PU;in operation;Rocky Linux 8.10
+DPU-SCAN-01.bev.int_10.2.6.33_RZ1-ESX-50;DPU-SCAN-01.bev.int;10.2.6.33;RZ1-ESX-50;CL_PU;in operation;Windows Server 2008 R2 Standard
+egadata-01.ega.local_RZ1-ESX-47;egadata-01.ega.local;;RZ1-ESX-47;CL_DB;in operation;Oracle Linux Server 7.8
+EGAELK-01_RZ1-ESX-39;EGAELK-01;;RZ1-ESX-39;CL_WEB;in operation;Rocky Linux 8.6
+EGAELK-02_10.1.25.12_RZ1-ESX-37;EGAELK-02;10.1.25.12;RZ1-ESX-37;CL_DMZ;in operation;Rocky Linux 9.5
+EGAPDL-01_RZ2-ESX-59;EGAPDL-01;;RZ2-ESX-59;CL_WEB;in operation;CentOS Linux 7.9.2009
+EGAPDL-02_10.1.32.42_RZ1-ESX-39;EGAPDL-02;10.1.32.42;RZ1-ESX-39;CL_WEB;in operation;CentOS Linux 7.9.2009
+EGASAP-01.ega.local_10.1.33.55_RZ1-ESX-36;EGASAP-01.ega.local;10.1.33.55;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2008 R2
+egasdb-01.ega.local_10.1.33.72_RZ2-ESX-47;egasdb-01.ega.local;10.1.33.72;RZ2-ESX-47;CL_DB;in operation;Oracle Linux Server 7.7
+EGASIGPX-01_RZ1-ESX-39;EGASIGPX-01;;RZ1-ESX-39;CL_WEB;in operation;CentOS Linux 7.7.1908
+ELEMENT-01_10.2.11.210_RZ1-ESX-34;ELEMENT-01;10.2.11.210;RZ1-ESX-34;CL_PU;in operation;Rocky Linux 9.5
+emcloud-01.bev.int_10.2.8.105_RZ2-ESX-31;emcloud-01.bev.int;10.2.8.105;RZ2-ESX-31;CL_PU;in operation;Oracle Linux Server release 8.10
+ESPADM-01.bev.int_10.2.5.51_RZ1-ESX-34;ESPADM-01.bev.int;10.2.5.51;RZ1-ESX-34;CL_PU;in operation;Windows Server 2008 R2 Standard
+ESPADM-02.bev.int_10.2.5.57_RZ1-ESX-50;ESPADM-02.bev.int;10.2.5.57;RZ1-ESX-50;CL_PU;in operation;Windows Server 2019
+ESPANA-01.bev.int_10.2.5.55;ESPANA-01.bev.int;10.2.5.55;;;in operation;Windows Server 2019 Datacenter
+ESPPRO-01.bev.int_10.2.5.53_RZ1-ESX-33;ESPPRO-01.bev.int;10.2.5.53;RZ1-ESX-33;CL_PU;in operation;Windows Server 2019 Datacenter
+ESPVEI-01_RZ1-ESX-34;ESPVEI-01;;RZ1-ESX-34;CL_PU;in operation;CentOS Linux 8.2.2004
+ESPVMW-01.bev.int_10.2.5.52_RZ2-ESX-31;ESPVMW-01.bev.int;10.2.5.52;RZ2-ESX-31;CL_PU;in operation;Windows Server 2019 Datacenter
+ETU-HVV-01_10.6.7.39_RZ2-ESX-56.bev.int;ETU-HVV-01;10.6.7.39;RZ2-ESX-56.bev.int;CL_DMZ-TU;in operation;Rocky Linux 9.5
+ETU-HVV-02_10.6.7.38_RZ2-ESX-56.bev.int;ETU-HVV-02;10.6.7.38;RZ2-ESX-56.bev.int;CL_DMZ-TU;in operation;Rocky Linux 9.5
+ETU-HVV-02_RZ2-ESX-56.bev.int;ETU-HVV-02;;RZ2-ESX-56.bev.int;CL_DMZ-TU;in operation;CentOS 4/5
+ETU-MON-01_10.6.7.139_RZ2-ESX-56.bev.int;ETU-MON-01;10.6.7.139;RZ2-ESX-56.bev.int;CL_DMZ-TU;in operation;Rocky Linux 9.5
+ETUEGAELK-01_RZ1-ESX-39;ETUEGAELK-01;;RZ1-ESX-39;CL_WEB;in operation;Rocky Linux 8.6
+ETUEGAPDL-01_RZ1-ESX-39;ETUEGAPDL-01;;RZ1-ESX-39;CL_WEB;in operation;CentOS Linux 7.9.2009
+ETUEGAPDL-02_RZ1-ESX-39;ETUEGAPDL-02;;RZ1-ESX-39;CL_WEB;in operation;CentOS Linux 7.9.2009
+etumapproxy-01.egatest.local_10.6.7.33_RZ2-ESX-36;etumapproxy-01.egatest.local;10.6.7.33;RZ2-ESX-36;CL_DMZ;in operation;Windows
+etumapproxy-02.egatest.local_10.6.7.133_RZ2-ESX-36;etumapproxy-02.egatest.local;10.6.7.133;RZ2-ESX-36;CL_DMZ;in operation;Windows
+Expedition_10.3.50.230;Expedition;10.3.50.230;;;in operation;Ubuntu Linux
+FIL-FSLOGIX.bev.int_10.2.6.201_RZ1-ESX-50;FIL-FSLOGIX.bev.int;10.2.6.201;RZ1-ESX-50;CL_PU;in operation;Windows Server 2008 R2 Standard
+fil-fslogix1_RZ1-ESX-34;fil-fslogix1;;RZ1-ESX-34;CL_PU;in operation;Windows Server 2016
+fpgw01_10.2.1.105_RZ1-ESX-33;fpgw01;10.2.1.105;RZ1-ESX-33;CL_PU;in operation;CentOS 7
+fpgw02_10.2.1.107_RZ1-ESX-34;fpgw02;10.2.1.107;RZ1-ESX-34;CL_PU;in operation;CentOS 7
+G-WIKI_10.2.6.50_rz2-esx-32.bev.int;G-WIKI;10.2.6.50;rz2-esx-32.bev.int;CL_PU;in operation;Rocky Linux 9.6
+GEOCLOUD-01_10.2.6.40_RZ1-ESX-33;GEOCLOUD-01;10.2.6.40;RZ1-ESX-33;CL_PU;in operation;CentOS Linux 7.5.1804
+GES-01_10.1.32.66;GES-01;10.1.32.66;;;in operation;CentOS Linux 7.9.2009
+geuvw10-01.user.bev.int_10.6.9.61_rz2-esx-51.bev.int;geuvw10-01.user.bev.int;10.6.9.61;rz2-esx-51.bev.int;CL_BEU;in operation;Windows 10 Pro
+GEUVW10-02.user.bev.int_10.6.9.62_rz2-esx-51.bev.int;GEUVW10-02.user.bev.int;10.6.9.62;rz2-esx-51.bev.int;CL_BEU;in operation;Windows 10 Pro
+GEUVW10-03.user.bev.int_10.6.9.63_rz2-esx-51.bev.int;GEUVW10-03.user.bev.int;10.6.9.63;rz2-esx-51.bev.int;CL_BEU;in operation;Windows 10 Pro
+GEUVW10-04.user.bev.int_10.6.9.64_RZ2-ESX-41;GEUVW10-04.user.bev.int;10.6.9.64;RZ2-ESX-41;CL_BEU;in operation;Windows 10 Pro
+GEUVW10-05.user.bev.int_10.6.9.65_RZ2-ESX-41;GEUVW10-05.user.bev.int;10.6.9.65;RZ2-ESX-41;CL_BEU;in operation;Windows 10
+GEUVW10-06_RZ2-ESX-41;GEUVW10-06;;RZ2-ESX-41;CL_BEU;in operation;Windows 10
+GEUVW10-07.user.bev.int_10.6.9.67_RZ1-ESX-41;GEUVW10-07.user.bev.int;10.6.9.67;RZ1-ESX-41;CL_BEU;in operation;Windows 10 Pro
+GEUVW10-08.user.bev.int_10.6.9.68_RZ1-ESX-41;GEUVW10-08.user.bev.int;10.6.9.68;RZ1-ESX-41;CL_BEU;in operation;Windows 10 Pro
+GEUVW10-09.user.bev.int_10.6.9.69_RZ1-ESX-41;GEUVW10-09.user.bev.int;10.6.9.69;RZ1-ESX-41;CL_BEU;in operation;Windows 10 Pro
+GEUVW10-11.user.bev.int_10.6.9.71_RZ1-ESX-51.bev.int;GEUVW10-11.user.bev.int;10.6.9.71;RZ1-ESX-51.bev.int;CL_BEU;in operation;Windows 10 Pro
+GEUVW10-12.user.bev.int_10.6.9.72_RZ1-ESX-41;GEUVW10-12.user.bev.int;10.6.9.72;RZ1-ESX-41;CL_BEU;in operation;Windows 10 Pro
+GEUVW10-14.user.bev.int_10.6.9.74_rz2-esx-51.bev.int;GEUVW10-14.user.bev.int;10.6.9.74;rz2-esx-51.bev.int;CL_BEU;in operation;Windows 10 Pro
+GEUVW7-01.user.bev.int_10.70.155.35_RZ2-ESX-41;GEUVW7-01.user.bev.int;10.70.155.35;RZ2-ESX-41;CL_BEU;in operation;Windows 7
+GEUVW7-03.user.bev.int_10.70.155.37_RZ1-ESX-41;GEUVW7-03.user.bev.int;10.70.155.37;RZ1-ESX-41;CL_BEU;in operation;Windows 7 Professional
+GEUVW7-04.user.bev.int_10.70.155.38_rz2-esx-51.bev.int;GEUVW7-04.user.bev.int;10.70.155.38;rz2-esx-51.bev.int;CL_BEU;in operation;Windows 7
+GEUVW7-05.user.bev.int_10.70.155.39_rz2-esx-51.bev.int;GEUVW7-05.user.bev.int;10.70.155.39;rz2-esx-51.bev.int;CL_BEU;in operation;Windows 7
+GEUVW7-09.user.bev.int_10.70.155.43_RZ1-ESX-51.bev.int;GEUVW7-09.user.bev.int;10.70.155.43;RZ1-ESX-51.bev.int;CL_BEU;in operation;Windows 7
+GEUVW7-11.user.bev.int_10.70.155.47;GEUVW7-11.user.bev.int;10.70.155.47;;;in operation;Windows 7
+GEUVW7-21.user.bev.int_10.70.155.21_RZ1-ESX-51.bev.int;GEUVW7-21.user.bev.int;10.70.155.21;RZ1-ESX-51.bev.int;CL_BEU;in operation;Windows 7
+GEUVW7-22.user.bev.int_10.70.155.22_RZ1-ESX-51.bev.int;GEUVW7-22.user.bev.int;10.70.155.22;RZ1-ESX-51.bev.int;CL_BEU;in operation;Windows 7
+GEUVW7-23.user.bev.int;GEUVW7-23.user.bev.int;;;;in operation;Windows 7
+GEUVW7-24.user.bev.int_10.70.155.24;GEUVW7-24.user.bev.int;10.70.155.24;;;in operation;Windows 7
+GEUVW7-25_10.70.155.25_RZ2-ESX-41;GEUVW7-25;10.70.155.25;RZ2-ESX-41;CL_BEU;in operation;Windows 7
+GEUVW7-27;GEUVW7-27;;;;in operation;Windows 7
+GEUVW7-28.user.bev.int_10.70.155.45;GEUVW7-28.user.bev.int;10.70.155.45;;;in operation;Windows 7
+GEUVW7-29.user.bev.int_10.70.155.46;GEUVW7-29.user.bev.int;10.70.155.46;;;in operation;Windows 7
+GEUVW7-31.user.bev.int_10.70.155.31_RZ1-ESX-51.bev.int;GEUVW7-31.user.bev.int;10.70.155.31;RZ1-ESX-51.bev.int;CL_BEU;in operation;Windows 7
+GEUVW7-32.user.bev.int_10.70.155.32_rz2-esx-51.bev.int;GEUVW7-32.user.bev.int;10.70.155.32;rz2-esx-51.bev.int;CL_BEU;in operation;Windows 7
+GEUVW7-33_RZ1-ESX-41;GEUVW7-33;;RZ1-ESX-41;CL_BEU;in operation;Windows 7
+GEUVW7-48.user.bev.int_10.70.155.48_RZ1-ESX-51.bev.int;GEUVW7-48.user.bev.int;10.70.155.48;RZ1-ESX-51.bev.int;CL_BEU;in operation;Windows 7
+GEUVW7-49.user.bev.int_10.70.155.49_RZ2-ESX-41;GEUVW7-49.user.bev.int;10.70.155.49;RZ2-ESX-41;CL_BEU;in operation;Windows 7
+GEUVW7-50.user.bev.int_10.70.155.50_RZ1-ESX-41;GEUVW7-50.user.bev.int;10.70.155.50;RZ1-ESX-41;CL_BEU;in operation;Windows 7
+GRUPU-1_RZ1-ESX-39;GRUPU-1;;RZ1-ESX-39;CL_WEB;in operation;CentOS Linux 7.9.2009
+GRUPU-2_10.1.42.52_RZ1-ESX-39;GRUPU-2;10.1.42.52;RZ1-ESX-39;CL_WEB;in operation;CentOS Linux 7.9.2009
+GRUPU-3;GRUPU-3;;;;in operation;CentOS Linux 7.9.2009
+HPE-OV4VC_RZ1-ESX-50;HPE-OV4VC;;RZ1-ESX-50;CL_PU;in operation;CentOS
+HPE-RDA-01_10.1.38.21_RZ1-ESX-39;HPE-RDA-01;10.1.38.21;RZ1-ESX-39;CL_WEB;in operation;CentOS 4/5
+HPEXP8RAID-01.bev.int;HPEXP8RAID-01.bev.int;;;;in operation;Windows Server 2019 Datacenter
+HPEXP8RAID-02.bev.int_rz2-esx-34.bev.int;HPEXP8RAID-02.bev.int;;rz2-esx-34.bev.int;CL_PU;in operation;Windows Server 2019 Datacenter
+HPEXPIMS-01.bev.int_10.3.100.70_RZ1-ESX-33;HPEXPIMS-01.bev.int;10.3.100.70;RZ1-ESX-33;CL_PU;in operation;Oracle Linux 9
+HPEXPPA-01.bev.int_RZ1-ESX-32;HPEXPPA-01.bev.int;;RZ1-ESX-32;CL_PU;in operation;Windows Server 2019 Datacenter
+HVV-01_10.1.33.70_RZ2-ESX-56.bev.int;HVV-01;10.1.33.70;RZ2-ESX-56.bev.int;CL_DMZ-TU;in operation;Rocky Linux 9.5
+HVV-01_10.1.33.70_RZ2-ESX-56.bev.int;HVV-01;10.1.33.70;RZ2-ESX-56.bev.int;CL_DMZ-TU;in operation;Rocky Linux 9.5
+IGELUMS-01.bev.int_10.2.9.11;IGELUMS-01.bev.int;10.2.9.11;;;in operation;Windows Server 2019 Datacenter
+IGELUMS-02.bev.int_10.2.9.9_RZ2-ESX-31;IGELUMS-02.bev.int;10.2.9.9;RZ2-ESX-31;CL_PU;in operation;Windows Server 2019 Datacenter
+igelums-03.bev.int_10.2.9.12_RZ1-ESX-34;igelums-03.bev.int;10.2.9.12;RZ1-ESX-34;CL_PU;in operation;Windows Server 2019 Standard
+insightvm-01_RZ1-ESX-37;insightvm-01;;RZ1-ESX-37;CL_DMZ;in operation;Windows Server 2016
+insightvm-01_10.1.51.111_RZ2-ESX-37;insightvm-01;10.1.51.111;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2019
+INTCLOUD-01_10.2.5.35;INTCLOUD-01;10.2.5.35;;;in operation;Rocky Linux 9.5
+intdocx-01.bev.int_10.2.5.36_RZ1-ESX-32;intdocx-01.bev.int;10.2.5.36;RZ1-ESX-32;CL_PU;in operation;Rocky Linux 9.6
+KUTEST-01_10.2.8.95_RZ1-ESX-50;KUTEST-01;10.2.8.95;RZ1-ESX-50;CL_PU;in operation;Rocky Linux 9.4
+KUTEST-02_10.2.8.96_RZ2-ESX-31;KUTEST-02;10.2.8.96;RZ2-ESX-31;CL_PU;in operation;CentOS 4/5
+KUTEST-02_10.2.8.96_RZ2-ESX-33;KUTEST-02;10.2.8.96;RZ2-ESX-33;CL_PU;in operation;Rocky Linux 9.4
+KUTEST-03_10.2.8.97_RZ2-ESX-33;KUTEST-03;10.2.8.97;RZ2-ESX-33;CL_PU;in operation;Rocky Linux 9.4
+LEHRORC-01_10.70.2.214_RZ2-ESX-47;LEHRORC-01;10.70.2.214;RZ2-ESX-47;CL_DB;in operation;Oracle Linux Server 8.8
+logger02;logger02;;;;in operation;Windows Server 2016
+logger02_10.1.51.99;logger02;10.1.51.99;;;in operation;
+logger02_10.1.51.99;logger02;10.1.51.99;;;in operation;
+LZZ-05.bev.int_10.2.8.17;LZZ-05.bev.int;10.2.8.17;;;in operation;Windows Server 2019 Datacenter
+messplatz_10.122.73.33_RZ2-ESX-36;messplatz;10.122.73.33;RZ2-ESX-36;CL_DMZ;in operation;CentOS 4/5/6
+MMAPP-01_10.1.11.31_RZ2-ESX-59;MMAPP-01;10.1.11.31;RZ2-ESX-59;CL_WEB;in operation;CentOS 4/5
+MMAPP-02_10.1.11.131;MMAPP-02;10.1.11.131;;;in operation;CentOS 4/5
+mmdb.bev.gv.at_RZ1-ESX-34;mmdb.bev.gv.at;;RZ1-ESX-34;CL_PU;in operation;CentOS 6.10
+MOODLETEST_RZ1-ESX-34;MOODLETEST;;RZ1-ESX-34;CL_PU;in operation;CentOS
+MST-O2010.bev.int;MST-O2010.bev.int;;;;in operation;Windows Server 2008 R2
+MST-OXXXX.bev.int;MST-OXXXX.bev.int;;;;in operation;Windows Server 2008 R2
+NAGIOS-02_10.1.51.32_RZ1-ESX-37;NAGIOS-02;10.1.51.32;RZ1-ESX-37;CL_DMZ;in operation;Rocky Linux 9.4
+NETBEAM-02.bev.int_10.1.41.41_RZ2-ESX-37;NETBEAM-02.bev.int;10.1.41.41;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2019 Datacenter
+NEXUS-1_RZ1-ESX-34;NEXUS-1;;RZ1-ESX-34;CL_PU;in operation;Rocky Linux 8.5
+NGXStreaming_RZ1-ESX-34;NGXStreaming;;RZ1-ESX-34;CL_PU;in operation;CentOS
+NPS-01.bev.int_10.2.6.41;NPS-01.bev.int;10.2.6.41;;;in operation;Windows Server 2019 Datacenter
+NPS-01.bev.int_10.2.6.41;NPS-01.bev.int;10.2.6.41;;;in operation;Windows Server 2019 Datacenter
+OL9x_RZ1-ESX-34;OL9x;;RZ1-ESX-34;CL_PU;in operation;Oracle Linux 4/5
+OracleLinux-8_RZ1-ESX-47;OracleLinux-8;;RZ1-ESX-47;CL_DB;in operation;Oracle Linux 8
+OracleLinux-8_RZ1-ESX-31;OracleLinux-8;;RZ1-ESX-31;CL_PU;in operation;Oracle Linux 4/5
+OracleLinux-8;OracleLinux-8;;;;in operation;Oracle Linux 4/5
+OVBACKUP-01_10.3.6.30_RZ1-ESX-32;OVBACKUP-01;10.3.6.30;RZ1-ESX-32;CL_PU;in operation;CentOS 4/5
+PGR-01_RZ2-ESX-37;PGR-01;;RZ2-ESX-37;CL_DMZ;in operation;CentOS Linux 7.9.2009
+PGSEU-01_10.70.1.51_RZ1-ESX-51.bev.int;PGSEU-01;10.70.1.51;RZ1-ESX-51.bev.int;CL_BEU;in operation;Rocky Linux 9.6
+pgseu-01.beu.local_10.70.1.51_RZ2-ESX-41;pgseu-01.beu.local;10.70.1.51;RZ2-ESX-41;CL_BEU;in operation;CentOS Linux 7.6.1810
+photon-machine_10.2.7.211;photon-machine;10.2.7.211;;;in operation;Other 3.x Linux
+photon-machine_10.2.7.205;photon-machine;10.2.7.205;;;in operation;Other 3.x Linux
+photon-machine_10.2.7.206_RZ1-ESX-29;photon-machine;10.2.7.206;RZ1-ESX-29;CL-CTX;in operation;Other 3.x Linux
+photon-machine_10.2.7.199;photon-machine;10.2.7.199;;;in operation;Other 3.x Linux
+photon-machine_10.2.7.209;photon-machine;10.2.7.209;;;in operation;Other 3.x Linux
+photon-machine_10.2.7.213;photon-machine;10.2.7.213;;;in operation;Other 3.x Linux
+photon-machine_10.2.7.214;photon-machine;10.2.7.214;;;in operation;Other 3.x Linux
+photon-machine_10.2.7.202;photon-machine;10.2.7.202;;;in operation;Other 3.x Linux
+photon-machine_10.2.7.212;photon-machine;10.2.7.212;;;in operation;Other 3.x Linux
+photon-machine_10.2.7.219;photon-machine;10.2.7.219;;;in operation;Other 3.x Linux
+photon-machine_10.2.7.210;photon-machine;10.2.7.210;;;in operation;Other 3.x Linux
+photon-machine_10.2.7.198;photon-machine;10.2.7.198;;;in operation;Other 3.x Linux
+PortalTemp_RZ1-ESX-31;PortalTemp;;RZ1-ESX-31;CL_PU;in operation;CentOS
+PUKO-TEST_RZ1-ESX-32;PUKO-TEST;;RZ1-ESX-32;CL_PU;in operation;CentOS
+puloginsight.bev.int_10.2.9.126_RZ1-ESX-34;puloginsight.bev.int;10.2.9.126;RZ1-ESX-34;CL_PU;in operation;SuSE Linux Enterprise Server 11
+PVAMA-01_10.1.29.31_RZ1-ESX-39;PVAMA-01;10.1.29.31;RZ1-ESX-39;CL_WEB;in operation;CentOS 7
+PVAMA-02_10.1.29.131_RZ1-ESX-39;PVAMA-02;10.1.29.131;RZ1-ESX-39;CL_WEB;in operation;CentOS 7
+PVS-W7-02_RZ1-ESX-41;PVS-W7-02;;RZ1-ESX-41;CL_BEU;in operation;Windows 7
+QUOWIT-01_10.3.100.15_rz1-esx-16;QUOWIT-01;10.3.100.15;rz1-esx-16;standalone;in operation;CentOS Linux 7.7.1908
+remotesec02_10.1.41.12_RZ1-ESX-36;remotesec02;10.1.41.12;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2019
+RH-7x_RZ1-ESX-32;RH-7x;;RZ1-ESX-32;CL_PU;in operation;Red Hat Enterprise Linux 6
+RHEL9x_RZ1-ESX-31;RHEL9x;;RZ1-ESX-31;CL_PU;in operation;CentOS
+RL8-9_RZ1-ESX-32;RL8-9;;RZ1-ESX-32;CL_PU;in operation;CentOS
+rl8x_RZ2-ESX-31;rl8x;;RZ2-ESX-31;CL_PU;in operation;CentOS 4/5
+RL9x_RZ2-ESX-50;RL9x;;RZ2-ESX-50;CL_PU;in operation;Rocky Linux
+RL9x-G73_RZ2-ESX-50;RL9x-G73;;RZ2-ESX-50;CL_PU;in operation;Rocky Linux
+RL9x-XFCE_RZ2-ESX-50;RL9x-XFCE;;RZ2-ESX-50;CL_PU;in operation;CentOS 4/5
+RL9x-XFCE;RL9x-XFCE;;;;in operation;CentOS 4/5
+RZ-ADD-01.bev.int_10.2.8.107_RZ2-ESX-31;RZ-ADD-01.bev.int;10.2.8.107;RZ2-ESX-31;CL_PU;in operation;Windows Server 2019 Datacenter
+RZ-ADI-01.ega.local_10.1.33.40_RZ2-ESX-36;RZ-ADI-01.ega.local;10.1.33.40;RZ2-ESX-36;CL_DMZ;in operation;Windows Server 2019
+RZ-BEUGIS-01.beu.local_10.70.1.32_RZ2-ESX-41;RZ-BEUGIS-01.beu.local;10.70.1.32;RZ2-ESX-41;CL_BEU;in operation;Windows Server 2016
+RZ-ETUADI-01.egatest.local_10.6.7.40_RZ2-ESX-36;RZ-ETUADI-01.egatest.local;10.6.7.40;RZ2-ESX-36;CL_DMZ;in operation;Windows Server 2019
+rz-etuapp-01.egatest.local_10.6.7.62_RZ2-ESX-37;rz-etuapp-01.egatest.local;10.6.7.62;RZ2-ESX-37;CL_DMZ;in operation;Windows
+RZ-ETUIMP-01.egatest.local_10.6.7.69_RZ2-ESX-37;RZ-ETUIMP-01.egatest.local;10.6.7.69;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2019
+rz-etumap-01.egatest.local_10.6.7.63_RZ2-ESX-37;rz-etumap-01.egatest.local;10.6.7.63;RZ2-ESX-37;CL_DMZ;in operation;Windows
+RZ-ETUSOC-01.egatest.local_10.6.7.45_RZ1-ESX-36;RZ-ETUSOC-01.egatest.local;10.6.7.45;RZ1-ESX-36;CL_DMZ;in operation;Windows
+RZ-ETUSOC-02.egatest.local_10.6.7.46_RZ1-ESX-37;RZ-ETUSOC-02.egatest.local;10.6.7.46;RZ1-ESX-37;CL_DMZ;in operation;Windows Server 2019
+RZ-FME-01.bev.int_10.2.11.4_RZ1-ESX-32;RZ-FME-01.bev.int;10.2.11.4;RZ1-ESX-32;CL_PU;in operation;Windows Server 2019 Datacenter
+RZ-FME-02.bev.int_10.2.11.5;RZ-FME-02.bev.int;10.2.11.5;;;in operation;Windows Server 2019 Datacenter
+RZ-IMC-01.bev.int_10.2.5.224_RZ1-ESX-33;RZ-IMC-01.bev.int;10.2.5.224;RZ1-ESX-33;CL_PU;in operation;Windows Server 2019 Datacenter
+RZ-STCENT-01.bev.int_10.2.5.60_RZ2-ESX-31;RZ-STCENT-01.bev.int;10.2.5.60;RZ2-ESX-31;CL_PU;in operation;Windows Server 2019 Datacenter
+RZ-STROB1-01.bev.int_10.2.5.61;RZ-STROB1-01.bev.int;10.2.5.61;;;in operation;Windows Server 2019 Datacenter
+RZ-STWFST-01.bev.int_10.2.5.62;RZ-STWFST-01.bev.int;10.2.5.62;;;in operation;Windows Server 2019 Datacenter
+RZ0-FIL-30.bev.int_10.2.2.130_RZ1-ESX-31;RZ0-FIL-30.bev.int;10.2.2.130;RZ1-ESX-31;CL_PU;in operation;Windows Server 2016
+RZ0-FIL-50.bev.int_10.2.2.3_RZ2-ESX-50;RZ0-FIL-50.bev.int;10.2.2.3;RZ2-ESX-50;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZ0-FIL-51.bev.int_10.2.2.4_rz2-esx-32.bev.int;RZ0-FIL-51.bev.int;10.2.2.4;rz2-esx-32.bev.int;CL_PU;in operation;Windows Server 2019 Datacenter
+RZ0-FIL-90.bev.int_10.2.2.90_RZ2-ESX-50;RZ0-FIL-90.bev.int;10.2.2.90;RZ2-ESX-50;CL_PU;in operation;Windows Server 2019 Datacenter
+rz0-ort-01.ega.local_10.1.33.61_RZ2-ESX-37;rz0-ort-01.ega.local;10.1.33.61;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2008 R2
+RZ1-ADS-01.bev.int_10.2.10.3_rz1-esx-16;RZ1-ADS-01.bev.int;10.2.10.3;rz1-esx-16;standalone;in operation;Windows Server 2008 R2 Standard
+RZ1-ADS-03.bev.int_RZ1-ESX-32;RZ1-ADS-03.bev.int;;RZ1-ESX-32;CL_PU;in operation;Windows Server 2003 Standard
+rz1-ams-01.ega.local_10.1.32.26_RZ1-ESX-39;rz1-ams-01.ega.local;10.1.32.26;RZ1-ESX-39;CL_WEB;in operation;CentOS 5
+RZ1-AOT-01.bev.int_10.1.64.37_RZ1-ESX-37;RZ1-AOT-01.bev.int;10.1.64.37;RZ1-ESX-37;CL_DMZ;in operation;Windows Server 2008 Standard
+rz1-app-01.ega.local_10.1.33.45_RZ2-ESX-36;rz1-app-01.ega.local;10.1.33.45;RZ2-ESX-36;CL_DMZ;in operation;Windows
+rz1-app-02.ega.local_10.1.33.46_RZ2-ESX-36;rz1-app-02.ega.local;10.1.33.46;RZ2-ESX-36;CL_DMZ;in operation;Windows
+RZ1-APS-01_10.1.5.31;RZ1-APS-01;10.1.5.31;;;in operation;Windows Server 2008 R2
+RZ1-APS-02.bev.int_10.1.4.32;RZ1-APS-02.bev.int;10.1.4.32;;;in operation;Windows Server 2008 R2
+RZ1-APS-03.bev.int_10.1.4.33;RZ1-APS-03.bev.int;10.1.4.33;;;in operation;Windows Server 2008 R2
+RZ1-APS-04.bev.int_10.1.4.34;RZ1-APS-04.bev.int;10.1.4.34;;;in operation;Windows Server 2008 R2
+RZ1-APS-05.bev.int_10.1.4.35;RZ1-APS-05.bev.int;10.1.4.35;;;in operation;Windows Server 2008 R2
+RZ1-ARC-01.bev.int_10.1.64.210_RZ2-ESX-37;RZ1-ARC-01.bev.int;10.1.64.210;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2008 Enterprise
+RZ1-ASS-01.bev.int_10.2.7.4_RZ1-ESX-29;RZ1-ASS-01.bev.int;10.2.7.4;RZ1-ESX-29;CL-CTX;in operation;Windows Server 2008 R2 Standard
+RZ1-AWI-01_10.1.29.11_RZ1-ESX-39;RZ1-AWI-01;10.1.29.11;RZ1-ESX-39;CL_WEB;in operation;CentOS 4/5
+RZ1-AWP-01_10.1.40.11_RZ2-ESX-36;RZ1-AWP-01;10.1.40.11;RZ2-ESX-36;CL_DMZ;in operation;Rocky Linux 9.6
+rz1-bom-01.bev.int_10.2.5.26_RZ1-ESX-50;rz1-bom-01.bev.int;10.2.5.26;RZ1-ESX-50;CL_PU;in operation;CentOS release 5.8
+RZ1-BPM-01.bev.int_10.2.5.22;RZ1-BPM-01.bev.int;10.2.5.22;;;in operation;Windows Server 2008 R2 Standard
+RZ1-COM-01_RZ2-ESX-31;RZ1-COM-01;;RZ2-ESX-31;CL_PU;in operation;Red Hat Advanced Server 2.1
+RZ1-CON-01.bev.int_10.1.64.204_RZ1-ESX-37;RZ1-CON-01.bev.int;10.1.64.204;RZ1-ESX-37;CL_DMZ;in operation;Windows Server 2008 Enterprise
+RZ1-CRR-01.bev.int_10.2.5.25_rz2-esx-34.bev.int;RZ1-CRR-01.bev.int;10.2.5.25;rz2-esx-34.bev.int;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZ1-DDC-02.bev.int_10.2.7.5;RZ1-DDC-02.bev.int;10.2.7.5;;;in operation;Windows Server 2008 R2 Standard
+RZ1-EGA-01.ega.local_10.1.33.16_RZ1-ESX-37;RZ1-EGA-01.ega.local;10.1.33.16;RZ1-ESX-37;CL_DMZ;in operation;Windows Server 2003 Standard
+rz1-ega-01.ega.local_10.1.33.16_RZ2-ESX-37;rz1-ega-01.ega.local;10.1.33.16;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2019
+RZ1-EGA-03_10.1.33.17_RZ2-ESX-37;RZ1-EGA-03;10.1.33.17;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2008 R2
+RZ1-EMR-01_RZ1-ESX-36;RZ1-EMR-01;;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2003 Standard
+rz1-etuapp-01.egatest.local_10.6.7.31_RZ2-ESX-36;rz1-etuapp-01.egatest.local;10.6.7.31;RZ2-ESX-36;CL_DMZ;in operation;Windows
+rz1-etumap-01.egatest.local_10.6.7.32_RZ2-ESX-37;rz1-etumap-01.egatest.local;10.6.7.32;RZ2-ESX-37;CL_DMZ;in operation;Windows
+rz1-etusoc-01.egatest.local_10.6.7.35_RZ1-ESX-36;rz1-etusoc-01.egatest.local;10.6.7.35;RZ1-ESX-36;CL_DMZ;in operation;Windows
+RZ1-ETUWSA-01_10.6.8.21_RZ1-ESX-39;RZ1-ETUWSA-01;10.6.8.21;RZ1-ESX-39;CL_WEB;in operation;CentOS 5.2
+RZ1-ETUWSA-01.egatest.local_10.6.8.21;RZ1-ETUWSA-01.egatest.local;10.6.8.21;;;in operation;CentOS 5.2
+RZ1-FTP-01.bev.int_RZ1-ESX-34;RZ1-FTP-01.bev.int;;RZ1-ESX-34;CL_PU;in operation;Windows Server 2003 Standard
+RZ1-GBS-01_10.1.34.21_RZ1-ESX-36;RZ1-GBS-01;10.1.34.21;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZ1-GBS-01_10.1.34.21_RZ2-ESX-36;RZ1-GBS-01;10.1.34.21;RZ2-ESX-36;CL_DMZ;in operation;Rocky Linux 9.6
+RZ1-GBS-02_10.1.34.22_RZ1-ESX-37;RZ1-GBS-02;10.1.34.22;RZ1-ESX-37;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZ1-GBS-02_10.1.34.22_RZ2-ESX-36;RZ1-GBS-02;10.1.34.22;RZ2-ESX-36;CL_DMZ;in operation;Rocky Linux 9.6
+RZ1-GTUGBS-01_10.6.6.10_RZ1-ESX-37;RZ1-GTUGBS-01;10.6.6.10;RZ1-ESX-37;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZ1-GTUGBS-01_10.6.6.10_RZ2-ESX-36;RZ1-GTUGBS-01;10.6.6.10;RZ2-ESX-36;CL_DMZ;in operation;Rocky Linux 9.6
+RZ1-GTUKFS-01_10.6.6.20_RZ1-ESX-37;RZ1-GTUKFS-01;10.6.6.20;RZ1-ESX-37;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZ1-GTUKFS-01_10.6.6.20_RZ2-ESX-36;RZ1-GTUKFS-01;10.6.6.20;RZ2-ESX-36;CL_DMZ;in operation;Rocky Linux 9.6
+RZ1-GWR-01_10.1.15.22_RZ1-ESX-39;RZ1-GWR-01;10.1.15.22;RZ1-ESX-39;CL_WEB;in operation;CentOS 7
+rz1-inf-01.ega.local_RZ1-ESX-37;rz1-inf-01.ega.local;;RZ1-ESX-37;CL_DMZ;in operation;Red Hat Advanced Server 2.1
+RZ1-KFS-01_10.1.34.32_RZ1-ESX-37;RZ1-KFS-01;10.1.34.32;RZ1-ESX-37;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZ1-KFS-01_rz2-esx-34.bev.int;RZ1-KFS-01;;rz2-esx-34.bev.int;CL_PU;in operation;Rocky Linux 9.5
+RZ1-KFS-01_10.1.34.32_RZ2-ESX-37;RZ1-KFS-01;10.1.34.32;RZ2-ESX-37;CL_DMZ;in operation;Rocky Linux 9.6
+RZ1-KFS-02_10.1.34.33_RZ1-ESX-36;RZ1-KFS-02;10.1.34.33;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZ1-KFS-02_10.1.34.33_RZ1-ESX-36;RZ1-KFS-02;10.1.34.33;RZ1-ESX-36;CL_DMZ;in operation;Rocky Linux 9.6
+RZ1-LDC-01.bev.int_10.2.6.25_RZ1-ESX-31;RZ1-LDC-01.bev.int;10.2.6.25;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Enterprise
+RZ1-LDP-01_10.2.20.31_RZ1-ESX-31;RZ1-LDP-01;10.2.20.31;RZ1-ESX-31;CL_PU;in operation;CentOS Linux 7.9.2009
+RZ1-LIZ-01.bev.int_10.2.8.2_rz2-esx-32.bev.int;RZ1-LIZ-01.bev.int;10.2.8.2;rz2-esx-32.bev.int;CL_PU;in operation;Rocky Linux 9.6
+rz1-lpx-01.bev.int_10.2.8.1_RZ1-ESX-50;rz1-lpx-01.bev.int;10.2.8.1;RZ1-ESX-50;CL_PU;in operation;CentOS 4/5/6/7
+rz1-map-01.ega.local_10.1.33.47_RZ2-ESX-36;rz1-map-01.ega.local;10.1.33.47;RZ2-ESX-36;CL_DMZ;in operation;Windows
+rz1-map-02.ega.local_10.1.33.48_RZ2-ESX-36;rz1-map-02.ega.local;10.1.33.48;RZ2-ESX-36;CL_DMZ;in operation;Windows
+RZ1-MAT-01.bev.int_10.2.6.21_RZ1-ESX-32;RZ1-MAT-01.bev.int;10.2.6.21;RZ1-ESX-32;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZ1-MAT-02.bev.int_10.2.6.22_rz2-esx-34.bev.int;RZ1-MAT-02.bev.int;10.2.6.22;rz2-esx-34.bev.int;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZ1-MAT-03.bev.int_10.2.6.23_RZ2-ESX-35;RZ1-MAT-03.bev.int;10.2.6.23;RZ2-ESX-35;CL_PU_MAT;in operation;Windows Server 2008 R2 Standard
+RZ1-MAT-04.bev.int_10.2.6.24_RZ2-ESX-35;RZ1-MAT-04.bev.int;10.2.6.24;RZ2-ESX-35;CL_PU_MAT;in operation;Windows Server 2008 R2 Standard
+RZ1-MST-01.bev.int;RZ1-MST-01.bev.int;;;;in operation;Windows Server 2008 R2
+RZ1-SIS-01.bev.int_10.2.5.24_RZ1-ESX-50;RZ1-SIS-01.bev.int;10.2.5.24;RZ1-ESX-50;CL_PU;in operation;Windows Server 2003 Standard
+RZ1-SMQ-01_RZ2-ESX-37;RZ1-SMQ-01;;RZ2-ESX-37;CL_DMZ;in operation;Rocky Linux 8.4
+RZ1-SMQ-02_RZ1-ESX-37;RZ1-SMQ-02;;RZ1-ESX-37;CL_DMZ;in operation;Rocky Linux 8.4
+rz1-soc-01.ega.local_10.1.33.35_RZ2-ESX-36;rz1-soc-01.ega.local;10.1.33.35;RZ2-ESX-36;CL_DMZ;in operation;Windows
+RZ1-SOC-03.ega.local_10.1.33.37_RZ1-ESX-36;RZ1-SOC-03.ega.local;10.1.33.37;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2008 R2
+RZ1-SQL-01_RZ1-ESX-34;RZ1-SQL-01;;RZ1-ESX-34;CL_PU;in operation;Windows Server 2003 Standard
+RZ1-STF-01.bev.int_10.2.7.1;RZ1-STF-01.bev.int;10.2.7.1;;;in operation;Windows Server 2008 R2 Standard
+RZ1-STI-01_10.1.29.21_RZ1-ESX-39;RZ1-STI-01;10.1.29.21;RZ1-ESX-39;CL_WEB;in operation;CentOS 7
+RZ1-STP-01_10.1.40.21_RZ2-ESX-36;RZ1-STP-01;10.1.40.21;RZ2-ESX-36;CL_DMZ;in operation;Rocky Linux 9.6
+RZ1-TCP-01.bev.int_10.1.64.30_RZ2-ESX-36;RZ1-TCP-01.bev.int;10.1.64.30;RZ2-ESX-36;CL_DMZ;in operation;Windows Server 2008 Enterprise
+RZ1-TES-08_10.6.7.116_RZ2-ESX-37;RZ1-TES-08;10.6.7.116;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2019
+rz1-tes-11_RZ1-ESX-46;rz1-tes-11;;RZ1-ESX-46;CL_DB;in operation;Oracle Linux 4/5
+rz1-tes-11.egatest.local_RZ2-ESX-46;rz1-tes-11.egatest.local;;RZ2-ESX-46;CL_DB;in operation;Red Hat Enterprise Server 5.9
+RZ1-WEB-01_10.1.32.16_RZ1-ESX-48;RZ1-WEB-01;10.1.32.16;RZ1-ESX-48;eGA-WEB;in operation;Red Hat Advanced Server 2.1
+RZ1-WEB-02_RZ1-ESX-48;RZ1-WEB-02;;RZ1-ESX-48;eGA-WEB;in operation;Red Hat Advanced Server 2.1
+RZ1-WEB-03_RZ2-ESX-48;RZ1-WEB-03;;RZ2-ESX-48;eGA-WEB;in operation;Red Hat Advanced Server 2.1
+RZ1-WEB-04_10.1.32.19_RZ2-ESX-48;RZ1-WEB-04;10.1.32.19;RZ2-ESX-48;eGA-WEB;in operation;Red Hat Advanced Server 2.1
+RZ1-WIN-01.bev.int_10.2.10.1;RZ1-WIN-01.bev.int;10.2.10.1;;;in operation;Windows Server 2019 Datacenter
+RZ1-WIN-02.user.bev.int_10.2.10.2_rz2-esx-32.bev.int;RZ1-WIN-02.user.bev.int;10.2.10.2;rz2-esx-32.bev.int;CL_PU;in operation;Windows Server 2025
+RZ1-WSA-01_RZ2-ESX-39;RZ1-WSA-01;;RZ2-ESX-39;CL_WEB;in operation;CentOS
+RZ1-XIG-01_RZ1-ESX-36;RZ1-XIG-01;;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2008 R2
+RZ1-XIG-01_10.1.40.15;RZ1-XIG-01;10.1.40.15;;;in operation;Windows Server 2008 R2
+RZ1-XIG-01N_10.1.40.15_RZ2-ESX-36;RZ1-XIG-01N;10.1.40.15;RZ2-ESX-36;CL_DMZ;in operation;Windows Server 2019
+RZ1-XIG-01N_10.1.40.15_RZ2-ESX-36;RZ1-XIG-01N;10.1.40.15;RZ2-ESX-36;CL_DMZ;in operation;Windows Server 2019
+rz2-adm-01.ega.local_10.1.33.118_RZ2-ESX-37;rz2-adm-01.ega.local;10.1.33.118;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2003 Standard
+rz2-ads-01.bev.int_10.2.10.103_RZ1-ESX-50;rz2-ads-01.bev.int;10.2.10.103;RZ1-ESX-50;CL_PU;in operation;Windows Server 2008 R2 Standard
+rz2-ams-01.ega.local_10.1.32.126;rz2-ams-01.ega.local;10.1.32.126;;;in operation;CentOS 5
+rz2-app-01.ega.local_10.1.33.145_RZ2-ESX-37;rz2-app-01.ega.local;10.1.33.145;RZ2-ESX-37;CL_DMZ;in operation;Windows
+rz2-app-02.ega.local_10.1.33.146_RZ1-ESX-37;rz2-app-02.ega.local;10.1.33.146;RZ1-ESX-37;CL_DMZ;in operation;Windows
+RZ2-APS-01_10.1.5.131;RZ2-APS-01;10.1.5.131;;;in operation;Windows Server 2008 R2
+RZ2-APS-02.bev.int_10.254.97.132;RZ2-APS-02.bev.int;10.254.97.132;;;in operation;Windows Server 2008 R2
+RZ2-APS-03.bev.int_10.254.97.133;RZ2-APS-03.bev.int;10.254.97.133;;;in operation;Windows Server 2008 R2
+RZ2-APS-04.bev.int_10.254.97.134;RZ2-APS-04.bev.int;10.254.97.134;;;in operation;Windows Server 2008 R2
+RZ2-APS-05.bev.int_10.1.4.135;RZ2-APS-05.bev.int;10.1.4.135;;;in operation;Windows Server 2008
+RZ2-APS-06_10.1.4.136;RZ2-APS-06;10.1.4.136;;;in operation;CentOS 7
+RZ2-AWI-01_10.1.29.111_RZ1-ESX-39;RZ2-AWI-01;10.1.29.111;RZ1-ESX-39;CL_WEB;in operation;CentOS 4/5
+RZ2-AWP-01_10.1.40.111_RZ1-ESX-36;RZ2-AWP-01;10.1.40.111;RZ1-ESX-36;CL_DMZ;in operation;Rocky Linux 9.6
+RZ2-BMP-01.bev.int_10.2.5.122_RZ1-ESX-34;RZ2-BMP-01.bev.int;10.2.5.122;RZ1-ESX-34;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZ2-CIT-01.bev.int_10.2.7.109;RZ2-CIT-01.bev.int;10.2.7.109;;;in operation;Windows Server 2008 R2 Standard
+RZ2-COM-01_10.2.8.110_RZ2-ESX-31;RZ2-COM-01;10.2.8.110;RZ2-ESX-31;CL_PU;in operation;Red Hat Advanced Server 2.1
+RZ2-CTS-61.bev.int;RZ2-CTS-61.bev.int;;;;in operation;Windows Server 2008 R2
+RZ2-CTS-62.bev.int_10.2.7.162_RZ1-ESX-29;RZ2-CTS-62.bev.int;10.2.7.162;RZ1-ESX-29;CL-CTX;in operation;Windows Server 2008 R2 Standard
+RZ2-DDC-02.bev.int_10.2.7.105;RZ2-DDC-02.bev.int;10.2.7.105;;;in operation;Windows Server 2008 R2 Standard
+rz2-ega-01.ega.local_10.1.33.116_RZ2-ESX-37;rz2-ega-01.ega.local;10.1.33.116;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2019
+rz2-etuapp-01.egatest.local_10.6.7.131_RZ1-ESX-37;rz2-etuapp-01.egatest.local;10.6.7.131;RZ1-ESX-37;CL_DMZ;in operation;Windows
+rz2-etumap-01.egatest.local_10.6.7.132_RZ2-ESX-37;rz2-etumap-01.egatest.local;10.6.7.132;RZ2-ESX-37;CL_DMZ;in operation;Windows
+RZ2-ETUSOC-01.egatest.local_10.6.7.135_RZ1-ESX-37;RZ2-ETUSOC-01.egatest.local;10.6.7.135;RZ1-ESX-37;CL_DMZ;in operation;Windows Server 2008
+RZ2-ETUWSA-01_10.6.8.121;RZ2-ETUWSA-01;10.6.8.121;;;in operation;CentOS 5.2
+RZ2-GBS-01_10.1.34.121_RZ1-ESX-37;RZ2-GBS-01;10.1.34.121;RZ1-ESX-37;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZ2-GBS-01_10.1.34.121_RZ1-ESX-37;RZ2-GBS-01;10.1.34.121;RZ1-ESX-37;CL_DMZ;in operation;Rocky Linux 9.6
+RZ2-GTUGBS-01_10.6.6.110_RZ1-ESX-37;RZ2-GTUGBS-01;10.6.6.110;RZ1-ESX-37;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZ2-GTUGBS-01_10.6.6.110_RZ2-ESX-36;RZ2-GTUGBS-01;10.6.6.110;RZ2-ESX-36;CL_DMZ;in operation;Rocky Linux 9.6
+RZ2-GTUKFS-01_10.6.6.120_RZ1-ESX-37;RZ2-GTUKFS-01;10.6.6.120;RZ1-ESX-37;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZ2-GTUKFS-01_10.6.6.120_RZ2-ESX-36;RZ2-GTUKFS-01;10.6.6.120;RZ2-ESX-36;CL_DMZ;in operation;Rocky Linux 9.6
+RZ2-GWR-01_10.1.15.122_RZ1-ESX-39;RZ2-GWR-01;10.1.15.122;RZ1-ESX-39;CL_WEB;in operation;CentOS 7
+rz2-ift-01_10.1.5.116_RZ1-ESX-39;rz2-ift-01;10.1.5.116;RZ1-ESX-39;CL_WEB;in operation;CentOS 4/5/6
+rz2-imp-01.ega.local_10.1.33.149_RZ2-ESX-37;rz2-imp-01.ega.local;10.1.33.149;RZ2-ESX-37;CL_DMZ;in operation;Windows
+RZ2-KFS-01_10.1.34.132_RZ1-ESX-37;RZ2-KFS-01;10.1.34.132;RZ1-ESX-37;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZ2-KFS-01_10.1.34.132_RZ2-ESX-37;RZ2-KFS-01;10.1.34.132;RZ2-ESX-37;CL_DMZ;in operation;Rocky Linux 9.6
+RZ2-LDP-01_10.2.20.131_RZ1-ESX-31;RZ2-LDP-01;10.2.20.131;RZ1-ESX-31;CL_PU;in operation;CentOS Linux 7.9.2009
+rz2-map-01.ega.local_10.1.33.147_RZ2-ESX-36;rz2-map-01.ega.local;10.1.33.147;RZ2-ESX-36;CL_DMZ;in operation;Windows
+rz2-map-02.ega.local_10.1.33.148_RZ2-ESX-36;rz2-map-02.ega.local;10.1.33.148;RZ2-ESX-36;CL_DMZ;in operation;Windows
+RZ2-OTUAOT-01_10.75.64.137_RZ2-ESX-37;RZ2-OTUAOT-01;10.75.64.137;RZ2-ESX-37;CL_DMZ;in operation;Windows
+RZ2-OTUTCP-01_10.75.64.130_RZ1-ESX-37;RZ2-OTUTCP-01;10.75.64.130;RZ1-ESX-37;CL_DMZ;in operation;Windows
+rz2-rac-01.ega.local_RZ1-ESX-46;rz2-rac-01.ega.local;;RZ1-ESX-46;CL_DB;in operation;Red Hat Enterprise Linux 3
+RZ2-RDS-01.bev.int_10.2.2.106_RZ1-ESX-34;RZ2-RDS-01.bev.int;10.2.2.106;RZ1-ESX-34;CL_PU;in operation;Windows Server 2008 R2
+RZ2-SMQ-01_RZ2-ESX-37;RZ2-SMQ-01;;RZ2-ESX-37;CL_DMZ;in operation;Rocky Linux 8.4
+RZ2-SMQ-02_10.1.64.172_RZ1-ESX-37;RZ2-SMQ-02;10.1.64.172;RZ1-ESX-37;CL_DMZ;in operation;Rocky Linux 8.4
+rz2-soc-01.ega.local_10.1.33.135_RZ1-ESX-37;rz2-soc-01.ega.local;10.1.33.135;RZ1-ESX-37;CL_DMZ;in operation;Windows
+RZ2-STF-01.bev.int_10.2.7.101;RZ2-STF-01.bev.int;10.2.7.101;;;in operation;Windows Server 2008 R2 Standard
+RZ2-STF-02.bev.int;RZ2-STF-02.bev.int;;;;in operation;Windows Server 2008 R2
+RZ2-STI-01_10.1.29.121_RZ1-ESX-39;RZ2-STI-01;10.1.29.121;RZ1-ESX-39;CL_WEB;in operation;CentOS 7
+RZ2-STP-01_10.1.40.121_RZ1-ESX-36;RZ2-STP-01;10.1.40.121;RZ1-ESX-36;CL_DMZ;in operation;Rocky Linux 9.6
+rz2-tam-01.egatest.local_10.6.7.24_RZ1-ESX-36;rz2-tam-01.egatest.local;10.6.7.24;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2003 Standard
+rz2-tes-02_10.6.8.16_RZ1-ESX-48;rz2-tes-02;10.6.8.16;RZ1-ESX-48;eGA-WEB;in operation;Red Hat Enterprise Linux 3
+rz2-tes-03_RZ1-ESX-48;rz2-tes-03;;RZ1-ESX-48;eGA-WEB;in operation;Red Hat Enterprise Linux 3
+rz2-tes-04.egatest.local_RZ2-ESX-37;rz2-tes-04.egatest.local;;RZ2-ESX-37;CL_DMZ;in operation;Red Hat Enterprise Linux 3
+RZ2-TES-08.egatest.local_10.6.7.16_RZ2-ESX-37;RZ2-TES-08.egatest.local;10.6.7.16;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2003
+RZ2-TES-08N;RZ2-TES-08N;;;;in operation;Windows Server 2016
+RZ2-TES-16.egatest.local_10.6.7.37_RZ2-ESX-36;RZ2-TES-16.egatest.local;10.6.7.37;RZ2-ESX-36;CL_DMZ;in operation;Windows Server 2008 R2
+rz2-tms-01_10.6.8.18_RZ2-ESX-39;rz2-tms-01;10.6.8.18;RZ2-ESX-39;CL_WEB;in operation;CentOS 5
+rz2-tms-01.egatest.local_10.6.8.18;rz2-tms-01.egatest.local;10.6.8.18;;;in operation;CentOS 5
+RZ2-WEB-01_10.1.32.116_RZ2-ESX-48;RZ2-WEB-01;10.1.32.116;RZ2-ESX-48;eGA-WEB;in operation;Red Hat Advanced Server 2.1
+RZ2-WEB-02_RZ2-ESX-48;RZ2-WEB-02;;RZ2-ESX-48;eGA-WEB;in operation;Red Hat Advanced Server 2.1
+RZ2-WEB-03_10.1.32.118_RZ2-ESX-48;RZ2-WEB-03;10.1.32.118;RZ2-ESX-48;eGA-WEB;in operation;Red Hat Advanced Server 2.1
+RZ2-WEB-04_10.1.32.119_RZ1-ESX-48;RZ2-WEB-04;10.1.32.119;RZ1-ESX-48;eGA-WEB;in operation;Red Hat Advanced Server 2.1
+RZ2-WIN-01.bev.int_10.2.10.101_rz1-esx-16;RZ2-WIN-01.bev.int;10.2.10.101;rz1-esx-16;standalone;in operation;Windows Server 2019 Datacenter
+RZ2-WIN-02.user.bev.int_10.2.10.102_rz1-esx-16;RZ2-WIN-02.user.bev.int;10.2.10.102;rz1-esx-16;standalone;in operation;Windows Server 2025
+RZ2-WSA-01_RZ1-ESX-39;RZ2-WSA-01;;RZ1-ESX-39;CL_WEB;in operation;CentOS 5.3
+RZ2-XIG-01_10.1.40.115_RZ1-ESX-36;RZ2-XIG-01;10.1.40.115;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2008 R2
+RZ2-XIG-01_10.1.40.115_RZ2-ESX-37;RZ2-XIG-01;10.1.40.115;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2019
+RZ2-XIG-01_10.1.40.115_RZ2-ESX-37;RZ2-XIG-01;10.1.40.115;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2019
+RZ2-XIG-01B_RZ2-ESX-36;RZ2-XIG-01B;;RZ2-ESX-36;CL_DMZ;in operation;Windows Server 2008 R2
+RZ2-XIG-01N_RZ1-ESX-36;RZ2-XIG-01N;;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2008 R2
+RZ2-ZDA-01.bev.int_10.2.11.103_RZ2-ESX-31;RZ2-ZDA-01.bev.int;10.2.11.103;RZ2-ESX-31;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-3PR-01.bev.int_10.3.100.11;RZV-3PR-01.bev.int;10.3.100.11;;;in operation;Windows Server 2008 R2 Standard
+RZV-ACC-02.bev.int_10.2.3.100;RZV-ACC-02.bev.int;10.2.3.100;;;in operation;Windows Server 2008 R2 Standard
+RZV-ACC-03.bev.int_10.2.2.157_RZ1-ESX-33;RZV-ACC-03.bev.int;10.2.2.157;RZ1-ESX-33;CL_PU;in operation;Windows Server 2019 Datacenter
+rzv-adb-01.ega.local_RZ2-ESX-46;rzv-adb-01.ega.local;;RZ2-ESX-46;CL_DB;in operation;Red Hat Enterprise Linux 3
+RZV-ADD-01.bev.int_10.2.8.106_RZ2-ESX-33;RZV-ADD-01.bev.int;10.2.8.106;RZ2-ESX-33;CL_PU;in operation;Windows Server 2008 R2 Standard
+rzv-adfs-01.user.bev.int_10.2.10.110_RZ1-ESX-31;rzv-adfs-01.user.bev.int;10.2.10.110;RZ1-ESX-31;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-ADI-01.ega.local_10.1.33.180_RZ2-ESX-36;RZV-ADI-01.ega.local;10.1.33.180;RZ2-ESX-36;CL_DMZ;in operation;Windows Server 2008 R2
+RZV-ADM-02.bev.int_10.1.64.139_RZ1-ESX-37;RZV-ADM-02.bev.int;10.1.64.139;RZ1-ESX-37;CL_DMZ;in operation;Windows Server 2019 Datacenter
+RZV-ADMOOD-01.bev.int_10.2.3.151_rz2-esx-34.bev.int;RZV-ADMOOD-01.bev.int;10.2.3.151;rz2-esx-34.bev.int;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-ADR-01;RZV-ADR-01;;;;in operation;CentOS Linux 7.9.2009
+RZV-ADR-02;RZV-ADR-02;;;;in operation;CentOS Linux 7.9.2009
+RZV-ADR-03_10.1.32.73;RZV-ADR-03;10.1.32.73;;;in operation;CentOS Linux 7.9.2009
+RZV-ADS-01.bev.int_10.2.10.6;RZV-ADS-01.bev.int;10.2.10.6;;;in operation;Windows Server 2019 Datacenter
+RZV-ADS-03.bev.int_10.2.10.5;RZV-ADS-03.bev.int;10.2.10.5;;;in operation;Windows Server 2019 Datacenter
+RZV-AED-01_10.1.5.11;RZV-AED-01;10.1.5.11;;;in operation;Windows Server 2019
+RZV-AED-02_10.1.5.12;RZV-AED-02;10.1.5.12;;;in operation;Windows Server 2019
+RZV-AMT-01.bev.int_10.2.8.7_rz2-esx-34.bev.int;RZV-AMT-01.bev.int;10.2.8.7;rz2-esx-34.bev.int;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-APOSQL-02.bev.int_10.1.4.65_rz1-esx-22.bev.int;RZV-APOSQL-02.bev.int;10.1.4.65;rz1-esx-22.bev.int;CL_APOS;in operation;Windows Server 2008 R2
+RZV-APPL-01.bev.int_10.2.8.30_RZ2-ESX-31;RZV-APPL-01.bev.int;10.2.8.30;RZ2-ESX-31;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-APS-01_RZ1-ESX-31;RZV-APS-01;;RZ1-ESX-31;CL_PU;in operation;Windows Server 2003 Standard
+RZV-APT-01.bev.int_10.2.3.50_RZ1-ESX-34;RZV-APT-01.bev.int;10.2.3.50;RZ1-ESX-34;CL_PU;in operation;Windows Server 2008 R2 Standard
+rzv-apt-02.bev.int_10.2.3.150_RZ1-ESX-33;rzv-apt-02.bev.int;10.2.3.150;RZ1-ESX-33;CL_PU;in operation;CentOS Linux release 7.9.2009
+rzv-arc-01.bev.int_10.1.64.142_RZ1-ESX-36;rzv-arc-01.bev.int;10.1.64.142;RZ1-ESX-36;CL_DMZ;in operation;Red Hat Enterprise Linux 8.10
+rzv-arc-01.bev.int_RZ1-ESX-36;rzv-arc-01.bev.int;;RZ1-ESX-36;CL_DMZ;in operation;Red Hat Enterprise Server 6.10
+RZV-ASS-11.bev.int_10.2.7.121;RZV-ASS-11.bev.int;10.2.7.121;;;in operation;Windows Server 2019 Datacenter
+rzv-bal-01.bev.int_RZ1-ESX-46;rzv-bal-01.bev.int;;RZ1-ESX-46;CL_DB;in operation;Oracle Linux Server 8.6
+RZV-BCPU-01_10.122.73.111_RZ1-ESX-36;RZV-BCPU-01;10.122.73.111;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2019
+RZV-BCPU-01_10.122.73.111_RZ1-ESX-36;RZV-BCPU-01;10.122.73.111;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2019
+RZV-BCTU-01_10.122.73.101_RZ1-ESX-36;RZV-BCTU-01;10.122.73.101;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2019
+RZV-BCTU-01_10.122.73.101_RZ1-ESX-36;RZV-BCTU-01;10.122.73.101;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2019
+RZV-BEA-01.bev.int_10.2.2.181_RZ1-ESX-33;RZV-BEA-01.bev.int;10.2.2.181;RZ1-ESX-33;CL_PU;in operation;Windows Server 2019
+RZV-BEA-02.bev.int_10.2.2.182_RZ1-ESX-33;RZV-BEA-02.bev.int;10.2.2.182;RZ1-ESX-33;CL_PU;in operation;Windows Server 2019
+RZV-BEA-03.bev.int_10.2.2.183_RZ1-ESX-34;RZV-BEA-03.bev.int;10.2.2.183;RZ1-ESX-34;CL_PU;in operation;Windows Server 2019
+RZV-BEA-04.bev.int_10.2.2.184;RZV-BEA-04.bev.int;10.2.2.184;;;in operation;Windows Server 2019 Datacenter
+RZV-BEA-05.bev.int_10.2.2.185_RZ1-ESX-34;RZV-BEA-05.bev.int;10.2.2.185;RZ1-ESX-34;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-BEA-06.bev.int_10.2.2.186_RZ1-ESX-50;RZV-BEA-06.bev.int;10.2.2.186;RZ1-ESX-50;CL_PU;in operation;Windows Server 2019
+RZV-BEA-07.bev.int_10.2.2.187_RZ1-ESX-34;RZV-BEA-07.bev.int;10.2.2.187;RZ1-ESX-34;CL_PU;in operation;Windows Server 2019
+RZV-BEA-08.bev.int_10.2.2.188_RZ1-ESX-32;RZV-BEA-08.bev.int;10.2.2.188;RZ1-ESX-32;CL_PU;in operation;Windows Server 2019
+RZV-BEA-09.bev.int;RZV-BEA-09.bev.int;;;;in operation;Windows Server 2019 Datacenter
+RZV-BEUAOT-01_10.70.2.137_RZ1-ESX-41;RZV-BEUAOT-01;10.70.2.137;RZ1-ESX-41;CL_BEU;in operation;Windows Server 2008
+RZV-BEUAPT-01.beu.local_10.70.10.1_RZ1-ESX-41;RZV-BEUAPT-01.beu.local;10.70.10.1;RZ1-ESX-41;CL_BEU;in operation;Windows Server 2008 R2
+RZV-BEUARC-01.beu.local_10.70.2.135_RZ1-ESX-41;RZV-BEUARC-01.beu.local;10.70.2.135;RZ1-ESX-41;CL_BEU;in operation;Windows Server 2008
+rzv-beubal-01.beu.local_RZ2-ESX-47;rzv-beubal-01.beu.local;;RZ2-ESX-47;CL_DB;in operation;Oracle Linux Server 8.7
+RZV-BEUCON-01.beu.local_10.70.2.134_RZ1-ESX-41;RZV-BEUCON-01.beu.local;10.70.2.134;RZ1-ESX-41;CL_BEU;in operation;Windows Server 2008
+RZV-BEUEGN-01_RZ1-ESX-41;RZV-BEUEGN-01;;RZ1-ESX-41;CL_BEU;in operation;Red Hat Enterprise Linux 5
+RZV-BEUESP-01.beu.local_10.70.2.122_RZ1-ESX-41;RZV-BEUESP-01.beu.local;10.70.2.122;RZ1-ESX-41;CL_BEU;in operation;Windows Server 2019
+RZV-BEUFIL-01.beu.local_10.70.2.1_rz2-esx-51.bev.int;RZV-BEUFIL-01.beu.local;10.70.2.1;rz2-esx-51.bev.int;CL_BEU;in operation;Windows Server 2003 Standard
+rzv-beugms-01_10.70.2.36_rz2-esx-51.bev.int;rzv-beugms-01;10.70.2.36;rz2-esx-51.bev.int;CL_BEU;in operation;CentOS 5.5
+RZV-BEULTS-01.beu.local_10.70.10.23_RZ1-ESX-41;RZV-BEULTS-01.beu.local;10.70.10.23;RZ1-ESX-41;CL_BEU;in operation;Windows Server 2016
+rzv-beuorc-01.beu.local_RZ1-ESX-46;rzv-beuorc-01.beu.local;;RZ1-ESX-46;CL_DB;in operation;Red Hat Enterprise Server 5.9
+RZV-BEUPVS-01_rz2-esx-51.bev.int;RZV-BEUPVS-01;;rz2-esx-51.bev.int;CL_BEU;in operation;Red Hat Enterprise Server 5.3
+RZV-BEUTCP-01_10.70.2.130_RZ1-ESX-41;RZV-BEUTCP-01;10.70.2.130;RZ1-ESX-41;CL_BEU;in operation;Windows
+RZV-BEUTES-01_10.70.155.51_RZ1-ESX-41;RZV-BEUTES-01;10.70.155.51;RZ1-ESX-41;CL_BEU;in operation;CentOS
+RZV-BEUTES-02_10.70.155.52_RZ1-ESX-51.bev.int;RZV-BEUTES-02;10.70.155.52;RZ1-ESX-51.bev.int;CL_BEU;in operation;CentOS Linux 7.6.1810
+RZV-BEUTEST-01_10.70.2.101;RZV-BEUTEST-01;10.70.2.101;;;in operation;Windows Server 2019
+RZV-BEUTEST-01_10.70.2.101_rz2-esx-51.bev.int;RZV-BEUTEST-01;10.70.2.101;rz2-esx-51.bev.int;CL_BEU;in operation;Windows Server 2019
+RZV-BEUTRD-01_10.70.2.39_RZ1-ESX-41;RZV-BEUTRD-01;10.70.2.39;RZ1-ESX-41;CL_BEU;in operation;CentOS Linux release 7.4.1708
+RZV-BEUVCB-01.bev.int_10.2.8.151_RZ1-ESX-33;RZV-BEUVCB-01.bev.int;10.2.8.151;RZ1-ESX-33;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-BEUVVC-01.bev.int_10.2.9.102_RZ1-ESX-50;RZV-BEUVVC-01.bev.int;10.2.9.102;RZ1-ESX-50;CL_PU;in operation;VMware Photon OS
+RZV-BEUVXP-01.beu.local;RZV-BEUVXP-01.beu.local;;;;in operation;Windows XP
+rzv-beuvxp-21.user.bev.int_RZ1-ESX-41;rzv-beuvxp-21.user.bev.int;;RZ1-ESX-41;CL_BEU;in operation;Windows XP
+RZV-BEUVXP-XX_RZ1-ESX-33;RZV-BEUVXP-XX;;RZ1-ESX-33;CL_PU;in operation;Windows XP
+RZV-BEUWIN-01.beu.local_10.70.10.2_RZ1-ESX-51.bev.int;RZV-BEUWIN-01.beu.local;10.70.10.2;RZ1-ESX-51.bev.int;CL_BEU;in operation;Windows Server 2019
+RZV-BEUWIN-02.beu.local_10.70.10.102_RZ1-ESX-51.bev.int;RZV-BEUWIN-02.beu.local;10.70.10.102;RZ1-ESX-51.bev.int;CL_BEU;in operation;Windows Server 2019
+RZV-BEUZWR-01_10.70.2.42_RZ1-ESX-41;RZV-BEUZWR-01;10.70.2.42;RZ1-ESX-41;CL_BEU;in operation;CentOS Linux 7.9.2009
+RZV-BHV-01_10.1.34.40_RZ2-ESX-36;RZV-BHV-01;10.1.34.40;RZ2-ESX-36;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZV-BHV-02_10.1.34.140_RZ1-ESX-36;RZV-BHV-02;10.1.34.140;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.8.2003
+rzv-bpm-03.bev.int_10.1.51.31_RZ2-ESX-37;rzv-bpm-03.bev.int;10.1.51.31;RZ2-ESX-37;CL_DMZ;in operation;Rocky Linux 9.3
+rzv-bsqlpu-01.bev.int_10.1.64.66_RZ2-ESX-36;rzv-bsqlpu-01.bev.int;10.1.64.66;RZ2-ESX-36;CL_DMZ;in operation;Windows Server 2019 Datacenter
+rzv-bsqltu-01.btu.local_10.75.2.95_RZ2-ESX-37;rzv-bsqltu-01.btu.local;10.75.2.95;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2019
+RZV-BTUAPT-01.btu.local_10.75.10.1_RZ2-ESX-37;RZV-BTUAPT-01.btu.local;10.75.10.1;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2008 R2
+RZV-BTUAPT-02_10.75.10.101_RZ2-ESX-37;RZV-BTUAPT-02;10.75.10.101;RZ2-ESX-37;CL_DMZ;in operation;CentOS Linux release 7.9.2009
+RZV-BTUAPT-03.btu.local_10.75.10.3_RZ1-ESX-37;RZV-BTUAPT-03.btu.local;10.75.10.3;RZ1-ESX-37;CL_DMZ;in operation;Windows Server 2019
+rzv-btubal-01.btu.local_10.75.1.51_RZ1-ESX-46;rzv-btubal-01.btu.local;10.75.1.51;RZ1-ESX-46;CL_DB;in operation;Oracle Linux Server 8.4
+RZV-BTUEKP-01_10.75.2.48_RZ1-ESX-36;RZV-BTUEKP-01;10.75.2.48;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZV-BTUEKP-02_RZ2-ESX-37;RZV-BTUEKP-02;;RZ2-ESX-37;CL_DMZ;in operation;Rocky Linux 8.4
+RZV-BTUEKS-01_RZ1-ESX-36;RZV-BTUEKS-01;;RZ1-ESX-36;CL_DMZ;in operation;CentOS 6.10
+RZV-BTUELA-01_10.75.1.42_RZ2-ESX-36;RZV-BTUELA-01;10.75.1.42;RZ2-ESX-36;CL_DMZ;in operation;CentOS Linux 7.9.2009
+RZV-BTUELA-01_10.75.1.42_RZ2-ESX-37;RZV-BTUELA-01;10.75.1.42;RZ2-ESX-37;CL_DMZ;in operation;Rocky Linux 9.5
+RZV-BTUESD-01_10.75.2.47_RZ1-ESX-37;RZV-BTUESD-01;10.75.2.47;RZ1-ESX-37;CL_DMZ;in operation;CentOS Linux 7.4.1708
+RZV-BTUFIL-01.btu.local_10.75.2.10_RZ1-ESX-36;RZV-BTUFIL-01.btu.local;10.75.2.10;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2008 R2
+rzv-btugms-01_10.75.2.36_RZ2-ESX-37;rzv-btugms-01;10.75.2.36;RZ2-ESX-37;CL_DMZ;in operation;CentOS 5.5
+RZV-BTUGWS-01_10.6.6.11_RZ1-ESX-36;RZV-BTUGWS-01;10.6.6.11;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZV-BTUJIR-01_10.75.2.112_RZ2-ESX-37;RZV-BTUJIR-01;10.75.2.112;RZ2-ESX-37;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZV-BTULDP-01_10.75.1.31_RZ2-ESX-37;RZV-BTULDP-01;10.75.1.31;RZ2-ESX-37;CL_DMZ;in operation;Rocky Linux 9.6
+RZV-BTULDP-02_10.75.1.32_RZ2-ESX-37;RZV-BTULDP-02;10.75.1.32;RZ2-ESX-37;CL_DMZ;in operation;Rocky Linux 9.6
+RZV-BTULFR-01_10.75.2.35_RZ1-ESX-36;RZV-BTULFR-01;10.75.2.35;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZV-BTULTS-01.btu.local_10.75.10.23_RZ1-ESX-36;RZV-BTULTS-01.btu.local;10.75.10.23;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2019
+RZV-BTUMPR-01_10.75.2.49_RZ1-ESX-36;RZV-BTUMPR-01;10.75.2.49;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZV-BTUMPR-02_10.75.2.50_RZ1-ESX-36;RZV-BTUMPR-02;10.75.2.50;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZV-BTUMPR-03_10.75.2.52_RZ2-ESX-37;RZV-BTUMPR-03;10.75.2.52;RZ2-ESX-37;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZV-BTUMPR-04_10.75.2.53_RZ1-ESX-36;RZV-BTUMPR-04;10.75.2.53;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZV-BTUNAV-01.bev.int_10.122.73.40_RZ2-ESX-37;RZV-BTUNAV-01.bev.int;10.122.73.40;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2008 R2
+RZV-BTUNCLOUD-01_10.75.2.51_RZ1-ESX-36;RZV-BTUNCLOUD-01;10.75.2.51;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.9.2009
+rzv-btuorc-01.btu.local_RZ2-ESX-46;rzv-btuorc-01.btu.local;;RZ2-ESX-46;CL_DB;in operation;Red Hat Enterprise Server 5.9
+RZV-BTUPGR-01_10.75.1.43_RZ2-ESX-37;RZV-BTUPGR-01;10.75.1.43;RZ2-ESX-37;CL_DMZ;in operation;CentOS Linux 7.9.2009
+RZV-BTUPTL-01_10.75.2.11_RZ2-ESX-36;RZV-BTUPTL-01;10.75.2.11;RZ2-ESX-36;CL_DMZ;in operation;Rocky Linux 9.6
+RZV-BTUPVS-01_RZ1-ESX-36;RZV-BTUPVS-01;;RZ1-ESX-36;CL_DMZ;in operation;Red Hat Enterprise Server 5.3
+RZV-BTUSIS-01.btu.local_10.75.2.24_RZ2-ESX-37;RZV-BTUSIS-01.btu.local;10.75.2.24;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2003 Standard
+RZV-BTUSMQ-01_10.75.2.91_RZ1-ESX-37;RZV-BTUSMQ-01;10.75.2.91;RZ1-ESX-37;CL_DMZ;in operation;Rocky Linux 8.4
+RZV-BTUSMQ-02_RZ1-ESX-37;RZV-BTUSMQ-02;;RZ1-ESX-37;CL_DMZ;in operation;Rocky Linux 8.4
+RZV-BTUSMQ-03_RZ2-ESX-37;RZV-BTUSMQ-03;;RZ2-ESX-37;CL_DMZ;in operation;Rocky Linux 8.4
+RZV-BTUSMQ-04_RZ2-ESX-37;RZV-BTUSMQ-04;;RZ2-ESX-37;CL_DMZ;in operation;Rocky Linux 8.4
+RZV-BTUSPI-01.btu.local_10.75.2.31_RZ2-ESX-36;RZV-BTUSPI-01.btu.local;10.75.2.31;RZ2-ESX-36;CL_DMZ;in operation;Windows
+RZV-BTUSPIDB-01.btu.local_10.75.2.32_RZ2-ESX-36;RZV-BTUSPIDB-01.btu.local;10.75.2.32;RZ2-ESX-36;CL_DMZ;in operation;Windows Server 2008 R2
+RZV-BTUSQL-01.btu.local_10.75.2.40_RZ1-ESX-36;RZV-BTUSQL-01.btu.local;10.75.2.40;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2008 R2
+RZV-BTUSQL-02.btu.local_10.75.2.44_RZ1-ESX-37;RZV-BTUSQL-02.btu.local;10.75.2.44;RZ1-ESX-37;CL_DMZ;in operation;Windows Server 2008
+RZV-BTUTRA-01_10.75.1.41_RZ1-ESX-37;RZV-BTUTRA-01;10.75.1.41;RZ1-ESX-37;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZV-BTUWFS-01_RZ1-ESX-37;RZV-BTUWFS-01;;RZ1-ESX-37;CL_DMZ;in operation;Rocky Linux 8.6
+RZV-BTUWIN-01_10.75.10.2_RZ2-ESX-36;RZV-BTUWIN-01;10.75.10.2;RZ2-ESX-36;CL_DMZ;in operation;Windows Server 2019
+RZV-BTUWIN-01.btu.local_10.75.10.2_RZ2-ESX-37;RZV-BTUWIN-01.btu.local;10.75.10.2;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2003 Standard
+RZV-BTUWIN-02_10.75.10.102_RZ2-ESX-37;RZV-BTUWIN-02;10.75.10.102;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2019
+RZV-BTUWIN-03_10.75.10.4_RZ1-ESX-37;RZV-BTUWIN-03;10.75.10.4;RZ1-ESX-37;CL_DMZ;in operation;Windows Server 2008 R2
+RZV-BTUXIG-01_10.6.3.61_RZ2-ESX-36;RZV-BTUXIG-01;10.6.3.61;RZ2-ESX-36;CL_DMZ;in operation;Windows Server 2008 R2
+RZV-BTUXIG-01B_RZ1-ESX-36;RZV-BTUXIG-01B;;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2008 R2
+RZV-BTUXIG-01N_RZ1-ESX-36;RZV-BTUXIG-01N;;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2016
+RZV-BTUXIG-02_10.6.3.62_RZ1-ESX-36;RZV-BTUXIG-02;10.6.3.62;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2008 R2
+RZV-BTUXIG-02_10.6.3.62_RZ1-ESX-36;RZV-BTUXIG-02;10.6.3.62;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2019
+RZV-BTUXIG-02_10.6.3.62_RZ1-ESX-36;RZV-BTUXIG-02;10.6.3.62;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2019
+RZV-BTUXIG-02N_RZ1-ESX-37;RZV-BTUXIG-02N;;RZ1-ESX-37;CL_DMZ;in operation;Windows Server 2016
+RZV-BTUZDA-01.btu.local_10.75.2.42_RZ1-ESX-37;RZV-BTUZDA-01.btu.local;10.75.2.42;RZ1-ESX-37;CL_DMZ;in operation;Windows Server 2019
+RZV-BTUZDA-02_10.75.2.43_RZ2-ESX-36;RZV-BTUZDA-02;10.75.2.43;RZ2-ESX-36;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZV-BTUZWR-01_10.6.6.51_RZ1-ESX-36;RZV-BTUZWR-01;10.6.6.51;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.9.2009
+RZV-BTUZWR-02_10.6.6.52_RZ1-ESX-37;RZV-BTUZWR-02;10.6.6.52;RZ1-ESX-37;CL_DMZ;in operation;CentOS Linux 7.6.1810
+RZV-BTUZWR-03_10.6.6.53_RZ1-ESX-37;RZV-BTUZWR-03;10.6.6.53;RZ1-ESX-37;CL_DMZ;in operation;CentOS Linux 7.6.1810
+RZV-C2C-21_RZ1-ESX-28;RZV-C2C-21;;RZ1-ESX-28;CL-CTX;in operation;Windows Server 2008 R2
+RZV-C2C-21.bev.int_10.2.7.21;RZV-C2C-21.bev.int;10.2.7.21;;;in operation;Windows Server 2008 R2 Standard
+RZV-C2C-23_rz1-esx-25.bev.int;RZV-C2C-23;;rz1-esx-25.bev.int;CL-CTX;in operation;Windows Server 2008 R2
+RZV-C2C-23.bev.int_10.2.7.23;RZV-C2C-23.bev.int;10.2.7.23;;;in operation;Windows Server 2008 R2 Standard
+RZV-CIT-11.bev.int_10.2.7.122;RZV-CIT-11.bev.int;10.2.7.122;;;in operation;Windows Server 2019 Datacenter
+RZV-COL-01.bev.int_10.2.3.32_rz2-esx-32.bev.int;RZV-COL-01.bev.int;10.2.3.32;rz2-esx-32.bev.int;CL_PU;in operation;Windows Server 2008 R2 Standard
+rzv-com-01.bev.int_RZ2-ESX-47;rzv-com-01.bev.int;;RZ2-ESX-47;CL_DB;in operation;Oracle Linux Server 8.7
+rzv-com-02.bev.int_RZ2-ESX-47;rzv-com-02.bev.int;;RZ2-ESX-47;CL_DB;in operation;Oracle Linux Server 8.7
+rzv-com-03.bev.int_10.1.64.20_RZ2-ESX-47;rzv-com-03.bev.int;10.1.64.20;RZ2-ESX-47;CL_DB;in operation;CentOS release 5.10
+rzv-com-04.bev.int_10.1.64.120_RZ2-ESX-47;rzv-com-04.bev.int;10.1.64.120;RZ2-ESX-47;CL_DB;in operation;CentOS release 5.10
+RZV-CTS-01.bev.int_10.2.7.25;RZV-CTS-01.bev.int;10.2.7.25;;;in operation;Windows Server 2019 Datacenter
+rzv-cts-02.bev.int_RZ2-ESX-37;rzv-cts-02.bev.int;;RZ2-ESX-37;CL_DMZ;in operation;Red Hat Enterprise Server 7.9
+RZV-CTS-02.bev.int_10.2.7.26;RZV-CTS-02.bev.int;10.2.7.26;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-03.bev.int_10.2.7.27;RZV-CTS-03.bev.int;10.2.7.27;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-04.bev.int_10.2.7.28;RZV-CTS-04.bev.int;10.2.7.28;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-05.bev.int_10.2.7.29;RZV-CTS-05.bev.int;10.2.7.29;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-06.bev.int_10.2.7.30;RZV-CTS-06.bev.int;10.2.7.30;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-07.bev.int_10.2.7.31;RZV-CTS-07.bev.int;10.2.7.31;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-08.bev.int_10.2.7.32;RZV-CTS-08.bev.int;10.2.7.32;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-09.bev.int_10.2.7.33;RZV-CTS-09.bev.int;10.2.7.33;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-10.bev.int_10.2.7.34;RZV-CTS-10.bev.int;10.2.7.34;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-11.bev.int_10.2.7.35;RZV-CTS-11.bev.int;10.2.7.35;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-12.bev.int_10.2.7.36;RZV-CTS-12.bev.int;10.2.7.36;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-13.bev.int_10.2.7.37;RZV-CTS-13.bev.int;10.2.7.37;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-14.bev.int_10.2.7.38;RZV-CTS-14.bev.int;10.2.7.38;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-15.bev.int_10.2.7.39;RZV-CTS-15.bev.int;10.2.7.39;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-16.bev.int_10.2.7.40;RZV-CTS-16.bev.int;10.2.7.40;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-17.bev.int_10.2.7.41_RZ1-ESX-29;RZV-CTS-17.bev.int;10.2.7.41;RZ1-ESX-29;CL-CTX;in operation;Windows Server 2019 Datacenter
+RZV-CTS-18.bev.int_10.2.7.42_RZ1-ESX-29;RZV-CTS-18.bev.int;10.2.7.42;RZ1-ESX-29;CL-CTX;in operation;Windows Server 2019 Datacenter
+RZV-CTS-19.bev.int_10.2.7.43_RZ1-ESX-29;RZV-CTS-19.bev.int;10.2.7.43;RZ1-ESX-29;CL-CTX;in operation;Windows Server 2019 Datacenter
+RZV-CTS-20.bev.int_10.2.7.44_RZ1-ESX-29;RZV-CTS-20.bev.int;10.2.7.44;RZ1-ESX-29;CL-CTX;in operation;Windows Server 2019 Datacenter
+RZV-CTS-21.bev.int_10.2.7.45;RZV-CTS-21.bev.int;10.2.7.45;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-22.bev.int_10.2.7.46;RZV-CTS-22.bev.int;10.2.7.46;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-23.bev.int_10.2.7.47;RZV-CTS-23.bev.int;10.2.7.47;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-24.bev.int_10.2.7.48;RZV-CTS-24.bev.int;10.2.7.48;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-25.bev.int_10.2.7.49;RZV-CTS-25.bev.int;10.2.7.49;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-26.bev.int_10.2.7.50;RZV-CTS-26.bev.int;10.2.7.50;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-27.bev.int_10.2.7.51;RZV-CTS-27.bev.int;10.2.7.51;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-28.bev.int_10.2.7.52;RZV-CTS-28.bev.int;10.2.7.52;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-29.bev.int_10.2.7.53;RZV-CTS-29.bev.int;10.2.7.53;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-30.bev.int_10.2.7.54;RZV-CTS-30.bev.int;10.2.7.54;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-31.bev.int_10.2.7.55;RZV-CTS-31.bev.int;10.2.7.55;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-32.bev.int_10.2.7.56;RZV-CTS-32.bev.int;10.2.7.56;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-33.bev.int_10.2.7.57;RZV-CTS-33.bev.int;10.2.7.57;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-34.bev.int_10.2.7.58;RZV-CTS-34.bev.int;10.2.7.58;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-35.bev.int_10.2.7.59;RZV-CTS-35.bev.int;10.2.7.59;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-36.bev.int_10.2.7.60;RZV-CTS-36.bev.int;10.2.7.60;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-37.bev.int_10.2.7.61;RZV-CTS-37.bev.int;10.2.7.61;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-38.bev.int_10.2.7.62;RZV-CTS-38.bev.int;10.2.7.62;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-39.bev.int_10.2.7.63;RZV-CTS-39.bev.int;10.2.7.63;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-40.bev.int_10.2.7.64;RZV-CTS-40.bev.int;10.2.7.64;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-41.bev.int_10.2.7.65;RZV-CTS-41.bev.int;10.2.7.65;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-42.bev.int_10.2.7.66;RZV-CTS-42.bev.int;10.2.7.66;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-43.bev.int_10.2.7.67;RZV-CTS-43.bev.int;10.2.7.67;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-44.bev.int_10.2.7.68;RZV-CTS-44.bev.int;10.2.7.68;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-45.bev.int_10.2.7.69;RZV-CTS-45.bev.int;10.2.7.69;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-46.bev.int_10.2.7.70;RZV-CTS-46.bev.int;10.2.7.70;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-47.bev.int_10.2.7.71;RZV-CTS-47.bev.int;10.2.7.71;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-48.bev.int_10.2.7.72;RZV-CTS-48.bev.int;10.2.7.72;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-T1.bev.int_10.2.7.131_RZ1-ESX-29;RZV-CTS-T1.bev.int;10.2.7.131;RZ1-ESX-29;CL-CTX;in operation;Windows Server 2019 Datacenter
+RZV-CTS-T2.bev.int_10.2.7.132;RZV-CTS-T2.bev.int;10.2.7.132;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-T3.bev.int_10.2.7.133;RZV-CTS-T3.bev.int;10.2.7.133;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-T4.bev.int_10.2.7.134;RZV-CTS-T4.bev.int;10.2.7.134;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-T5.bev.int_10.2.7.135;RZV-CTS-T5.bev.int;10.2.7.135;;;in operation;Windows Server 2019 Datacenter
+RZV-CTS-V1.bev.int_10.2.7.141;RZV-CTS-V1.bev.int;10.2.7.141;;;in operation;Windows Server 2019 Datacenter
+rzv-dba-01.bev.int_10.2.8.104;rzv-dba-01.bev.int;10.2.8.104;;;in operation;Red Hat Enterprise Server 5.10
+RZV-DDC-11.bev.int_10.2.7.111;RZV-DDC-11.bev.int;10.2.7.111;;;in operation;Windows Server 2019 Datacenter
+RZV-DDC-12.bev.int_10.2.7.112;RZV-DDC-12.bev.int;10.2.7.112;;;in operation;Windows Server 2019 Datacenter
+RZV-DDC-XX.bev.int_10.2.7.119_rz2-esx-24.bev.int;RZV-DDC-XX.bev.int;10.2.7.119;rz2-esx-24.bev.int;CL-CTX;in operation;Windows Server 2019
+RZV-DUAL-01_RZ1-ESX-32;RZV-DUAL-01;;RZ1-ESX-32;CL_PU;in operation;Windows Server 2008 R2
+RZV-E19-01.bev.int_10.2.2.20_rz2-esx-32.bev.int;RZV-E19-01.bev.int;10.2.2.20;rz2-esx-32.bev.int;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-E19-02.bev.int_10.2.2.21_RZ2-ESX-31;RZV-E19-02.bev.int;10.2.2.21;RZ2-ESX-31;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-EGALTS-01.ega.local_10.1.33.23_RZ1-ESX-37;RZV-EGALTS-01.ega.local;10.1.33.23;RZ1-ESX-37;CL_DMZ;in operation;Windows Server 2019
+rzv-egavvc-01.bev.int_10.2.9.103_rz2-esx-32.bev.int;rzv-egavvc-01.bev.int;10.2.9.103;rz2-esx-32.bev.int;CL_PU;in operation;VMware Photon OS
+RZV-EGN-01.bev.int_10.2.9.105_RZ1-ESX-50;RZV-EGN-01.bev.int;10.2.9.105;RZ1-ESX-50;CL_PU;in operation;Windows Server 2003 Standard
+RZV-EKP-01_10.1.40.71_RZ1-ESX-36;RZV-EKP-01;10.1.40.71;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZV-EKP-02_10.1.40.72_RZ1-ESX-36;RZV-EKP-02;10.1.40.72;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZV-ELA-01_10.1.25.11_RZ2-ESX-36;RZV-ELA-01;10.1.25.11;RZ2-ESX-36;CL_DMZ;in operation;CentOS Linux 7.9.2009
+RZV-ESD-01_10.1.11.22_RZ1-ESX-39;RZV-ESD-01;10.1.11.22;RZ1-ESX-39;CL_WEB;in operation;CentOS 6
+RZV-ESD-02_10.1.11.122_RZ1-ESX-39;RZV-ESD-02;10.1.11.122;RZ1-ESX-39;CL_WEB;in operation;CentOS 6
+RZV-ETUADR-01;RZV-ETUADR-01;;;;in operation;CentOS Linux 7.9.2009
+RZV-ETUADR-02_RZ1-ESX-39;RZV-ETUADR-02;;RZ1-ESX-39;CL_WEB;in operation;CentOS Linux 7.9.2009
+RZV-ETUADR-03_10.6.8.93_RZ1-ESX-39;RZV-ETUADR-03;10.6.8.93;RZ1-ESX-39;CL_WEB;in operation;CentOS Linux 7.9.2009
+RZV-ETUESP-01;RZV-ETUESP-01;;;;in operation;CentOS Linux 7.6.1810
+RZV-ETUFIL-01_RZ1-ESX-37;RZV-ETUFIL-01;;RZ1-ESX-37;CL_DMZ;in operation;Windows Server 2008
+RZV-ETUFIL-01.egatest.local_10.6.7.20_RZ1-ESX-36;RZV-ETUFIL-01.egatest.local;10.6.7.20;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2019
+RZV-ETUFIL-02.egatest.local_10.6.7.22_RZ2-ESX-36;RZV-ETUFIL-02.egatest.local;10.6.7.22;RZ2-ESX-36;CL_DMZ;in operation;Windows Server 2019
+RZV-ETUGEOWC-01;RZV-ETUGEOWC-01;;;;in operation;CentOS Linux 7.9.2009
+RZV-ETUGES-01_10.6.8.61_RZ1-ESX-39;RZV-ETUGES-01;10.6.8.61;RZ1-ESX-39;CL_WEB;in operation;CentOS Linux 7.9.2009
+RZV-ETUGSDB-01_10.6.7.51_RZ1-ESX-37;RZV-ETUGSDB-01;10.6.7.51;RZ1-ESX-37;CL_DMZ;in operation;CentOS Linux 7.6.1810
+RZV-ETUGSMS-01_10.6.7.53_RZ2-ESX-36;RZV-ETUGSMS-01;10.6.7.53;RZ2-ESX-36;CL_DMZ;in operation;CentOS Linux 7.6.1810
+RZV-ETUGSMS-02_10.6.7.54_RZ2-ESX-36;RZV-ETUGSMS-02;10.6.7.54;RZ2-ESX-36;CL_DMZ;in operation;CentOS Linux 7.6.1810
+RZV-ETUGSNFS-01_10.6.7.50_RZ1-ESX-36;RZV-ETUGSNFS-01;10.6.7.50;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.9.2009
+RZV-ETUGSPPS-01_10.6.7.52_RZ2-ESX-37;RZV-ETUGSPPS-01;10.6.7.52;RZ2-ESX-37;CL_DMZ;in operation;CentOS Linux 7.6.1810
+RZV-ETUIMD-01_RZ1-ESX-39;RZV-ETUIMD-01;;RZ1-ESX-39;CL_WEB;in operation;CentOS Linux 7.9.2009
+RZV-ETUIMP-01.egatest.local_10.6.7.134_RZ1-ESX-37;RZV-ETUIMP-01.egatest.local;10.6.7.134;RZ1-ESX-37;CL_DMZ;in operation;Windows Server 2008 R2
+RZV-ETUIMP-02.egatest.local_10.6.7.55_RZ2-ESX-36;RZV-ETUIMP-02.egatest.local;10.6.7.55;RZ2-ESX-36;CL_DMZ;in operation;Windows Server 2019
+RZV-ETULTS-01.egatest.local_10.6.7.23_RZ2-ESX-37;RZV-ETULTS-01.egatest.local;10.6.7.23;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2019
+rzv-etuorc-01.egatest.local_10.6.7.30_RZ2-ESX-47;rzv-etuorc-01.egatest.local;10.6.7.30;RZ2-ESX-47;CL_DB;in operation;Windows Server 2003 Standard
+rzv-etusdb-01.egatest.local_RZ2-ESX-47;rzv-etusdb-01.egatest.local;;RZ2-ESX-47;CL_DB;in operation;Oracle Linux Server 7.4
+rzv-etusde-01.egatest.local_RZ2-ESX-47;rzv-etusde-01.egatest.local;;RZ2-ESX-47;CL_DB;in operation;Red Hat Enterprise Server 5.6
+rzv-etuuba-01.egatest.local_RZ2-ESX-46;rzv-etuuba-01.egatest.local;;RZ2-ESX-46;CL_DB;in operation;Oracle Linux Server 7.6
+rzv-etuwbc-01.egatest.local_10.6.7.36_RZ2-ESX-37;rzv-etuwbc-01.egatest.local;10.6.7.36;RZ2-ESX-37;CL_DMZ;in operation;Windows
+rzv-etuwbc-01n.egatest.local_10.6.7.136_RZ2-ESX-37;rzv-etuwbc-01n.egatest.local;10.6.7.136;RZ2-ESX-37;CL_DMZ;in operation;Windows
+RZV-ETUWCD-01_RZ1-ESX-39;RZV-ETUWCD-01;;RZ1-ESX-39;CL_WEB;in operation;CentOS Linux 7.5.1804
+RZV-ETUWSA-01_10.6.8.22_RZ1-ESX-39;RZV-ETUWSA-01;10.6.8.22;RZ1-ESX-39;CL_WEB;in operation;CentOS Linux 7.9.2009
+RZV-ETUZLH-01_10.6.8.51_RZ1-ESX-39;RZV-ETUZLH-01;10.6.8.51;RZ1-ESX-39;CL_WEB;in operation;CentOS Linux 7.9.2009
+rzv-ev-01.bev.int_10.2.2.221;rzv-ev-01.bev.int;10.2.2.221;;;in operation;Windows Server 2019 Datacenter
+RZV-EXTHOP-01_10.1.38.31_RZ1-ESX-39;RZV-EXTHOP-01;10.1.38.31;RZ1-ESX-39;CL_WEB;in operation;Windows Server 2019
+RZV-FPM-01.bev.int_10.2.6.31_RZ1-ESX-32;RZV-FPM-01.bev.int;10.2.6.31;RZ1-ESX-32;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-FTP-01_10.1.18.11_RZ1-ESX-59;RZV-FTP-01;10.1.18.11;RZ1-ESX-59;CL_WEB;in operation;CentOS 7
+RZV-FTP-02.bev.int_10.2.6.10;RZV-FTP-02.bev.int;10.2.6.10;;;in operation;Windows Server 2019 Datacenter
+RZV-FWDADM-01_10.2.8.71_RZ1-ESX-31;RZV-FWDADM-01;10.2.8.71;RZ1-ESX-31;CL_PU;in operation;CentOS Linux 7.4.1708
+RZV-GEOWC-01_10.1.32.22;RZV-GEOWC-01;10.1.32.22;;;in operation;CentOS Linux 7.9.2009
+RZV-GEOWC-02;RZV-GEOWC-02;;;;in operation;CentOS Linux 7.9.2009
+RZV-GEUBUI-03_10.70.5.35;RZV-GEUBUI-03;10.70.5.35;;;in operation;CentOS
+rzv-geuorc-01.beu.local_10.70.5.40_RZ2-ESX-47;rzv-geuorc-01.beu.local;10.70.5.40;RZ2-ESX-47;CL_DB;in operation;Red Hat Enterprise Server 5.6
+RZV-GEUVW7-02.user.bev.int_10.70.155.36_RZ1-ESX-41;RZV-GEUVW7-02.user.bev.int;10.70.155.36;RZ1-ESX-41;CL_BEU;in operation;Windows 7
+RZV-GEUVW7-06.user.bev.int_10.70.155.40;RZV-GEUVW7-06.user.bev.int;10.70.155.40;;;in operation;Windows 7
+RZV-GEUVW7-07.user.bev.int_10.70.155.41_RZ1-ESX-51.bev.int;RZV-GEUVW7-07.user.bev.int;10.70.155.41;RZ1-ESX-51.bev.int;CL_BEU;in operation;Windows 7
+RZV-GEUVW7-08;RZV-GEUVW7-08;;;;in operation;Windows 7
+RZV-GEUXPE-08.user.bev.int_10.70.155.28;RZV-GEUXPE-08.user.bev.int;10.70.155.28;;;in operation;Windows XP
+RZV-GEUXPE-09.user.bev.int_RZ1-ESX-41;RZV-GEUXPE-09.user.bev.int;;RZ1-ESX-41;CL_BEU;in operation;Windows XP
+RZV-GEUXPE-10.user.bev.int_10.70.155.30_rz2-esx-51.bev.int;RZV-GEUXPE-10.user.bev.int;10.70.155.30;rz2-esx-51.bev.int;CL_BEU;in operation;Windows XP
+RZV-GEUXPE-15_RZ2-ESX-41;RZV-GEUXPE-15;;RZ2-ESX-41;CL_BEU;in operation;Windows XP
+RZV-GIPDBREP-01_10.1.29.61;RZV-GIPDBREP-01;10.1.29.61;;;in operation;CentOS 4/5
+RZV-GNS-01_10.1.6.11_RZ2-ESX-59;RZV-GNS-01;10.1.6.11;RZ2-ESX-59;CL_WEB;in operation;CentOS 6
+RZV-GNS-02_10.1.6.12;RZV-GNS-02;10.1.6.12;;;in operation;CentOS 7
+RZV-GNS-03_10.1.6.13_RZ1-ESX-39;RZV-GNS-03;10.1.6.13;RZ1-ESX-39;CL_WEB;in operation;CentOS 7
+RZV-GNS-04_10.1.6.14_RZ1-ESX-59;RZV-GNS-04;10.1.6.14;RZ1-ESX-59;CL_WEB;in operation;CentOS 7
+RZV-GNS-05_10.1.6.15;RZV-GNS-05;10.1.6.15;;;in operation;CentOS 4/5/6
+RZV-GNS-07_10.1.6.17_RZ1-ESX-39;RZV-GNS-07;10.1.6.17;RZ1-ESX-39;CL_WEB;in operation;CentOS 7
+RZV-GNS-08_192.168.122.1_RZ1-ESX-39;RZV-GNS-08;192.168.122.1;RZ1-ESX-39;CL_WEB;in operation;CentOS 7
+RZV-GNSADMIN-01_10.1.6.20_RZ2-ESX-59;RZV-GNSADMIN-01;10.1.6.20;RZ2-ESX-59;CL_WEB;in operation;CentOS 7
+RZV-GSADM-01.bev.int_10.1.23.20_RZ2-ESX-37;RZV-GSADM-01.bev.int;10.1.23.20;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2008 R2 Standard
+RZV-GSDB-01_RZ2-ESX-37;RZV-GSDB-01;;RZ2-ESX-37;CL_DMZ;in operation;CentOS Linux 7.6.1810
+RZV-GSGWC-01;RZV-GSGWC-01;;;;in operation;CentOS Linux 7.6.1810
+RZV-GSMETA-01_RZ1-ESX-37;RZV-GSMETA-01;;RZ1-ESX-37;CL_DMZ;in operation;CentOS Linux 7.6.1810
+RZV-GSMETA-02_10.1.23.32_RZ2-ESX-36;RZV-GSMETA-02;10.1.23.32;RZ2-ESX-36;CL_DMZ;in operation;CentOS Linux 7.6.1810
+RZV-GSNFS-01_10.1.23.10_RZ1-ESX-36;RZV-GSNFS-01;10.1.23.10;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.9.2009
+RZV-GSNFS-01_RZ2-ESX-36;RZV-GSNFS-01;;RZ2-ESX-36;CL_DMZ;in operation;CentOS
+RZV-GSPPS-01_10.1.23.12_RZ1-ESX-37;RZV-GSPPS-01;10.1.23.12;RZ1-ESX-37;CL_DMZ;in operation;CentOS Linux 7.6.1810
+RZV-GSWMS-01_RZ2-ESX-59;RZV-GSWMS-01;;RZ2-ESX-59;CL_WEB;in operation;CentOS Linux 7.6.1810
+RZV-GSWMS-02_RZ2-ESX-39;RZV-GSWMS-02;;RZ2-ESX-39;CL_WEB;in operation;CentOS Linux 7.6.1810
+RZV-GSWMS-03;RZV-GSWMS-03;;;;in operation;CentOS Linux 7.6.1810
+RZV-GSWMS-04_RZ2-ESX-39;RZV-GSWMS-04;;RZ2-ESX-39;CL_WEB;in operation;CentOS Linux 7.6.1810
+RZV-GSWPS-01_RZ2-ESX-36;RZV-GSWPS-01;;RZ2-ESX-36;CL_DMZ;in operation;CentOS Linux 7.6.1810
+RZV-GSWPS-02_RZ2-ESX-36;RZV-GSWPS-02;;RZ2-ESX-36;CL_DMZ;in operation;CentOS Linux 7.6.1810
+RZV-GSWPS-03_172.19.0.1_RZ2-ESX-36;RZV-GSWPS-03;172.19.0.1;RZ2-ESX-36;CL_DMZ;in operation;CentOS Linux 7.6.1810
+RZV-GSWPS-04_RZ2-ESX-36;RZV-GSWPS-04;;RZ2-ESX-36;CL_DMZ;in operation;CentOS Linux 7.6.1810
+RZV-GTUBHV-01_10.6.6.30_RZ1-ESX-37;RZV-GTUBHV-01;10.6.6.30;RZ1-ESX-37;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZV-GTUBHV-02_10.6.6.130_RZ1-ESX-36;RZV-GTUBHV-02;10.6.6.130;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.8.2003
+rzv-gtuorc-01.btu.local_RZ2-ESX-46;rzv-gtuorc-01.btu.local;;RZ2-ESX-46;CL_DB;in operation;Red Hat Enterprise Server 5.9
+RZV-GTUSTP-01_10.6.3.81_RZ1-ESX-36;RZV-GTUSTP-01;10.6.3.81;RZ1-ESX-36;CL_DMZ;in operation;Rocky Linux 9.6
+RZV-GTUSTP-02_10.6.3.181_RZ2-ESX-36;RZV-GTUSTP-02;10.6.3.181;RZ2-ESX-36;CL_DMZ;in operation;Rocky Linux 9.6
+RZV-I1T-01.bev.int_10.2.3.92_RZ1-ESX-32;RZV-I1T-01.bev.int;10.2.3.92;RZ1-ESX-32;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-I1T-02.bev.int_10.2.3.93_RZ1-ESX-31;RZV-I1T-02.bev.int;10.2.3.93;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-IDOIT-01.bev.int_10.2.5.30_RZ1-ESX-32;RZV-IDOIT-01.bev.int;10.2.5.30;RZ1-ESX-32;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-IGM-01.bev.int_10.2.9.8_RZ1-ESX-32;RZV-IGM-01.bev.int;10.2.9.8;RZ1-ESX-32;CL_PU;in operation;Windows Server 2003 Standard
+RZV-IGM-03.bev.int_10.2.9.10_RZ1-ESX-31;RZV-IGM-03.bev.int;10.2.9.10;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-IMD-01_10.1.32.25_RZ2-ESX-39;RZV-IMD-01;10.1.32.25;RZ2-ESX-39;CL_WEB;in operation;CentOS Linux 7.9.2009
+RZV-IMD-01_RZ1-ESX-39;RZV-IMD-01;;RZ1-ESX-39;CL_WEB;in operation;CentOS Linux 7.9.2009
+RZV-IMD-01_RZ1-ESX-39;RZV-IMD-01;;RZ1-ESX-39;CL_WEB;in operation;CentOS Linux 7.9.2009
+RZV-IRS-01.bev.int_10.2.8.121_RZ1-ESX-34;RZV-IRS-01.bev.int;10.2.8.121;RZ1-ESX-34;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-JDISC-01.bev.int_10.1.51.21_RZ1-ESX-36;RZV-JDISC-01.bev.int;10.1.51.21;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2019 Datacenter
+RZV-JIR-01_10.2.3.12_rz2-esx-34.bev.int;RZV-JIR-01;10.2.3.12;rz2-esx-34.bev.int;CL_PU;in operation;CentOS Linux 7.8.2003
+rzv-kgb-01.bev.int_RZ2-ESX-47;rzv-kgb-01.bev.int;;RZ2-ESX-47;CL_DB;in operation;Oracle Linux Server 7.4
+rzv-kmo-01.bev.int_RZ2-ESX-46;rzv-kmo-01.bev.int;;RZ2-ESX-46;CL_DB;in operation;Oracle Linux Server 8.6
+RZV-KMORC-01_10.1.64.81_RZ2-ESX-47;RZV-KMORC-01;10.1.64.81;RZ2-ESX-47;CL_DB;in operation;Oracle Linux Server 9.5
+RZV-KMORC-01_10.1.64.81_RZ2-ESX-46;RZV-KMORC-01;10.1.64.81;RZ2-ESX-46;CL_DB;in operation;Oracle Linux Server 9.5
+RZV-LDC-01.bev.int_10.2.6.60_RZ2-ESX-35;RZV-LDC-01.bev.int;10.2.6.60;RZ2-ESX-35;CL_PU_MAT;in operation;Windows Server 2019 Datacenter
+rzv-leuorc-01.beu.local_RZ1-ESX-46;rzv-leuorc-01.beu.local;;RZ1-ESX-46;CL_DB;in operation;Red Hat Enterprise Server 5.9
+RZV-LFR-01_10.2.3.14_RZ1-ESX-31;RZV-LFR-01;10.2.3.14;RZ1-ESX-31;CL_PU;in operation;CentOS Linux 7.8.2003
+RZV-LPX-02_RZ1-ESX-31;RZV-LPX-02;;RZ1-ESX-31;CL_PU;in operation;CentOS
+RZV-LTS-01.bev.int_10.2.8.21;RZV-LTS-01.bev.int;10.2.8.21;;;in operation;Windows Server 2019 Datacenter
+RZV-LTS-02.bev.int_10.2.8.22_rz2-esx-32.bev.int;RZV-LTS-02.bev.int;10.2.8.22;rz2-esx-32.bev.int;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-LTS-03.bev.int_10.2.8.23_RZ1-ESX-31;RZV-LTS-03.bev.int;10.2.8.23;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-LZZ-01.bev.int_10.2.8.11_RZ1-ESX-50;RZV-LZZ-01.bev.int;10.2.8.11;RZ1-ESX-50;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-LZZ-02.bev.int_10.2.8.12_rz2-esx-34.bev.int;RZV-LZZ-02.bev.int;10.2.8.12;rz2-esx-34.bev.int;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-LZZ-04.bev.int_10.2.8.16_RZ1-ESX-32;RZV-LZZ-04.bev.int;10.2.8.16;RZ1-ESX-32;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-LZZ-06.bev.int_10.2.8.18_RZ1-ESX-34;RZV-LZZ-06.bev.int;10.2.8.18;RZ1-ESX-34;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-M365-01.bev.int_10.2.10.111;RZV-M365-01.bev.int;10.2.10.111;;;in operation;Windows Server 2019 Datacenter
+RZV-MAT-01.bev.int_RZ1-ESX-35;RZV-MAT-01.bev.int;;RZ1-ESX-35;CL_PU_MAT;in operation;Windows Server 2019 Datacenter
+RZV-MAT-02.bev.int_RZ2-ESX-35;RZV-MAT-02.bev.int;;RZ2-ESX-35;CL_PU_MAT;in operation;Windows Server 2019 Datacenter
+RZV-MAT-03.bev.int_RZ2-ESX-33;RZV-MAT-03.bev.int;;RZ2-ESX-33;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-MAT-04.bev.int_RZ2-ESX-50;RZV-MAT-04.bev.int;;RZ2-ESX-50;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-MIS-01.bev.int_10.122.73.60_RZ1-ESX-36;RZV-MIS-01.bev.int;10.122.73.60;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2008 R2
+RZV-MIS-02.bev.int_10.122.73.61_RZ2-ESX-37;RZV-MIS-02.bev.int;10.122.73.61;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2019
+RZV-MPNAMT-01_10.1.37.7_rz1-esx-22.bev.int;RZV-MPNAMT-01;10.1.37.7;rz1-esx-22.bev.int;CL_APOS;in operation;Windows Server 2019
+RZV-MPR-01_10.1.40.81_RZ1-ESX-36;RZV-MPR-01;10.1.40.81;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZV-MPR-02_10.1.40.82_RZ1-ESX-36;RZV-MPR-02;10.1.40.82;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZV-MPR-03_10.1.40.83_RZ1-ESX-36;RZV-MPR-03;10.1.40.83;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.8.2003
+RZV-MST-00_rz2-esx-30.bev.int;RZV-MST-00;;rz2-esx-30.bev.int;CL-CTX;in operation;Windows Server 2016
+RZV-MST-11.bev.int_10.2.7.123;RZV-MST-11.bev.int;10.2.7.123;;;in operation;Windows Server 2016
+RZV-MST-21.bev.int_10.2.7.124;RZV-MST-21.bev.int;10.2.7.124;;;in operation;Windows Server 2019 Datacenter
+RZV-MST-31.bev.int;RZV-MST-31.bev.int;;;;in operation;Windows Server 2019
+RZV-NAV-01_RZ1-ESX-31;RZV-NAV-01;;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2
+RZV-NAV-02.bev.int_10.122.73.50_RZ1-ESX-36;RZV-NAV-02.bev.int;10.122.73.50;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2008 R2
+RZV-NBR-01.bev.int_10.2.2.72_RZ1-ESX-50;RZV-NBR-01.bev.int;10.2.2.72;RZ1-ESX-50;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-NBSNAP-01_10.2.2.73_RZ1-ESX-34;RZV-NBSNAP-01;10.2.2.73;RZ1-ESX-34;CL_PU;in operation;Red Hat Enterprise Linux 9.4
+RZV-NCLOUD-01_10.1.42.21;RZV-NCLOUD-01;10.1.42.21;;;in operation;CentOS Linux 7.9.2009
+RZV-OCR-01.bev.int_10.2.3.8;RZV-OCR-01.bev.int;10.2.3.8;;;in operation;Windows Server 2003 Standard
+RZV-OCR-02.bev.int_10.2.3.5;RZV-OCR-02.bev.int;10.2.3.5;;;in operation;Windows Server 2003 Standard
+RZV-OCR-03.bev.int_rz2-esx-32.bev.int;RZV-OCR-03.bev.int;;rz2-esx-32.bev.int;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-OCR-03.bev.int_rz2-esx-32.bev.int;RZV-OCR-03.bev.int;;rz2-esx-32.bev.int;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-OEUADM-02.beu.local_10.70.2.139_RZ2-ESX-41;RZV-OEUADM-02.beu.local;10.70.2.139;RZ2-ESX-41;CL_BEU;in operation;Windows Server 2016
+RZV-OEUARC-01_RZ1-ESX-41;RZV-OEUARC-01;;RZ1-ESX-41;CL_BEU;in operation;Red Hat Enterprise Linux 8.7
+RZV-OEUARC-01_RZ1-ESX-41;RZV-OEUARC-01;;RZ1-ESX-41;CL_BEU;in operation;Red Hat Enterprise Server 6.10
+RZV-OEUCTS-02_RZ1-ESX-51.bev.int;RZV-OEUCTS-02;;RZ1-ESX-51.bev.int;CL_BEU;in operation;Red Hat Enterprise Server 7.9
+RZV-OEUOTD-02_10.70.2.147_RZ1-ESX-41;RZV-OEUOTD-02;10.70.2.147;RZ1-ESX-41;CL_BEU;in operation;CentOS Linux 7.9.2009
+rzv-ogb-01.bev.int_10.1.64.55_RZ1-ESX-46;rzv-ogb-01.bev.int;10.1.64.55;RZ1-ESX-46;CL_DB;in operation;Red Hat Enterprise Server 5.10
+rzv-oli-01.bev.int_10.1.64.50_RZ1-ESX-46;rzv-oli-01.bev.int;10.1.64.50;RZ1-ESX-46;CL_DB;in operation;Red Hat Enterprise Server 5.9
+rzv-opsi-01.bev.int;rzv-opsi-01.bev.int;;;;in operation;Rocky Linux release 8.10
+rzv-orc-01.ega.local_RZ1-ESX-46;rzv-orc-01.ega.local;;RZ1-ESX-46;CL_DB;in operation;Red Hat Enterprise Server 5.9
+rzv-otd-02.bev.int_10.1.64.148_RZ1-ESX-36;rzv-otd-02.bev.int;10.1.64.148;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.9.2009
+RZV-OTUADM-02.btu.local_10.75.1.140_RZ1-ESX-37;RZV-OTUADM-02.btu.local;10.75.1.140;RZ1-ESX-37;CL_DMZ;in operation;Windows Server 2019
+rzv-otuarc-01.btu.local_10.75.1.142_RZ1-ESX-36;rzv-otuarc-01.btu.local;10.75.1.142;RZ1-ESX-36;CL_DMZ;in operation;Red Hat Enterprise Linux 8.8
+rzv-otuarc-01.btu.local_RZ2-ESX-37;rzv-otuarc-01.btu.local;;RZ2-ESX-37;CL_DMZ;in operation;Red Hat Enterprise Server 6.10
+rzv-otucts-02.btu.local_RZ2-ESX-36;rzv-otucts-02.btu.local;;RZ2-ESX-36;CL_DMZ;in operation;Red Hat Enterprise Server 7.9
+rzv-otuotd-02.btu.local_10.75.1.148_RZ1-ESX-37;rzv-otuotd-02.btu.local;10.75.1.148;RZ1-ESX-37;CL_DMZ;in operation;CentOS Linux 7.9.2009
+RZV-OTUSCM-01_10.75.1.91_RZ1-ESX-36;RZV-OTUSCM-01;10.75.1.91;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.9.2009
+rzv-poptest-01.bev.int_10.2.8.101;rzv-poptest-01.bev.int;10.2.8.101;;;in operation;Rocky Linux 9.5
+RZV-POR-01.user.bev.int_10.2.3.120_RZ1-ESX-31;RZV-POR-01.user.bev.int;10.2.3.120;RZ1-ESX-31;CL_PU;in operation;Windows Server 2003
+RZV-POR-02.user.bev.int_10.2.3.122_RZ1-ESX-31;RZV-POR-02.user.bev.int;10.2.3.122;RZ1-ESX-31;CL_PU;in operation;Windows Server 2003
+RZV-PTR-03.bev.int_10.2.2.153_rz2-esx-32.bev.int;RZV-PTR-03.bev.int;10.2.2.153;rz2-esx-32.bev.int;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-PTR-04.bev.int_10.2.2.154_RZ2-ESX-50;RZV-PTR-04.bev.int;10.2.2.154;RZ2-ESX-50;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-PTR-11.bev.int_10.2.3.101;RZV-PTR-11.bev.int;10.2.3.101;;;in operation;Windows Server 2008 R2 Standard
+RZV-PTR-12.bev.int_10.2.3.102_RZ1-ESX-34;RZV-PTR-12.bev.int;10.2.3.102;RZ1-ESX-34;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-PTR-13.bev.int_10.2.3.103_rz2-esx-34.bev.int;RZV-PTR-13.bev.int;10.2.3.103;rz2-esx-34.bev.int;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-PTR-14.bev.int_10.2.3.104_RZ2-ESX-31;RZV-PTR-14.bev.int;10.2.3.104;RZ2-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-PTR-31.bev.int_10.2.2.155;RZV-PTR-31.bev.int;10.2.2.155;;;in operation;Windows Server 2019 Datacenter
+rzv-pupgsql16-01.bev.int_10.1.64.110_RZ2-ESX-46;rzv-pupgsql16-01.bev.int;10.1.64.110;RZ2-ESX-46;CL_DB;in operation;Rocky Linux 9.6
+RZV-PVS-01_RZ1-ESX-31;RZV-PVS-01;;RZ1-ESX-31;CL_PU;in operation;Red Hat Enterprise Server 5.3
+RZV-QLOOK-01_10.1.11.13_RZ1-ESX-39;RZV-QLOOK-01;10.1.11.13;RZ1-ESX-39;CL_WEB;in operation;CentOS 6
+RZV-QRC-01_10.2.6.12;RZV-QRC-01;10.2.6.12;;;in operation;CentOS Linux 7.8.2003
+RZV-REPORT-01.bev.int_10.2.5.11_RZ1-ESX-32;RZV-REPORT-01.bev.int;10.2.5.11;RZ1-ESX-32;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-REPORT-02.bev.int_10.2.5.12_RZ2-ESX-31;RZV-REPORT-02.bev.int;10.2.5.12;RZ2-ESX-31;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-RICOH-03.bev.int_10.2.2.156_rz2-esx-34.bev.int;RZV-RICOH-03.bev.int;10.2.2.156;rz2-esx-34.bev.int;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-SAMDB-01.bev.int;RZV-SAMDB-01.bev.int;;;;in operation;Windows Server 2019 Datacenter
+RZV-SCM-01_10.1.64.91_RZ1-ESX-36;RZV-SCM-01;10.1.64.91;RZ1-ESX-36;CL_DMZ;in operation;CentOS Linux 7.9.2009
+rzv-sde-01.ega.local_RZ1-ESX-47;rzv-sde-01.ega.local;;RZ1-ESX-47;CL_DB;in operation;Red Hat Enterprise Server 5.9
+RZV-SFTPBMF-01.bev.int_10.1.41.71_RZ1-ESX-36;RZV-SFTPBMF-01.bev.int;10.1.41.71;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2019 Datacenter
+RZV-SLR-01.bev.int_10.2.7.13;RZV-SLR-01.bev.int;10.2.7.13;;;in operation;Windows Server 2008 R2 Standard
+RZV-SPI-01.bev.int_10.2.3.31;RZV-SPI-01.bev.int;10.2.3.31;;;in operation;Windows Server 2008 R2 Standard
+RZV-SPIDB-01.bev.int_10.2.3.33_RZ1-ESX-33;RZV-SPIDB-01.bev.int;10.2.3.33;RZ1-ESX-33;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-SQL-01.bev.int_10.1.64.64_RZ1-ESX-37;RZV-SQL-01.bev.int;10.1.64.64;RZ1-ESX-37;CL_DMZ;in operation;Windows Server 2008 R2 Standard
+RZV-SQLPU-01.bev.int_10.1.64.65_RZ2-ESX-36;RZV-SQLPU-01.bev.int;10.1.64.65;RZ2-ESX-36;CL_DMZ;in operation;Windows Server 2008 R2 Standard
+RZV-SSHDL-01_10.2.6.40;RZV-SSHDL-01;10.2.6.40;;;in operation;Rocky Linux 9.4
+RZV-STD-01.bev.int_10.2.6.104_rz2-esx-32.bev.int;RZV-STD-01.bev.int;10.2.6.104;rz2-esx-32.bev.int;CL_PU;in operation;Windows Server 2003 Standard
+RZV-STF-01.bev.int_10.2.7.2;RZV-STF-01.bev.int;10.2.7.2;;;in operation;Windows Server 2008 R2 Standard
+RZV-STF-11.bev.int_10.2.7.115;RZV-STF-11.bev.int;10.2.7.115;;;in operation;Windows Server 2019 Datacenter
+RZV-STF-12.bev.int_10.2.7.116;RZV-STF-12.bev.int;10.2.7.116;;;in operation;Windows Server 2019 Datacenter
+RZV-SVN-01_10.2.3.13_RZ1-ESX-32;RZV-SVN-01;10.2.3.13;RZ1-ESX-32;CL_PU;in operation;CentOS 5.5
+rzv-svn-01.bev.int_10.2.3.13;rzv-svn-01.bev.int;10.2.3.13;;;in operation;CentOS 5.5
+RZV-TAS-02.bev.int_10.2.5.227;RZV-TAS-02.bev.int;10.2.5.227;;;in operation;Windows Server 2008 R2 Standard
+RZV-TAS-03.bev.int_10.2.5.226;RZV-TAS-03.bev.int;10.2.5.226;;;in operation;Windows Server 2019 Datacenter
+rzv-tcs-01.bev.int_10.2.3.23_rz2-esx-32.bev.int;rzv-tcs-01.bev.int;10.2.3.23;rz2-esx-32.bev.int;CL_PU;in operation;Rocky Linux 9.4
+RZV-THP-01.bev.int_10.2.8.13_RZ2-ESX-31;RZV-THP-01.bev.int;10.2.8.13;RZ2-ESX-31;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-THP-02.bev.int_10.2.8.4_RZ1-ESX-31;RZV-THP-02.bev.int;10.2.8.4;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-TRA-01_RZ1-ESX-39;RZV-TRA-01;;RZ1-ESX-39;CL_WEB;in operation;CentOS Linux 7.9.2009
+RZV-TRA-02_10.1.42.32_RZ1-ESX-39;RZV-TRA-02;10.1.42.32;RZ1-ESX-39;CL_WEB;in operation;CentOS Linux 7.8.2003
+RZV-TRA-03_RZ2-ESX-59;RZV-TRA-03;;RZ2-ESX-59;CL_WEB;in operation;CentOS Linux 7.8.2003
+RZV-TSK-01.bev.int_10.2.2.80_RZ2-ESX-31;RZV-TSK-01.bev.int;10.2.2.80;RZ2-ESX-31;CL_PU;in operation;Windows Server 2019 Datacenter
+RZV-TUPGSQL16-01_10.75.1.21_RZ2-ESX-46;RZV-TUPGSQL16-01;10.75.1.21;RZ2-ESX-46;CL_DB;in operation;Rocky Linux 9.5
+RZV-TUPGSQL16-01_10.75.1.21_RZ2-ESX-47;RZV-TUPGSQL16-01;10.75.1.21;RZ2-ESX-47;CL_DB;in operation;Rocky Linux 9.5
+RZV-TUPGSQL16-02_10.75.1.110_RZ2-ESX-46;RZV-TUPGSQL16-02;10.75.1.110;RZ2-ESX-46;CL_DB;in operation;Rocky Linux 9.6
+RZV-VA0-01.bev.int_10.2.3.51_RZ1-ESX-32;RZV-VA0-01.bev.int;10.2.3.51;RZ1-ESX-32;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-03.bev.int_10.2.3.52_RZ1-ESX-31;RZV-VA0-03.bev.int;10.2.3.52;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-04.bev.int_10.2.3.53_RZ1-ESX-32;RZV-VA0-04.bev.int;10.2.3.53;RZ1-ESX-32;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-06.bev.int_10.2.3.54_RZ1-ESX-31;RZV-VA0-06.bev.int;10.2.3.54;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-07.bev.int_10.2.3.55_RZ1-ESX-31;RZV-VA0-07.bev.int;10.2.3.55;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-11.bev.int_10.2.3.56_RZ1-ESX-31;RZV-VA0-11.bev.int;10.2.3.56;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-12.bev.int_10.2.3.57;RZV-VA0-12.bev.int;10.2.3.57;;;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-19.bev.int_10.2.3.58_RZ1-ESX-31;RZV-VA0-19.bev.int;10.2.3.58;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-23.bev.int_10.2.3.59_RZ1-ESX-31;RZV-VA0-23.bev.int;10.2.3.59;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-30.bev.int_10.2.3.60_RZ1-ESX-31;RZV-VA0-30.bev.int;10.2.3.60;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-32.bev.int_10.2.3.61_RZ1-ESX-31;RZV-VA0-32.bev.int;10.2.3.61;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-34.bev.int_10.2.3.62_RZ1-ESX-32;RZV-VA0-34.bev.int;10.2.3.62;RZ1-ESX-32;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-40.bev.int_10.2.3.63_RZ1-ESX-31;RZV-VA0-40.bev.int;10.2.3.63;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-41.bev.int_10.2.3.64_RZ1-ESX-32;RZV-VA0-41.bev.int;10.2.3.64;RZ1-ESX-32;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-42.bev.int_10.2.3.65;RZV-VA0-42.bev.int;10.2.3.65;;;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-45.bev.int_10.2.3.66_RZ1-ESX-31;RZV-VA0-45.bev.int;10.2.3.66;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-46.bev.int_10.2.3.67;RZV-VA0-46.bev.int;10.2.3.67;;;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-47.bev.int_10.2.3.68;RZV-VA0-47.bev.int;10.2.3.68;;;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-49.bev.int_10.2.3.69_RZ1-ESX-31;RZV-VA0-49.bev.int;10.2.3.69;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-50.bev.int_10.2.3.70;RZV-VA0-50.bev.int;10.2.3.70;;;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-51.bev.int_10.2.3.71_RZ1-ESX-31;RZV-VA0-51.bev.int;10.2.3.71;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-55.bev.int_10.2.3.72_RZ1-ESX-34;RZV-VA0-55.bev.int;10.2.3.72;RZ1-ESX-34;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-56.bev.int_10.2.3.73;RZV-VA0-56.bev.int;10.2.3.73;;;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-57.bev.int_10.2.3.74;RZV-VA0-57.bev.int;10.2.3.74;;;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-60.bev.int_10.2.3.75_RZ1-ESX-32;RZV-VA0-60.bev.int;10.2.3.75;RZ1-ESX-32;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-62.bev.int_10.2.3.76_RZ1-ESX-34;RZV-VA0-62.bev.int;10.2.3.76;RZ1-ESX-34;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-63.bev.int_10.2.3.77_rz2-esx-32.bev.int;RZV-VA0-63.bev.int;10.2.3.77;rz2-esx-32.bev.int;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-65.bev.int_10.2.3.78_rz2-esx-32.bev.int;RZV-VA0-65.bev.int;10.2.3.78;rz2-esx-32.bev.int;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-66.bev.int_10.2.3.79;RZV-VA0-66.bev.int;10.2.3.79;;;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-67.bev.int_10.2.3.80;RZV-VA0-67.bev.int;10.2.3.80;;;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-68.bev.int_10.2.3.81_RZ1-ESX-31;RZV-VA0-68.bev.int;10.2.3.81;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-72.bev.int_10.2.3.82_RZ1-ESX-33;RZV-VA0-72.bev.int;10.2.3.82;RZ1-ESX-33;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-73.bev.int_10.2.3.83;RZV-VA0-73.bev.int;10.2.3.83;;;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-75.bev.int_10.2.3.84_rz2-esx-32.bev.int;RZV-VA0-75.bev.int;10.2.3.84;rz2-esx-32.bev.int;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-76.bev.int_10.2.3.85_RZ1-ESX-32;RZV-VA0-76.bev.int;10.2.3.85;RZ1-ESX-32;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-80.bev.int_10.2.3.86_RZ1-ESX-31;RZV-VA0-80.bev.int;10.2.3.86;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-81.bev.int_10.2.3.87_RZ2-ESX-31;RZV-VA0-81.bev.int;10.2.3.87;RZ2-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-83.bev.int_10.2.3.88;RZV-VA0-83.bev.int;10.2.3.88;;;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-85.bev.int_10.2.3.89_RZ1-ESX-31;RZV-VA0-85.bev.int;10.2.3.89;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-90.bev.int_10.2.3.90;RZV-VA0-90.bev.int;10.2.3.90;;;in operation;Windows Server 2008 R2 Standard
+RZV-VA0-91.bev.int_10.2.3.91_RZ1-ESX-34;RZV-VA0-91.bev.int;10.2.3.91;RZ1-ESX-34;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VAT-63-3.bev.int_10.2.3.143_RZ1-ESX-34;RZV-VAT-63-3.bev.int;10.2.3.143;RZ1-ESX-34;CL_PU;in operation;Windows Server 2008 R2 Standard
+RZV-VCB-01.bev.int_10.2.8.150_RZ1-ESX-34;RZV-VCB-01.bev.int;10.2.8.150;RZ1-ESX-34;CL_PU;in operation;Windows Server 2019 Datacenter
+rzv-vdb-01.bev.int_10.1.64.40_RZ1-ESX-46;rzv-vdb-01.bev.int;10.1.64.40;RZ1-ESX-46;CL_DB;in operation;Red Hat Enterprise Server 5.9
+rzv-vtukmo-01.btu.local_RZ1-ESX-47;rzv-vtukmo-01.btu.local;;RZ1-ESX-47;CL_DB;in operation;Oracle Linux Server 8.6
+rzv-vtuorc-01.btu.local_10.75.1.40_RZ1-ESX-46;rzv-vtuorc-01.btu.local;10.75.1.40;RZ1-ESX-46;CL_DB;in operation;Red Hat Enterprise Server 5.9
+RZV-VVC-01.bev.int_10.2.9.100;RZV-VVC-01.bev.int;10.2.9.100;;;in operation;VMware Photon OS
+RZV-VVCSQL-01.bev.int_10.1.64.63_RZ1-ESX-36;RZV-VVCSQL-01.bev.int;10.1.64.63;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2008 R2 Standard
+RZV-VVCSQL-02_RZ1-ESX-36;RZV-VVCSQL-02;;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2008 R2
+rzv-wbc-01.ega.local_10.1.33.22_RZ1-ESX-36;rzv-wbc-01.ega.local;10.1.33.22;RZ1-ESX-36;CL_DMZ;in operation;Windows
+rzv-wbc-02.ega.local_10.1.33.122_RZ1-ESX-37;rzv-wbc-02.ega.local;10.1.33.122;RZ1-ESX-37;CL_DMZ;in operation;Windows
+RZV-WCD-01_RZ1-ESX-39;RZV-WCD-01;;RZ1-ESX-39;CL_WEB;in operation;CentOS Linux 7.5.1804
+RZV-WIN-01.extern.local_10.2.3.201_RZ1-ESX-31;RZV-WIN-01.extern.local;10.2.3.201;RZ1-ESX-31;CL_PU;in operation;Windows Server 2019
+RZV-WIN-02.extern.local_10.2.3.202_rz2-esx-32.bev.int;RZV-WIN-02.extern.local;10.2.3.202;rz2-esx-32.bev.int;CL_PU;in operation;Windows Server 2019
+RZV-ZWR-01_10.1.43.41_RZ1-ESX-39;RZV-ZWR-01;10.1.43.41;RZ1-ESX-39;CL_WEB;in operation;CentOS 7
+RZV-ZWR-02_10.1.15.42_RZ1-ESX-39;RZV-ZWR-02;10.1.15.42;RZ1-ESX-39;CL_WEB;in operation;CentOS 7
+RZV-ZWR-03_10.1.15.43_RZ1-ESX-39;RZV-ZWR-03;10.1.15.43;RZ1-ESX-39;CL_WEB;in operation;CentOS 7
+SENTRY-1_RZ2-ESX-31;SENTRY-1;;RZ2-ESX-31;CL_PU;in operation;CentOS Linux 7.9.2009
+ssh-test_RZ1-ESX-32;ssh-test;;RZ1-ESX-32;CL_PU;in operation;Rocky Linux
+stpdev.bev.gv.at_10.70.5.60;stpdev.bev.gv.at;10.70.5.60;;;in operation;Rocky Linux 9.6
+TELEFONBUCH-01_10.2.20.41_RZ1-ESX-34;TELEFONBUCH-01;10.2.20.41;RZ1-ESX-34;CL_PU;in operation;Rocky Linux 9.4
+temp_CentOS_5.5_64_5GB2011_RZ1-ESX-33;temp_CentOS_5.5_64_5GB2011;;RZ1-ESX-33;CL_PU;in operation;Red Hat Enterprise Linux 5
+temp_CentOS_6.5_Opentext_RZ1-ESX-34;temp_CentOS_6.5_Opentext;;RZ1-ESX-34;CL_PU;in operation;Red Hat Enterprise Linux 6
+temp_CentOS_6.7_Opentext_RZ1-ESX-32;temp_CentOS_6.7_Opentext;;RZ1-ESX-32;CL_PU;in operation;Red Hat Enterprise Linux 6
+temp_CentOS_7.2_ACDC_FTP_intern_RZ1-ESX-34;temp_CentOS_7.2_ACDC_FTP_intern;;RZ1-ESX-34;CL_PU;in operation;CentOS
+temp_CentOS_7.2_ACDC_GNOME_RZ1-ESX-34;temp_CentOS_7.2_ACDC_GNOME;;RZ1-ESX-34;CL_PU;in operation;CentOS
+temp_CentOS_7.2_ACDC_GNOME_WEB_RZ1-ESX-33;temp_CentOS_7.2_ACDC_GNOME_WEB;;RZ1-ESX-33;CL_PU;in operation;CentOS
+temp_CentOS_7.2_DOP20_RZ1-ESX-34;temp_CentOS_7.2_DOP20;;RZ1-ESX-34;CL_PU;in operation;CentOS
+temp_CentOS_7.2_minimal_RZ1-ESX-31;temp_CentOS_7.2_minimal;;RZ1-ESX-31;CL_PU;in operation;CentOS
+temp_CentOS_7.2_minimal_Erwin_RZ1-ESX-32;temp_CentOS_7.2_minimal_Erwin;;RZ1-ESX-32;CL_PU;in operation;CentOS
+temp_CentOS_7.3_minimal_RZ1-ESX-31;temp_CentOS_7.3_minimal;;RZ1-ESX-31;CL_PU;in operation;CentOS
+temp_CentOS_7.4_IMD_RZ1-ESX-32;temp_CentOS_7.4_IMD;;RZ1-ESX-32;CL_PU;in operation;CentOS
+temp_CentOS_7.4_minimal_RZ1-ESX-34;temp_CentOS_7.4_minimal;;RZ1-ESX-34;CL_PU;in operation;CentOS
+temp_CentOS_7.4_portal_RZ1-ESX-32;temp_CentOS_7.4_portal;;RZ1-ESX-32;CL_PU;in operation;CentOS
+temp_CentOS_7.4_portal_20GB_RZ1-ESX-31;temp_CentOS_7.4_portal_20GB;;RZ1-ESX-31;CL_PU;in operation;CentOS
+temp_CentOS_7.5_minimal_RZ1-ESX-33;temp_CentOS_7.5_minimal;;RZ1-ESX-33;CL_PU;in operation;CentOS
+temp_CentOS_7.5_Tomcat_RZ1-ESX-34;temp_CentOS_7.5_Tomcat;;RZ1-ESX-34;CL_PU;in operation;CentOS
+temp_CentOS_7.6_BEUCLX-00_RZ2-ESX-33;temp_CentOS_7.6_BEUCLX-00;;RZ2-ESX-33;CL_PU;in operation;CentOS
+temp_CentOS_7.6_minimal_RZ1-ESX-31;temp_CentOS_7.6_minimal;;RZ1-ESX-31;CL_PU;in operation;CentOS
+temp_CentOS_7.7_minimal_RZ1-ESX-31;temp_CentOS_7.7_minimal;;RZ1-ESX-31;CL_PU;in operation;CentOS
+temp_CentOS_8.1_esp_RZ1-ESX-31;temp_CentOS_8.1_esp;;RZ1-ESX-31;CL_PU;in operation;CentOS
+temp_CentOS_8.1_minimal_RZ1-ESX-32;temp_CentOS_8.1_minimal;;RZ1-ESX-32;CL_PU;in operation;CentOS
+temp_CentOS6.2_201206_RZ1-ESX-32;temp_CentOS6.2_201206;;RZ1-ESX-32;CL_PU;in operation;Red Hat Enterprise Linux 6
+temp_CentOS6.5_201403_RZ1-ESX-32;temp_CentOS6.5_201403;;RZ1-ESX-32;CL_PU;in operation;Red Hat Enterprise Linux 6
+temp_CentOS6.6_201504_RZ1-ESX-34;temp_CentOS6.6_201504;;RZ1-ESX-34;CL_PU;in operation;Red Hat Enterprise Linux 6
+temp_CentOS6.6_201505_24GB_HD_RZ1-ESX-34;temp_CentOS6.6_201505_24GB_HD;;RZ1-ESX-34;CL_PU;in operation;Red Hat Enterprise Linux 6
+temp_CentOS6.6_201505_minHD_RZ1-ESX-31;temp_CentOS6.6_201505_minHD;;RZ1-ESX-31;CL_PU;in operation;Red Hat Enterprise Linux 6
+temp_GEUXPE2011_RZ1-ESX-33;temp_GEUXPE2011;;RZ1-ESX-33;CL_PU;in operation;Windows XP
+temp_OracleLinux_7.4_RZ1-ESX-32;temp_OracleLinux_7.4;;RZ1-ESX-32;CL_PU;in operation;Oracle Linux 4/5
+temp_OracleLinux_7.6_RZ1-ESX-46;temp_OracleLinux_7.6;;RZ1-ESX-46;CL_DB;in operation;Oracle Linux 4/5
+temp_OracleLinux_7.6_RZ1-ESX-32;temp_OracleLinux_7.6;;RZ1-ESX-32;CL_PU;in operation;Oracle Linux 4/5
+temp_OracleLinux_8.3_minimal_RZ1-ESX-47;temp_OracleLinux_8.3_minimal;;RZ1-ESX-47;CL_DB;in operation;Oracle Linux 4/5
+temp_rh2.1_2007_RZ1-ESX-34;temp_rh2.1_2007;;RZ1-ESX-34;CL_PU;in operation;Linux
+temp_RHEL_5.10_OracleTemplate_16GB_Swap_RZ1-ESX-31;temp_RHEL_5.10_OracleTemplate_16GB_Swap;;RZ1-ESX-31;CL_PU;in operation;Red Hat Enterprise Linux 5
+temp_RHEL_5.10_OracleTemplate_16GB_Swap_RZ1-ESX-46;temp_RHEL_5.10_OracleTemplate_16GB_Swap;;RZ1-ESX-46;CL_DB;in operation;Red Hat Enterprise Linux 5
+temp_RHEL_5.11_64_RZ1-ESX-46;temp_RHEL_5.11_64;;RZ1-ESX-46;CL_DB;in operation;Red Hat Enterprise Linux 5
+temp_RHEL_5.11_64_RZ1-ESX-31;temp_RHEL_5.11_64;;RZ1-ESX-31;CL_PU;in operation;Red Hat Enterprise Linux 5
+temp_RHEL_6.5_minimal_RZ1-ESX-31;temp_RHEL_6.5_minimal;;RZ1-ESX-31;CL_PU;in operation;Red Hat Enterprise Linux 6
+temp_RHEL_6.6_OpenText_RZ1-ESX-34;temp_RHEL_6.6_OpenText;;RZ1-ESX-34;CL_PU;in operation;Red Hat Enterprise Linux 6
+temp_RHEL_7.2_OpenText_RZ1-ESX-33;temp_RHEL_7.2_OpenText;;RZ1-ESX-33;CL_PU;in operation;Red Hat Enterprise Linux 6
+temp_RHEL_7.2_OpenText_CTS2_RZ1-ESX-34;temp_RHEL_7.2_OpenText_CTS2;;RZ1-ESX-34;CL_PU;in operation;Red Hat Enterprise Linux 6
+temp_RHEL_7.2_OpenText_OC_CTS2_RZ1-ESX-31;temp_RHEL_7.2_OpenText_OC_CTS2;;RZ1-ESX-31;CL_PU;in operation;Red Hat Enterprise Linux 6
+temp_RHEL_7.3_RZ1-ESX-31;temp_RHEL_7.3;;RZ1-ESX-31;CL_PU;in operation;Red Hat Enterprise Linux 6
+temp_RHEL_8.7_minimal;temp_RHEL_8.7_minimal;;;;in operation;CentOS
+temp_RockyLinux_8_XFCE_V1_1.3_RZ1-ESX-31;temp_RockyLinux_8_XFCE_V1_1.3;;RZ1-ESX-31;CL_PU;in operation;CentOS
+temp_RockyLinux_8.4_kafkasmq_RZ1-ESX-31;temp_RockyLinux_8.4_kafkasmq;;RZ1-ESX-31;CL_PU;in operation;CentOS
+temp_RockyLinux_8.4_minimal_RZ1-ESX-31;temp_RockyLinux_8.4_minimal;;RZ1-ESX-31;CL_PU;in operation;CentOS
+temp_RockyLinux_8.5_AppServerGammer;temp_RockyLinux_8.5_AppServerGammer;;;;in operation;CentOS
+temp_RockyLinux_8.5_minimal_RZ1-ESX-31;temp_RockyLinux_8.5_minimal;;RZ1-ESX-31;CL_PU;in operation;CentOS
+temp_RockyLinux_8.9_BEUCIO_RZ1-ESX-41;temp_RockyLinux_8.9_BEUCIO;;RZ1-ESX-41;CL_BEU;in operation;CentOS
+temp_RockyLinux_9_XFCE_1.0_RZ2-ESX-33;temp_RockyLinux_9_XFCE_1.0;;RZ2-ESX-33;CL_PU;in operation;CentOS
+temp_RockyLinux_9.1_minimal_RZ2-ESX-33;temp_RockyLinux_9.1_minimal;;RZ2-ESX-33;CL_PU;in operation;CentOS
+temp_RockyLinux_9.2_LDAP_RZ1-ESX-50;temp_RockyLinux_9.2_LDAP;;RZ1-ESX-50;CL_PU;in operation;CentOS
+temp_RockyLinux_9.x_BEUCIO_rz2-esx-34.bev.int;temp_RockyLinux_9.x_BEUCIO;;rz2-esx-34.bev.int;CL_PU;in operation;CentOS
+temp_RockyLinux_9.x_BEUCIO_RZ2-ESX-41;temp_RockyLinux_9.x_BEUCIO;;RZ2-ESX-41;CL_BEU;in operation;CentOS
+temp_Ubuntu-2004-Server-minimal_RZ1-ESX-31;temp_Ubuntu-2004-Server-minimal;;RZ1-ESX-31;CL_PU;in operation;Ubuntu
+temp_VASVR201309_RZ1-ESX-34;temp_VASVR201309;;RZ1-ESX-34;CL_PU;in operation;Windows Server 2003 Standard
+temp_VASvrW2k8_RZ1-ESX-33;temp_VASvrW2k8;;RZ1-ESX-33;CL_PU;in operation;Windows Server 2008 R2
+temp_W2k3SP2_2013_RZ1-ESX-32;temp_W2k3SP2_2013;;RZ1-ESX-32;CL_PU;in operation;Windows Server 2003 Enterprise
+temp_w2k8r2-19_RZ1-ESX-31;temp_w2k8r2-19;;RZ1-ESX-31;CL_PU;in operation;Windows Server 2008 R2
+temp_W7-64_20110509_RZ1-ESX-34;temp_W7-64_20110509;;RZ1-ESX-34;CL_PU;in operation;Windows 7
+temp_XPSP3_2011_RZ1-ESX-32;temp_XPSP3_2011;;RZ1-ESX-32;CL_PU;in operation;Windows XP
+temp-GEUVW716-2_RZ1-ESX-41;temp-GEUVW716-2;;RZ1-ESX-41;CL_BEU;in operation;Windows 7
+temp-W7x64-2017_RZ1-ESX-33;temp-W7x64-2017;;RZ1-ESX-33;CL_PU;in operation;Windows 7
+tenable-1dw7r46r_10.1.51.51_RZ2-ESX-36;tenable-1dw7r46r;10.1.51.51;RZ2-ESX-36;CL_DMZ;in operation;CentOS
+TESTVUM2_10.2.8.184_RZ1-ESX-34;TESTVUM2;10.2.8.184;RZ1-ESX-34;CL_PU;in operation;Windows Server 2019
+tmcm01_10.2.1.140_rz2-esx-32.bev.int;tmcm01;10.2.1.140;rz2-esx-32.bev.int;CL_PU;in operation;Windows Server 2019
+tmcm01_10.2.1.140_rz2-esx-32.bev.int;tmcm01;10.2.1.140;rz2-esx-32.bev.int;CL_PU;in operation;Windows Server 2019
+tmcm02_10.2.1.141_RZ2-ESX-31;tmcm02;10.2.1.141;RZ2-ESX-31;CL_PU;in operation;Windows Server 2019
+tmcm02_10.1.41.141_RZ2-ESX-37;tmcm02;10.1.41.141;RZ2-ESX-37;CL_DMZ;in operation;Windows Server 2008 R2
+tmdeep01.bev.int_10.2.1.171_RZ1-ESX-34;tmdeep01.bev.int;10.2.1.171;RZ1-ESX-34;CL_PU;in operation;Windows Server 2019
+tmdeep02.bev.int_10.2.1.172_rz2-esx-34.bev.int;tmdeep02.bev.int;10.2.1.172;rz2-esx-34.bev.int;CL_PU;in operation;Windows Server 2019
+tmdsrelay01.bev.int_RZ1-ESX-31;tmdsrelay01.bev.int;;RZ1-ESX-31;CL_PU;in operation;Rocky Linux 8.5
+tmdsrelay02.bev.int_10.2.1.178_rz2-esx-34.bev.int;tmdsrelay02.bev.int;10.2.1.178;rz2-esx-34.bev.int;CL_PU;in operation;Rocky Linux 8.5
+tmp-GEUW10-23_RZ2-ESX-41;tmp-GEUW10-23;;RZ2-ESX-41;CL_BEU;in operation;Windows 10
+tmp-w2k19_RZ1-ESX-34;tmp-w2k19;;RZ1-ESX-34;CL_PU;in operation;Windows Server 2016
+tmp-w2k19-2024_RZ1-ESX-41;tmp-w2k19-2024;;RZ1-ESX-41;CL_BEU;in operation;Windows Server 2016
+tmp-w2k19datac_RZ1-ESX-29;tmp-w2k19datac;;RZ1-ESX-29;CL-CTX;in operation;Windows Server 2016
+tmp-w2k19datac_RZ1-ESX-32;tmp-w2k19datac;;RZ1-ESX-32;CL_PU;in operation;Windows Server 2016
+TMSPS01_RZ1-ESX-50;TMSPS01;;RZ1-ESX-50;CL_PU;in operation;CentOS 7
+triton01.user.bev.int_10.2.1.33_RZ1-ESX-34;triton01.user.bev.int;10.2.1.33;RZ1-ESX-34;CL_PU;in operation;Windows Server 2019 Datacenter
+V-WIKI_RZ1-ESX-50;V-WIKI;;RZ1-ESX-50;CL_PU;in operation;CentOS Linux 7.8.2003
+V000-IS-3-SVR_RZ1-ESX-34;V000-IS-3-SVR;;RZ1-ESX-34;CL_PU;inoperative;Windows 2000 Advanced Server
+VCMAILRELAY_10.2.9.60_RZ1-ESX-31;VCMAILRELAY;10.2.9.60;RZ1-ESX-31;CL_PU;in operation;Rocky Linux 8.5
+VDE-1_10.1.23.61_RZ1-ESX-36;VDE-1;10.1.23.61;RZ1-ESX-36;CL_DMZ;in operation;Rocky Linux 8.9
+VDE-2_RZ2-ESX-36;VDE-2;;RZ2-ESX-36;CL_DMZ;in operation;Rocky Linux 8.9
+VDE-3_RZ1-ESX-37;VDE-3;;RZ1-ESX-37;CL_DMZ;in operation;Rocky Linux 8.9
+VDE-4_RZ1-ESX-39;VDE-4;;RZ1-ESX-39;CL_WEB;in operation;Rocky Linux 8.9
+VDE-5_10.1.42.65_RZ1-ESX-39;VDE-5;10.1.42.65;RZ1-ESX-39;CL_WEB;in operation;Rocky Linux 8.9
+VDE-6_10.1.42.66_RZ1-ESX-39;VDE-6;10.1.42.66;RZ1-ESX-39;CL_WEB;in operation;Rocky Linux 8.9
+VDE-7_RZ1-ESX-39;VDE-7;;RZ1-ESX-39;CL_WEB;in operation;Rocky Linux 8.9
+VDE-8_RZ2-ESX-37;VDE-8;;RZ2-ESX-37;CL_DMZ;in operation;Rocky Linux 8.9
+vdi-nvidia-lic1.bev.int_10.2.9.191_RZ1-ESX-33;vdi-nvidia-lic1.bev.int;10.2.9.191;RZ1-ESX-33;CL_PU;in operation;Ubuntu Linux
+vdi-nvidia-lic3.bev.int_10.2.9.193;vdi-nvidia-lic3.bev.int;10.2.9.193;;;in operation;Ubuntu Linux
+vdicomp-02.bev.int_10.2.9.134_RZ2-ESX-31;vdicomp-02.bev.int;10.2.9.134;RZ2-ESX-31;CL_PU;in operation;Windows Server 2019 Datacenter
+VDICON-01.bev.int_10.2.9.121_RZ2-ESX-31;VDICON-01.bev.int;10.2.9.121;RZ2-ESX-31;CL_PU;in operation;Windows Server 2019 Datacenter
+vdicon-02.bev.int_10.2.9.132_RZ1-ESX-34;vdicon-02.bev.int;10.2.9.132;RZ1-ESX-34;CL_PU;in operation;Windows Server 2019 Datacenter
+VDICON-33.bev.int_10.2.9.133_RZ2-ESX-31;VDICON-33.bev.int;10.2.9.133;RZ2-ESX-31;CL_PU;in operation;Windows Server 2019 Datacenter
+vdiloginsight.bev.int_10.2.9.124;vdiloginsight.bev.int;10.2.9.124;;;in operation;SuSE Linux Enterprise Server 11
+vdinsx-01.bev.int_10.2.9.123_RZ2-ESX-33;vdinsx-01.bev.int;10.2.9.123;RZ2-ESX-33;CL_PU;in operation;Other 4.x or later Linux
+vdinsxm-02.bev.int_10.2.9.142_RZ1-ESX-50;vdinsxm-02.bev.int;10.2.9.142;RZ1-ESX-50;CL_PU;in operation;Linux
+vdinsxm-03.bev.int_10.2.9.143_RZ2-ESX-33;vdinsxm-03.bev.int;10.2.9.143;RZ2-ESX-33;CL_PU;in operation;Linux
+vdinsxm-04_RZ2-ESX-33;vdinsxm-04;;RZ2-ESX-33;CL_PU;in operation;Ubuntu
+vdinsxm-04_rz2-esx-34.bev.int;vdinsxm-04;;rz2-esx-34.bev.int;CL_PU;in operation;Ubuntu
+vdinsxm.bev.int_RZ1-ESX-33;vdinsxm.bev.int;;RZ1-ESX-33;CL_PU;in operation;Linux
+vdivcsa.bev.int_10.2.9.120;vdivcsa.bev.int;10.2.9.120;;;in operation;VMware Photon OS
+VERSION-1_10.2.3.16;VERSION-1;10.2.3.16;;;in operation;CentOS Linux 7.9.2009
+VERSION-2_10.1.29.51;VERSION-2;10.1.29.51;;;in operation;CentOS 7
+vmwareVCSAupdate_10.2.8.152_RZ1-ESX-32;vmwareVCSAupdate;10.2.8.152;RZ1-ESX-32;CL_PU;in operation;CentOS Linux 7.9.2009
+VPN-01_10.1.20.11_RZ1-ESX-39;VPN-01;10.1.20.11;RZ1-ESX-39;CL_WEB;in operation;Windows Server 2019
+VPN-01_10.1.20.11_RZ1-ESX-59;VPN-01;10.1.20.11;RZ1-ESX-59;CL_WEB;in operation;Windows Server 2019
+vrops-node_10.2.8.183_RZ1-ESX-33;vrops-node;10.2.8.183;RZ1-ESX-33;CL_PU;in operation;VMware Photon OS
+vvcctx-01.bev.int_10.2.9.106_RZ2-ESX-31;vvcctx-01.bev.int;10.2.9.106;RZ2-ESX-31;CL_PU;in operation;VMware Photon OS
+W10checkpoint_10.6.9.230_rz2-esx-51.bev.int;W10checkpoint;10.6.9.230;rz2-esx-51.bev.int;CL_BEU;in operation;Windows 10
+wfs.bev.gv.at_RZ1-ESX-34;wfs.bev.gv.at;;RZ1-ESX-34;CL_PU;in operation;Rocky Linux 8.5
+wsus02_10.1.25.25_RZ1-ESX-36;wsus02;10.1.25.25;RZ1-ESX-36;CL_DMZ;in operation;Windows
+XFCE-Test_RZ1-ESX-32;XFCE-Test;;RZ1-ESX-32;CL_PU;in operation;CentOS
+XP8Test_CO7_RZ1-ESX-41;XP8Test_CO7;;RZ1-ESX-41;CL_BEU;in operation;CentOS
+XP8Test-RL9_RZ1-ESX-41;XP8Test-RL9;;RZ1-ESX-41;CL_BEU;in operation;CentOS
+XP8Test-W2k19_RZ2-ESX-41;XP8Test-W2k19;;RZ2-ESX-41;CL_BEU;in operation;Windows Server 2016
+XP8Test-W2k19_10.70.2.190_RZ1-ESX-41;XP8Test-W2k19;10.70.2.190;RZ1-ESX-41;CL_BEU;in operation;Windows Server 2019
+XP8Test-W2k19_10.70.2.190_rz2-esx-51.bev.int;XP8Test-W2k19;10.70.2.190;rz2-esx-51.bev.int;CL_BEU;in operation;Windows Server 2019
+ZDA-2_10.2.3.22;ZDA-2;10.2.3.22;;;in operation;CentOS Linux 7.8.2003
+ZLH-01;ZLH-01;;;;in operation;CentOS Linux 7.9.2009
+ZLH-02;ZLH-02;;;;in operation;CentOS Linux 7.9.2009
+ZLHRADM-01.bev.int_10.1.41.50_RZ1-ESX-36;ZLHRADM-01.bev.int;10.1.41.50;RZ1-ESX-36;CL_DMZ;in operation;Windows Server 2008 R2 Standard

@@ -1,0 +1,8 @@
+﻿"Title";"Primary hostaddress";"Primary hostname";"Manufacturer";"Model";"Location path";"CMDB status"
+"rz1-esx-16";"10.2.4.16";"";"Hewlett Packard Enterprise";"ProLiant DL360 Gen10";"-";"in operation"
+"RZ1-MED-01";"10.2.2.22";"";"Hewlett Packard Enterprise";"ProLiant DL360 Gen10";"-";"in operation"
+"RZ1-SEA-01.bev.int";"";"";"Hewlett Packard Enterprise";"Storage Performance File Controller";"-";"in operation"
+"RZ1-SEA-02.bev.int";"";"";"Hewlett Packard Enterprise";"Storage Performance File Controller";"-";"in operation"
+"RZ2-NBU-01.bev.int";"";"";"Hewlett Packard Enterprise";"ProLiant DL360 Gen10";"-";"in operation"
+"RZ2-SEA-01.bev.int";"";"";"Hewlett Packard Enterprise";"Storage Performance File Controller";"-";"in operation"
+"RZ2-SEA-02.bev.int";"";"";"Hewlett Packard Enterprise";"Storage Performance File Controller";"-";"in operation"

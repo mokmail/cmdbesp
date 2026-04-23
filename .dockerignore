@@ -1,0 +1,15 @@
+.venv/
+.git/
+node_modules/
+dist/
+__pycache__/
+*.pyc
+nohup.out
+dashboard.log
+dashboard2.log
+react-dashboard/
+nicht nötig/
+*.pdf
+*.xlsx
+*.txt
+.eslintcache

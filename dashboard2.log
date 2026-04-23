@@ -1,0 +1,882 @@
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8502
+  Network URL: http://192.168.1.13:8502
+  External URL: http://83.64.202.110:8502
+
+2026-04-16 14:10:44.377 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 689, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 144, in <module>
+    st.dataframe(in_both.drop(columns=["_merge"]), width="stretch", height=400)
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/metrics_util.py", line 563, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/elements/arrow.py", line 937, in dataframe
+    proto.arrow_data.data = dataframe_util.convert_pandas_df_to_arrow_bytes(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/dataframe_util.py", line 818, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow/table.pxi", line 4796, in pyarrow.lib.Table.from_pandas
+  File "/home/kmail/.local/lib/python3.11/site-packages/pyarrow/pandas_compat.py", line 608, in dataframe_to_arrays
+    convert_fields) = _get_columns_to_convert(df, schema, preserve_index,
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/pyarrow/pandas_compat.py", line 388, in _get_columns_to_convert
+    raise ValueError(
+ValueError: Duplicate column names found: ['Komponente Nr. (ESP_20260416.csv)', 'Gerätename (ESP_20260416.csv)', 'IP Adresse', 'Person (System) (ESP_20260416.csv)', 'Typ (ESP_20260416.csv)', 'System Name (ESP_20260416.csv)', 'Status (ESP_20260416.csv)', 'BS (ESP_20260416.csv)', 'BS SP (ESP_20260416.csv)', 'Bemerkungen (ESP_20260416.csv)', 'Komponente Nr. (ESP_20260416.csv)', 'Gerätename (ESP_20260416.csv)', 'Person (System) (ESP_20260416.csv)', 'Typ (ESP_20260416.csv)', 'System Name (ESP_20260416.csv)', 'Status (ESP_20260416.csv)', 'BS (ESP_20260416.csv)', 'BS SP (ESP_20260416.csv)', 'Bemerkungen (ESP_20260416.csv)']
+2026-04-16 14:10:47.909 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 689, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 144, in <module>
+    st.dataframe(in_both.drop(columns=["_merge"]), width="stretch", height=400)
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/metrics_util.py", line 563, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/elements/arrow.py", line 937, in dataframe
+    proto.arrow_data.data = dataframe_util.convert_pandas_df_to_arrow_bytes(
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/dataframe_util.py", line 818, in convert_pandas_df_to_arrow_bytes
+    table = pa.Table.from_pandas(df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pyarrow/table.pxi", line 4796, in pyarrow.lib.Table.from_pandas
+  File "/home/kmail/.local/lib/python3.11/site-packages/pyarrow/pandas_compat.py", line 608, in dataframe_to_arrays
+    convert_fields) = _get_columns_to_convert(df, schema, preserve_index,
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/pyarrow/pandas_compat.py", line 388, in _get_columns_to_convert
+    raise ValueError(
+ValueError: Duplicate column names found: ['Komponente Nr. (ESP_20260416.csv)', 'Gerätename (ESP_20260416.csv)', 'IP Adresse', 'Person (System) (ESP_20260416.csv)', 'Typ (ESP_20260416.csv)', 'System Name (ESP_20260416.csv)', 'Status (ESP_20260416.csv)', 'BS (ESP_20260416.csv)', 'BS SP (ESP_20260416.csv)', 'Bemerkungen (ESP_20260416.csv)', 'Komponente Nr. (ESP_20260416.csv)', 'Gerätename (ESP_20260416.csv)', 'Person (System) (ESP_20260416.csv)', 'Typ (ESP_20260416.csv)', 'System Name (ESP_20260416.csv)', 'Status (ESP_20260416.csv)', 'BS (ESP_20260416.csv)', 'BS SP (ESP_20260416.csv)', 'Bemerkungen (ESP_20260416.csv)']
+2026-04-16 14:33:12.183 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:33:12.183 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:33:22.280 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:33:22.280 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:33:42.940 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:33:42.940 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:33:43.782 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:33:43.782 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:33:44.548 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:33:44.549 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:33:45.772 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:33:45.773 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:33:47.805 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:33:47.805 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:33:48.654 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:33:48.655 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:33:49.413 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:33:49.414 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:33:50.349 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:33:50.350 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:33:51.117 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:33:51.118 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:33:52.173 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:33:52.174 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:33:53.012 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:33:53.013 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:33:53.756 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:33:53.756 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:33:54.581 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:33:54.582 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:33:56.060 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:33:56.061 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:34:05.712 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:34:05.713 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:34:08.493 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:34:08.494 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:34:09.174 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:34:09.175 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:34:09.910 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:34:09.910 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:34:10.653 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:34:10.654 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:34:11.516 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:34:11.517 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:34:12.472 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:34:12.472 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:34:13.509 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 168
+    elif view_mode == "Compare Shares to ESP":
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:34:13.509 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:39:37.915 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 181
+    elif "UniqueID" not in esp_df.columns:
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:39:37.915 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:39:41.799 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 181
+    elif "UniqueID" not in esp_df.columns:
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:39:41.799 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:40:23.962 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 181
+    elif "UniqueID" not in esp_df.columns:
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:40:23.962 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:40:29.747 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 181
+    elif "UniqueID" not in esp_df.columns:
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:40:29.748 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:40:33.429 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 181
+    elif "UniqueID" not in esp_df.columns:
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:40:33.429 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:40:44.043 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 181
+    elif "UniqueID" not in esp_df.columns:
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:40:44.043 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:40:46.475 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 181
+    elif "UniqueID" not in esp_df.columns:
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:40:46.475 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:40:50.796 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 181
+    elif "UniqueID" not in esp_df.columns:
+    ^^^^
+SyntaxError: invalid syntax
+2026-04-16 14:40:50.796 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:40:58.665 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 186
+    shares_df = shares_df.copy()
+IndentationError: unexpected indent
+2026-04-16 14:40:58.666 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:41:02.443 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 186
+    shares_df = shares_df.copy()
+IndentationError: unexpected indent
+2026-04-16 14:41:02.444 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:41:06.298 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 186
+    shares_df = shares_df.copy()
+IndentationError: unexpected indent
+2026-04-16 14:41:06.299 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:41:09.001 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 186
+    shares_df = shares_df.copy()
+IndentationError: unexpected indent
+2026-04-16 14:41:09.002 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:41:13.364 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 186
+    shares_df = shares_df.copy()
+IndentationError: unexpected indent
+2026-04-16 14:41:13.364 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:41:21.095 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 186
+    shares_df = shares_df.copy()
+IndentationError: unexpected indent
+2026-04-16 14:41:21.095 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:41:26.977 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 186
+    shares_df = shares_df.copy()
+IndentationError: unexpected indent
+2026-04-16 14:41:26.978 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:41:30.008 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 186
+    shares_df = shares_df.copy()
+IndentationError: unexpected indent
+2026-04-16 14:41:30.008 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:41:31.876 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 186
+    shares_df = shares_df.copy()
+IndentationError: unexpected indent
+2026-04-16 14:41:31.877 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:41:53.667 Script compilation error
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 591, in _run_script
+    code = self._script_cache.get_bytecode(script_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_cache.py", line 72, in get_bytecode
+    filebody = magic.add_magic(filebody, script_path)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/magic.py", line 45, in add_magic
+    tree = ast.parse(code, script_path, "exec")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/ast.py", line 50, in parse
+    return compile(source, filename, mode, flags,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 186
+    shares_df = shares_df.copy()
+IndentationError: unexpected indent
+2026-04-16 14:41:53.668 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-04-16 14:42:33.013 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 689, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 229, in <module>
+    styled = display_df.style.applymap(color_match, subset=["ServerFound", "ShareFound", "MatchStatus"])
+             ^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/pandas/core/generic.py", line 6206, in __getattr__
+    return object.__getattribute__(self, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/pandas/core/frame.py", line 1430, in style
+    raise AttributeError("The '.style' accessor requires jinja2")
+AttributeError: The '.style' accessor requires jinja2
+2026-04-16 14:42:55.633 Uncaught app execution
+Traceback (most recent call last):
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 129, in exec_func_with_error_handling
+    result = func()
+             ^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 689, in code_to_exec
+    exec(code, module.__dict__)  # noqa: S102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/Downloads/cmdbesp/dashboard.py", line 229, in <module>
+    styled = display_df.style.applymap(color_match, subset=["ServerFound", "ShareFound", "MatchStatus"])
+             ^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/pandas/core/generic.py", line 6206, in __getattr__
+    return object.__getattribute__(self, name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kmail/.local/lib/python3.11/site-packages/pandas/core/frame.py", line 1430, in style
+    raise AttributeError("The '.style' accessor requires jinja2")
+AttributeError: The '.style' accessor requires jinja2
+  Stopping...
