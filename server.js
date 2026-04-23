@@ -2,7 +2,8 @@ import { createServer } from 'node:http';
 import { mkdir, writeFile, readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 
-const OUTPUT_DIR = path.join(process.cwd(), 'ID_generated');
+const UPLOADS_DIR = path.join(process.cwd(), 'uploads');
+const OUTPUT_DIR = path.join(UPLOADS_DIR, 'ID_generated');
 const PORT = parseInt(process.env.API_PORT || '3001', 10);
 
 const sendJson = (res, statusCode, body) => {

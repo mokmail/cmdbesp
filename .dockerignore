@@ -13,3 +13,4 @@ nicht nötig/
 *.xlsx
 *.txt
 .eslintcache
+dashboard.py

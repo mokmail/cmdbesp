@@ -1,0 +1,13 @@
+services:
+  cmdbesp:
+    build: .
+    image: mokmail/cmdbesp:latest
+    container_name: cmdbesp
+    ports:
+      - "80:80"
+    volumes:
+      - uploads:/app/uploads
+    restart: unless-stopped
+
+volumes:
+  uploads:

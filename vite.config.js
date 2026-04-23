@@ -31,7 +31,7 @@ const registerSaveUniqueIdMiddleware = (middlewares) => {
         }
 
         const safeFileName = fileName.replace(/[\\/]/g, '_')
-        const outputDir = path.join(process.cwd(), 'ID_generated')
+        const outputDir = path.join(process.cwd(), 'uploads', 'ID_generated')
         const outputPath = path.join(outputDir, safeFileName)
 
         await mkdir(outputDir, { recursive: true })
@@ -57,7 +57,7 @@ const registerSaveUniqueIdMiddleware = (middlewares) => {
     }
 
     try {
-      const outputDir = path.join(process.cwd(), 'ID_generated')
+      const outputDir = path.join(process.cwd(), 'uploads', 'ID_generated')
       await mkdir(outputDir, { recursive: true })
       const files = await readdir(outputDir)
       const csvFiles = files.filter((f) => f.toLowerCase().endsWith('.csv'))

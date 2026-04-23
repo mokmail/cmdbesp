@@ -288,8 +288,8 @@ export const SectionHeading = ({ icon, children, className = '' }) => (
   </div>
 )
 
-const originalCsvSources = import.meta.glob('../*.csv', { query: '?raw', import: 'default' })
-const generatedCsvSources = import.meta.glob('../ID_generated/*.csv', { query: '?raw', import: 'default' })
+const originalCsvSources = import.meta.glob('../uploads/*.csv', { query: '?raw', import: 'default' })
+const generatedCsvSources = import.meta.glob('../uploads/ID_generated/*.csv', { query: '?raw', import: 'default' })
 
 export const parseCsvText = (name, text) => {
   const normalizedText = normalizeText(text)
@@ -790,7 +790,7 @@ function App() {
       const errors = []
 
       for (const [path, loader] of Object.entries(originalCsvSources)) {
-        const name = path.replace('../', '')
+        const name = path.replace('../uploads/', '')
         try {
           const text = await loader()
           const parsed = parseCsvText(name, text)
@@ -803,7 +803,7 @@ function App() {
       }
 
       for (const [path, loader] of Object.entries(generatedCsvSources)) {
-        const name = path.replace('../ID_generated/', '')
+        const name = path.replace('../uploads/ID_generated/', '')
         try {
           const text = await loader()
           const parsed = parseCsvText(name, text)
@@ -838,41 +838,9 @@ function App() {
       <header>
         <h1><Icon name="dashboard" size={32} /> CIO Data Intelligence</h1>
         <div className="header-copy">
-          <p>CMDB vs ESP data intelligence and insight.</p>
-          <p>Designed by Mohammed Kmail</p>
+          <p>Created by Mohammed Kmail and Christoph Püler from the CIO department to analyze the IT infrastructure.</p>
         </div>
       </header>
-
-      {viewMode !== VIEW_MODES[3].id && (
-        <section className="upload-panel">
-          <div className="upload-label">
-            <Icon name="folder" size={22} />
-            <span>
-              Single File: {originalFiles.length} original CSV file{originalFiles.length !== 1 ? 's' : ''} ·
-              Compare: {generatedFiles.length} generated CSV file{generatedFiles.length !== 1 ? 's' : ''} from ID_generated
-            </span>
-          </div>
-          <label className="upload-action">
-            <Icon name="upload" size={20} />
-            <span>Upload file</span>
-            <input type="file" accept=".csv,.xlsx,.xls" multiple onChange={handleFileUpload} />
-          </label>
-          {uploadedFiles.length > 0 && (
-            <div className="uploaded-files-list">
-              {uploadedFiles.map((file) => (
-                <span key={file.name} className="uploaded-file-tag">
-                  <Icon name="file" size={14} />
-                  {file.name}
-                  <button type="button" className="remove-file-btn" onClick={() => removeUploadedFile(file.name)} title="Remove file">
-                    <Icon name="close" size={14} />
-                  </button>
-                </span>
-              ))}
-            </div>
-          )}
-          {error && <div className="error-box"><Icon name="warning" size={20} /> {error}</div>}
-        </section>
-      )}
 
       <section className="tabs">
         {VIEW_MODES.map((mode) => (
@@ -911,6 +879,14 @@ function App() {
               setSingleSearchColumn={setSingleSearchColumn}
               filteredSingleRows={filteredSingleRows}
               singleFilterStats={singleFilterStats}
+              setViewMode={setViewMode}
+              originalFileCount={originalFiles.length}
+              generatedFileCount={generatedFiles.length}
+              uploadedFiles={uploadedFiles}
+              uploadedFileCount={uploadedFiles.length}
+              handleFileUpload={handleFileUpload}
+              removeUploadedFile={removeUploadedFile}
+              error={error}
             />
           )}
 
