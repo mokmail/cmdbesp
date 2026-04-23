@@ -251,6 +251,19 @@ const ICONS = {
       <line x1="13" y1="9.5" x2="13" y2="17" stroke="currentColor" strokeWidth="1" opacity="0.3" />
     </>
   ),
+  upload: (
+    <>
+      <path d="M12 16V4m0 0-4 4m4-4 4 4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M20 16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </>
+  ),
+  trash: (
+    <>
+      <path d="M4 7h16M10 11v6M14 11v6" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2l1-12" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M10 4V3h4v1" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </>
+  ),
 }
 
 export const Icon = ({ name, size = 20, className = '' }) => (
@@ -300,6 +313,22 @@ export const parseCsvText = (name, text) => {
     columns: parsed.meta.fields || [],
     errors: parsed.errors,
   }
+}
+
+export const parseXlsxFile = (name, arrayBuffer) => {
+  const workbook = XLSX.read(arrayBuffer, { type: 'array' })
+  const sheetName = workbook.SheetNames[0]
+  const sheet = workbook.Sheets[sheetName]
+  const json = XLSX.utils.sheet_to_json(sheet, { defval: '' })
+  const columns = json.length > 0 ? Object.keys(json[0]).map(normalizeHeader) : []
+  const rows = json.map((row) => {
+    const normalized = {}
+    Object.keys(row).forEach((key) => {
+      normalized[normalizeHeader(key)] = row[key]
+    })
+    return normalized
+  })
+  return { name, rows, columns, errors: [] }
 }
 
 export const compareMultiColumn = (fileA, fileB) => {
@@ -474,12 +503,55 @@ function App() {
   const [uniqueIdColumns, setUniqueIdColumns] = useState([])
   const [generatedUniqueIds, setGeneratedUniqueIds] = useState(null)
   const [showUniqueIdModal, setShowUniqueIdModal] = useState(false)
+  const [uploadedFiles, setUploadedFiles] = useState([])
 
-  const originalLoadedNames = useMemo(() => originalFiles.map((file) => file.name), [originalFiles])
+  const handleFileUpload = (event) => {
+    const files = Array.from(event.target.files || [])
+    if (!files.length) return
+
+    const newUploaded = []
+    const errors = []
+
+    const processFiles = async () => {
+      for (const file of files) {
+        const ext = file.name.split('.').pop().toLowerCase()
+        try {
+          if (ext === 'csv') {
+            const text = await file.text()
+            const parsed = parseCsvText(file.name, text)
+            newUploaded.push(parsed)
+          } else if (ext === 'xlsx' || ext === 'xls') {
+            const buffer = await file.arrayBuffer()
+            const parsed = parseXlsxFile(file.name, buffer)
+            newUploaded.push(parsed)
+          } else {
+            errors.push(`Unsupported file format: ${file.name}`)
+          }
+        } catch (e) {
+          errors.push(`Failed to parse ${file.name}: ${e}`)
+        }
+      }
+
+      setUploadedFiles((prev) => [...prev, ...newUploaded])
+      if (errors.length > 0) setError(errors.join('; '))
+    }
+
+    processFiles()
+    event.target.value = ''
+  }
+
+  const removeUploadedFile = (fileName) => {
+    setUploadedFiles((prev) => prev.filter((f) => f.name !== fileName))
+    if (selectedFile === fileName) setSelectedFile('')
+  }
+
+  const allOriginalFiles = useMemo(() => [...originalFiles, ...uploadedFiles], [originalFiles, uploadedFiles])
+
+  const originalLoadedNames = useMemo(() => allOriginalFiles.map((file) => file.name), [allOriginalFiles])
   const generatedLoadedNames = useMemo(() => generatedFiles.map((file) => file.name), [generatedFiles])
   const originalFileMap = useMemo(
-    () => Object.fromEntries(originalFiles.map((file) => [file.name, file])),
-    [originalFiles],
+    () => Object.fromEntries(allOriginalFiles.map((file) => [file.name, file])),
+    [allOriginalFiles],
   )
   const generatedFileMap = useMemo(
     () => Object.fromEntries(generatedFiles.map((file) => [file.name, file])),
@@ -748,6 +820,19 @@ function App() {
     loadCsvFiles()
   }, [])
 
+  const reloadGeneratedFiles = async () => {
+    try {
+      const res = await fetch('/api/read-generated')
+      const result = await res.json()
+      if (result.ok && result.files) {
+        const parsed = result.files.map((f) => parseCsvText(f.fileName, f.content))
+        setGeneratedFiles(parsed)
+      }
+    } catch (e) {
+      console.error('Failed to reload generated files:', e)
+    }
+  }
+
   return (
     <div className="app-shell">
       <header>
@@ -767,6 +852,24 @@ function App() {
               Compare: {generatedFiles.length} generated CSV file{generatedFiles.length !== 1 ? 's' : ''} from ID_generated
             </span>
           </div>
+          <label className="upload-action">
+            <Icon name="upload" size={20} />
+            <span>Upload file</span>
+            <input type="file" accept=".csv,.xlsx,.xls" multiple onChange={handleFileUpload} />
+          </label>
+          {uploadedFiles.length > 0 && (
+            <div className="uploaded-files-list">
+              {uploadedFiles.map((file) => (
+                <span key={file.name} className="uploaded-file-tag">
+                  <Icon name="file" size={14} />
+                  {file.name}
+                  <button type="button" className="remove-file-btn" onClick={() => removeUploadedFile(file.name)} title="Remove file">
+                    <Icon name="close" size={14} />
+                  </button>
+                </span>
+              ))}
+            </div>
+          )}
           {error && <div className="error-box"><Icon name="warning" size={20} /> {error}</div>}
         </section>
       )}
@@ -904,6 +1007,7 @@ function App() {
           generatedUniqueIds={generatedUniqueIds}
           setGeneratedUniqueIds={setGeneratedUniqueIds}
           onClose={() => setShowUniqueIdModal(false)}
+          onSaved={reloadGeneratedFiles}
         />
       )}
     </div>

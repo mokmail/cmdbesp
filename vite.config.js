@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { mkdir, writeFile } from 'node:fs/promises'
+import { mkdir, writeFile, readdir, readFile } from 'node:fs/promises'
 import path from 'node:path'
 
 const registerSaveUniqueIdMiddleware = (middlewares) => {
@@ -46,6 +46,38 @@ const registerSaveUniqueIdMiddleware = (middlewares) => {
         res.end(JSON.stringify({ ok: false, error: String(error) }))
       }
     })
+  })
+
+  middlewares.use('/api/read-generated', async (req, res) => {
+    if (req.method !== 'GET') {
+      res.statusCode = 405
+      res.setHeader('Content-Type', 'application/json')
+      res.end(JSON.stringify({ ok: false, error: 'Method not allowed' }))
+      return
+    }
+
+    try {
+      const outputDir = path.join(process.cwd(), 'ID_generated')
+      await mkdir(outputDir, { recursive: true })
+      const files = await readdir(outputDir)
+      const csvFiles = files.filter((f) => f.toLowerCase().endsWith('.csv'))
+
+      const fileContents = await Promise.all(
+        csvFiles.map(async (fileName) => {
+          const filePath = path.join(outputDir, fileName)
+          const content = await readFile(filePath, 'utf8')
+          return { fileName, content }
+        })
+      )
+
+      res.statusCode = 200
+      res.setHeader('Content-Type', 'application/json')
+      res.end(JSON.stringify({ ok: true, files: fileContents }))
+    } catch (error) {
+      res.statusCode = 500
+      res.setHeader('Content-Type', 'application/json')
+      res.end(JSON.stringify({ ok: false, error: String(error) }))
+    }
   })
 }
 

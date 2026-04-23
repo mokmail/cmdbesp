@@ -1,5 +1,5 @@
 import { createServer } from 'node:http';
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, writeFile, readdir, readFile } from 'node:fs/promises';
 import path from 'node:path';
 
 const OUTPUT_DIR = path.join(process.cwd(), 'ID_generated');
@@ -36,6 +36,27 @@ const server = createServer(async (req, res) => {
         sendJson(res, 500, { ok: false, error: String(error) });
       }
     });
+    return;
+  }
+
+  if (req.url === '/api/read-generated' && req.method === 'GET') {
+    try {
+      await mkdir(OUTPUT_DIR, { recursive: true });
+      const files = await readdir(OUTPUT_DIR);
+      const csvFiles = files.filter((f) => f.toLowerCase().endsWith('.csv'));
+
+      const fileContents = await Promise.all(
+        csvFiles.map(async (fileName) => {
+          const filePath = path.join(OUTPUT_DIR, fileName);
+          const content = await readFile(filePath, 'utf8');
+          return { fileName, content };
+        })
+      );
+
+      sendJson(res, 200, { ok: true, files: fileContents });
+    } catch (error) {
+      sendJson(res, 500, { ok: false, error: String(error) });
+    }
     return;
   }
 

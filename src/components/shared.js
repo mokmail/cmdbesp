@@ -332,13 +332,12 @@ export const compareShareRows = (sharesRows, espRows) => {
 
 export const GENERATED_IDS_DIR = 'ID_generated'
 
-export const saveUniqueIdCsv = async (generatedUniqueIds, originalColumns, fileName) => {
+export const buildUniqueIdCsvContent = (generatedUniqueIds, originalColumns) => {
   if (!generatedUniqueIds || generatedUniqueIds.length === 0) {
     throw new Error('No data to save')
   }
-
   const newColumns = [...originalColumns, 'GeneratedUniqueID']
-  const csvContent = [
+  return [
     newColumns.join(';'),
     ...generatedUniqueIds.map((row) =>
       newColumns.map((col) => {
@@ -348,14 +347,22 @@ export const saveUniqueIdCsv = async (generatedUniqueIds, originalColumns, fileN
       }).join(';')
     ),
   ].join('\n')
+}
 
-  const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })
-  const url = URL.createObjectURL(blob)
-  const link = document.createElement('a')
-  link.href = url
-  link.download = `${fileName.replace(/\.csv$/i, '')}_with_uid.csv`
-  document.body.appendChild(link)
-  link.click()
-  document.body.removeChild(link)
-  URL.revokeObjectURL(url)
+export const saveUniqueIdCsv = async (generatedUniqueIds, originalColumns, fileName) => {
+  const csvContent = buildUniqueIdCsvContent(generatedUniqueIds, originalColumns)
+  const outputName = `${fileName.replace(/\.csv$/i, '')}_with_uid.csv`
+
+  const res = await fetch('/api/save-uniqueid', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ fileName: outputName, content: csvContent }),
+  })
+
+  const result = await res.json()
+  if (!result.ok) {
+    throw new Error(result.error || 'Save failed')
+  }
+
+  return result
 }

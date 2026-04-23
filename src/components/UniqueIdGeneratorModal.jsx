@@ -10,13 +10,16 @@ export default function UniqueIdGeneratorModal({
   generatedUniqueIds,
   setGeneratedUniqueIds,
   onClose,
+  onSaved,
 }) {
   const [replaceFrom, setReplaceFrom] = useState('')
   const [replaceTo, setReplaceTo] = useState('')
   const [trimBeforeFirstDelimiter, setTrimBeforeFirstDelimiter] = useState('')
   const [escapeValues, setEscapeValues] = useState(false)
+  const [saving, setSaving] = useState(false)
+  const [saveResult, setSaveResult] = useState(null)
 
-  const handleGenerate = () => {
+  const handleGenerate = async () => {
     if (uniqueIdColumns.length === 0) return
     const generated = generateUniqueIds(selectedFileData.rows, uniqueIdColumns, {
       replaceFrom,
@@ -25,17 +28,27 @@ export default function UniqueIdGeneratorModal({
       escapeValues,
     })
     setGeneratedUniqueIds(generated)
+    setSaveResult(null)
+    await handleSaveGenerated(generated)
   }
 
-  const handleSave = async () => {
-    if (!generatedUniqueIds) return
+  const handleSaveGenerated = async (ids) => {
+    if (!ids) return
+    setSaving(true)
+    setSaveResult(null)
     try {
-      await saveUniqueIdCsv(generatedUniqueIds, selectedFileData.columns, selectedFile)
+      await saveUniqueIdCsv(ids, selectedFileData.columns, selectedFile)
+      setSaveResult('saved')
+      if (onSaved) await onSaved()
     } catch (error) {
-      alert(`Failed to save. Please ensure the Vite dev server is running.`)
+      setSaveResult('error')
       console.error(error)
+    } finally {
+      setSaving(false)
     }
   }
+
+  const handleSave = () => handleSaveGenerated(generatedUniqueIds)
 
   return (
     <div className="modal-overlay" onClick={onClose}>
@@ -126,18 +139,29 @@ export default function UniqueIdGeneratorModal({
               type="button"
               className="action-button"
               onClick={handleGenerate}
-              disabled={uniqueIdColumns.length === 0}
+              disabled={uniqueIdColumns.length === 0 || saving}
             >
-              <Icon name="key" size={20} /> Generate UniqueID
+              <Icon name="key" size={20} /> {saving ? 'Saving...' : 'Generate & Save'}
             </button>
             {generatedUniqueIds && (
               <button
                 type="button"
-                className="action-button"
+                className="action-button secondary"
                 onClick={handleSave}
+                disabled={saving}
               >
-                <Icon name="save" size={20} /> Save CSV
+                <Icon name="save" size={20} /> {saving ? 'Saving...' : 'Save Again'}
               </button>
+            )}
+            {saveResult === 'saved' && (
+              <span style={{ color: 'var(--success)', fontSize: '0.875rem', fontWeight: 500 }}>
+                <Icon name="check" size={18} /> Saved to ID_generated/
+              </span>
+            )}
+            {saveResult === 'error' && (
+              <span style={{ color: 'var(--error)', fontSize: '0.875rem', fontWeight: 500 }}>
+                <Icon name="warning" size={18} /> Save failed
+              </span>
             )}
           </div>
 
@@ -149,8 +173,9 @@ export default function UniqueIdGeneratorModal({
                   type="button"
                   className="small-button"
                   onClick={handleSave}
+                  disabled={saving}
                 >
-                  <Icon name="save" size={18} /> Save Again
+                  <Icon name="save" size={18} /> {saving ? 'Saving...' : 'Save Again'}
                 </button>
               </div>
               <table className="preview-table">
