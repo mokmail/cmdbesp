@@ -7,8 +7,8 @@ import path from 'node:path'
 
 const registerSaveUniqueIdMiddleware = (middlewares) => {
   const envPath = path.join(process.cwd(), '.env')
-  let APP_USER = ''
-  let APP_PASSWORD = ''
+  let APP_USER = process.env.USER || ''
+  let APP_PASSWORD = process.env.PASSWORD || ''
   try {
     const text = readFileSync(envPath, 'utf8')
     for (const line of text.split('\n')) {
@@ -18,13 +18,13 @@ const registerSaveUniqueIdMiddleware = (middlewares) => {
       if (eqIdx === -1) continue
       const key = trimmed.slice(0, eqIdx).trim()
       const val = trimmed.slice(eqIdx + 1).trim()
-      if (key === 'USER') APP_USER = val
-      if (key === 'PASSWORD') APP_PASSWORD = val
+      if (key === 'USER' && !APP_USER) APP_USER = val
+      if (key === 'PASSWORD' && !APP_PASSWORD) APP_PASSWORD = val
     }
   } catch {}
 
   if (!APP_USER || !APP_PASSWORD) {
-    console.error('FATAL: USER and PASSWORD must be set in .env file')
+    console.error('FATAL: USER and PASSWORD must be set via env vars or .env file')
     process.exit(1)
   }
 

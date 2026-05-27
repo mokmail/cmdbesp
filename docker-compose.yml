@@ -4,7 +4,9 @@ services:
     image: mokmail/cmdbesp:latest
     container_name: cmdbesp
     ports:
-      - "80:80"
+      - "4455:4455"
+    env_file:
+      - .env
     volumes:
       - uploads:/app/uploads
     restart: unless-stopped

@@ -24,12 +24,12 @@ function loadEnv() {
   }
 }
 
-const env = loadEnv();
-const APP_USER = env.USER || '';
-const APP_PASSWORD = env.PASSWORD || '';
+const fileEnv = loadEnv();
+const APP_USER = process.env.USER || fileEnv.USER || '';
+const APP_PASSWORD = process.env.PASSWORD || fileEnv.PASSWORD || '';
 
 if (!APP_USER || !APP_PASSWORD) {
-  console.error('FATAL: USER and PASSWORD must be set in .env file');
+  console.error('FATAL: USER and PASSWORD must be set via env vars or .env file');
   process.exit(1);
 }
 
