@@ -86,7 +86,7 @@ export default function WikiSidebar({ Icon }) {
           ))}
         </nav>
       </aside>
-      <WikiSearch isOpen={searchOpen} onClose={() => setSearchOpen(false)} Icon={Icon} />
+      <WikiSearch isOpen={searchOpen} onClose={() => setSearchOpen(false)} onOpen={() => setSearchOpen(true)} Icon={Icon} />
     </>
   )
 }

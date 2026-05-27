@@ -10,7 +10,7 @@ const searchablePages = [
   { path: '/reference/troubleshooting', title: 'Troubleshooting', section: 'Reference', keywords: ['error', 'problem', 'fix', 'issue', 'help'] },
 ]
 
-export default function WikiSearch({ isOpen, onClose, Icon }) {
+export default function WikiSearch({ isOpen, onClose, onOpen, Icon }) {
   const [query, setQuery] = useState('')
   const [results, setResults] = useState([])
   const navigate = useNavigate()
@@ -47,6 +47,17 @@ export default function WikiSearch({ isOpen, onClose, Icon }) {
       return () => document.removeEventListener('keydown', handleKeyDown)
     }
   }, [isOpen, handleKeyDown])
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault()
+        onOpen()
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [onOpen])
 
   const handleResultClick = (path) => {
     navigate(path)
