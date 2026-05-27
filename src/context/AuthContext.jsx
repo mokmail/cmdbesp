@@ -8,16 +8,18 @@ export function AuthProvider({ children }) {
   const [error, setError] = useState('')
 
   useEffect(() => {
+    let cancelled = false
     fetch('/api/me')
       .then((res) => {
         if (!res.ok) throw new Error('Unauthorized')
         return res.json()
       })
       .then((data) => {
-        if (data.ok) setUser(data.user)
+        if (!cancelled && data.ok) setUser(data.user)
       })
-      .catch(() => setUser(null))
-      .finally(() => setLoading(false))
+      .catch(() => { if (!cancelled) setUser(null) })
+      .finally(() => { if (!cancelled) setLoading(false) })
+    return () => { cancelled = true }
   }, [])
 
   const login = useCallback(async (username, password) => {
@@ -44,6 +46,7 @@ export function AuthProvider({ children }) {
   const logout = useCallback(async () => {
     await fetch('/api/logout', { method: 'POST' })
     setUser(null)
+    setError('')
   }, [])
 
   return (
