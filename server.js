@@ -27,7 +27,13 @@ function loadEnv() {
 const env = loadEnv();
 const APP_USER = env.USER || '';
 const APP_PASSWORD = env.PASSWORD || '';
-const COOKIE_SECRET = APP_PASSWORD || 'fallback-secret';
+
+if (!APP_USER || !APP_PASSWORD) {
+  console.error('FATAL: USER and PASSWORD must be set in .env file');
+  process.exit(1);
+}
+
+const COOKIE_SECRET = APP_PASSWORD;
 const SESSION_MAX_AGE = 7200;
 
 const UPLOADS_DIR = path.join(__dirname, 'uploads');
@@ -106,7 +112,7 @@ const server = createServer(async (req, res) => {
         const token = signSession(user);
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
-        res.setHeader('Set-Cookie', `session=${token}; HttpOnly; SameSite=Strict; Path=/; Max-Age=${SESSION_MAX_AGE}`);
+        res.setHeader('Set-Cookie', `session=${token}; HttpOnly; SameSite=Strict; Path=/; Max-Age=${SESSION_MAX_AGE}${process.env.NODE_ENV === 'production' ? '; Secure' : ''}`);
         res.end(JSON.stringify({ ok: true, user }));
       } catch (err) {
         sendJson(res, 500, { ok: false, error: String(err) });
@@ -124,7 +130,7 @@ const server = createServer(async (req, res) => {
   if (req.url === '/api/logout' && req.method === 'POST') {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
-    res.setHeader('Set-Cookie', 'session=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0');
+    res.setHeader('Set-Cookie', `session=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0${process.env.NODE_ENV === 'production' ? '; Secure' : ''}`);
     res.end(JSON.stringify({ ok: true }));
     return;
   }
