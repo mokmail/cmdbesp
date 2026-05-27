@@ -137,6 +137,7 @@ export default function AGGridView({
           onSortChanged={onSortChanged}
           animateRows={true}
           suppressCellFocus={true}
+          theme="legacy"
         />
       </AgGridProvider>
     </div>
