@@ -1,6 +1,46 @@
+import { useState, useRef, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import mermaid from 'mermaid'
 import WikiBreadcrumb from './WikiBreadcrumb'
 import WikiPrevNext from './WikiPrevNext'
+
+mermaid.initialize({
+  startOnLoad: false,
+  theme: 'neutral',
+  securityLevel: 'loose',
+})
+
+function MermaidDiagram({ definition, id }) {
+  const containerRef = useRef(null)
+
+  useEffect(() => {
+    if (!containerRef.current) return
+    let isMounted = true
+
+    const render = async () => {
+      try {
+        const { svg } = await mermaid.render(`mermaid-${id}`, definition)
+        if (isMounted && containerRef.current) {
+          containerRef.current.innerHTML = svg
+        }
+      } catch (error) {
+        if (isMounted && containerRef.current) {
+          containerRef.current.innerHTML = `<pre class="mermaid-error">${String(error)}</pre>`
+        }
+      }
+    }
+
+    mermaid.parse(definition).then(() => render()).catch((error) => {
+      if (isMounted && containerRef.current) {
+        containerRef.current.innerHTML = `<pre class="mermaid-error">${String(error)}</pre>`
+      }
+    })
+
+    return () => { isMounted = false }
+  }, [definition, id])
+
+  return <div ref={containerRef} className="mermaid-diagram" aria-label="Mermaid diagram" />
+}
 
 const DOCS_CONTENT = {
   '/getting-started/overview': {
@@ -125,13 +165,31 @@ const DOCS_CONTENT = {
   },
 }
 
-function renderContent(content) {
+function renderContent(content, collapsedSections = {}, toggleSection) {
   return content.map((block, index) => {
     switch (block.type) {
       case 'heading': {
         const HeadingTag = `h${block.level}`
+        if (block.collapsible) {
+          const isCollapsed = collapsedSections[index]
+          return (
+            <div key={index} className={`collapsible-section ${isCollapsed ? 'collapsed' : 'expanded'}`}>
+              <button
+                className="collapsible-header"
+                onClick={() => toggleSection && toggleSection(index)}
+                aria-expanded={!isCollapsed}
+              >
+                <span className="collapsible-icon">{isCollapsed ? '▶' : '▼'}</span>
+                <HeadingTag>{block.text}</HeadingTag>
+              </button>
+              {!isCollapsed && <div className="collapsible-content">{renderContent(block.children || [], collapsedSections, toggleSection)}</div>}
+            </div>
+          )
+        }
         return <HeadingTag key={index}>{block.text}</HeadingTag>
       }
+      case 'diagram':
+        return <MermaidDiagram key={index} definition={block.definition} id={`wiki-diagram-${index}`} />
       case 'content':
         return <p key={index}>{block.text}</p>
       case 'items':
@@ -156,19 +214,28 @@ function renderContent(content) {
   })
 }
 
-export default function WikiContent() {
+function WikiContent() {
+  const [collapsedSections, setCollapsedSections] = useState({})
   const location = useLocation()
   const doc = DOCS_CONTENT[location.pathname] || DOCS_CONTENT['/getting-started/overview']
+
+  const toggleSection = (index) => {
+    setCollapsedSections(prev => ({
+      ...prev,
+      [index]: !prev[index]
+    }))
+  }
 
   return (
     <article className="wiki-content">
       <WikiBreadcrumb section={doc.section} page={doc.title} />
       <div className="wiki-page-content">
-        {renderContent(doc.content)}
+        {renderContent(doc.content, collapsedSections, toggleSection)}
       </div>
       <WikiPrevNext currentPath={location.pathname} />
     </article>
   )
 }
 
+export default WikiContent
 export { DOCS_CONTENT }

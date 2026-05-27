@@ -13,7 +13,11 @@ export default function AGGridView({
   return (
     <div className="ag-theme-quartz" style={{ width: '100%', height: '600px' }}>
       <AgGridReact
-        columnDefs={columns.map(col => ({ headerName: col, field: col }))}
+        columnDefs={columns.map(col => ({ 
+          headerName: col, 
+          valueGetter: params => params.data[col],
+          field: col
+        }))}
         rowData={rows}
       />
     </div>

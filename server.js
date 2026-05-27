@@ -167,6 +167,59 @@ const server = createServer(async (req, res) => {
     return;
   }
 
+  if (req.url === '/api/upload' && req.method === 'POST') {
+    const user = requireAuth(req, res);
+    if (!user) return;
+
+    const contentType = req.headers['content-type'] || '';
+    if (!contentType.includes('multipart/form-data')) {
+      return sendJson(res, 400, { ok: false, error: 'Expected multipart/form-data' });
+    }
+
+    const boundary = contentType.split('boundary=')[1];
+    if (!boundary) {
+      return sendJson(res, 400, { ok: false, error: 'Missing boundary' });
+    }
+
+    try {
+      await mkdir(UPLOADS_DIR, { recursive: true });
+
+      const chunks = [];
+      req.on('data', (chunk) => chunks.push(chunk));
+      await new Promise((resolve, reject) => {
+        req.on('end', resolve);
+        req.on('error', reject);
+      });
+
+      const buffer = Buffer.concat(chunks);
+      const parts = buffer.toString('binary').split(`--${boundary}`);
+      const savedFiles = [];
+
+      for (const part of parts) {
+        const headerEnd = part.indexOf('\r\n\r\n');
+        if (headerEnd === -1) continue;
+
+        const header = part.slice(0, headerEnd);
+        const body = part.slice(headerEnd + 4, part.length - 2);
+
+        const filenameMatch = header.match(/filename="([^"]+)"/);
+        if (!filenameMatch) continue;
+
+        const filename = filenameMatch[1];
+        const safeFilename = filename.replace(/[\\/]/g, '_');
+        const filePath = path.join(UPLOADS_DIR, safeFilename);
+
+        await writeFile(filePath, body, 'binary');
+        savedFiles.push(safeFilename);
+      }
+
+      sendJson(res, 200, { ok: true, files: savedFiles });
+    } catch (error) {
+      sendJson(res, 500, { ok: false, error: String(error) });
+    }
+    return;
+  }
+
   if (req.url === '/api/read-generated' && req.method === 'GET') {
     const user = requireAuth(req, res);
     if (!user) return;
@@ -180,6 +233,51 @@ const server = createServer(async (req, res) => {
           const filePath = path.join(OUTPUT_DIR, fileName);
           const content = await readFile(filePath, 'utf8');
           return { fileName, content };
+        })
+      );
+
+      sendJson(res, 200, { ok: true, files: fileContents });
+    } catch (error) {
+      sendJson(res, 500, { ok: false, error: String(error) });
+    }
+    return;
+  }
+
+  if (req.url === '/api/list-uploads' && req.method === 'GET') {
+    const user = requireAuth(req, res);
+    if (!user) return;
+    try {
+      await mkdir(UPLOADS_DIR, { recursive: true });
+      const files = await readdir(UPLOADS_DIR);
+      const fileList = files.filter((f) => {
+        const ext = f.split('.').pop().toLowerCase();
+        return ext === 'csv' || ext === 'xlsx' || ext === 'xls';
+      });
+      sendJson(res, 200, { ok: true, files: fileList });
+    } catch (error) {
+      sendJson(res, 500, { ok: false, error: String(error) });
+    }
+    return;
+  }
+
+  if (req.url === '/api/read-uploaded' && req.method === 'GET') {
+    const user = requireAuth(req, res);
+    if (!user) return;
+    try {
+      await mkdir(UPLOADS_DIR, { recursive: true });
+      const allFiles = await readdir(UPLOADS_DIR);
+      const uploadFiles = allFiles.filter((f) => {
+        if (f === 'ID_generated') return false;
+        const ext = f.split('.').pop().toLowerCase();
+        return ext === 'csv' || ext === 'xlsx' || ext === 'xls';
+      });
+
+      const fileContents = await Promise.all(
+        uploadFiles.map(async (fileName) => {
+          const filePath = path.join(UPLOADS_DIR, fileName);
+          const content = await readFile(filePath);
+          const ext = fileName.split('.').pop().toLowerCase();
+          return { fileName, content: content.toString('base64'), ext };
         })
       );
 

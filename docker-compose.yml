@@ -8,7 +8,7 @@ services:
     env_file:
       - .env
     volumes:
-      - uploads:/app/uploads
+      - ./uploads:/app/uploads
     restart: unless-stopped
 
 volumes:

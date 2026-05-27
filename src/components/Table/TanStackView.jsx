@@ -90,7 +90,8 @@ export default function TanStackView({
       const field = typeof col === 'string' ? col : col.field
       const header = typeof col === 'string' ? col : (col.headerName || col.field)
       return {
-        accessorKey: field,
+        accessorFn: (row) => row[field],
+        id: field,
         header: header,
         enableResizing: true,
       }

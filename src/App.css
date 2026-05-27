@@ -39,10 +39,10 @@ header,
 }
 
 /* Header */
-header {
+.app-header {
   margin-bottom: 2rem;
-  padding: 1rem 1.5rem;
-  background: var(--bg-elevated);
+  padding: 1.25rem 2rem;
+  background: linear-gradient(135deg, var(--bg-elevated) 0%, color-mix(in srgb, var(--bg-elevated) 96%, var(--accent)) 100%);
   border: 1px solid var(--border);
   border-radius: 0;
   box-shadow: var(--shadow-lg);
@@ -50,14 +50,94 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 
-header .header-logo {
-  height: 50px;
+.app-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--success), var(--accent));
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.header-logo-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-logo-wrap::before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  background: linear-gradient(135deg, var(--accent-bg), transparent);
+  border-radius: 8px;
+  z-index: -1;
+}
+
+.header-logo {
+  height: 52px;
   width: auto;
+  display: block;
 }
 
-header .logout-btn {
+.header-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.header-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-h);
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.header-subtitle {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.header-accent-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(180deg, transparent, var(--accent), transparent);
+  margin-left: 1rem;
+}
+
+.app-header .header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.app-header .header-logo {
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
+.app-header .logout-btn {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -70,15 +150,42 @@ header .logout-btn {
   transition: color 0.15s, background 0.15s, border-color 0.15s;
 }
 
-header .logout-btn:hover {
+.app-header .logout-btn:hover {
   color: var(--text);
   background: var(--bg-elevated);
   border-color: var(--accent);
 }
 
-.header-logo {
-  height: 60px;
-  width: auto;
+.table-style-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.table-style-selector select {
+  padding: 0.4rem 2rem 0.4rem 0.75rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 0.8125rem;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.6rem center;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.table-style-selector select:hover {
+  border-color: var(--accent);
+}
+
+.table-style-selector select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
 }
 
 /* Upload Action */
@@ -589,6 +696,52 @@ main {
   color: var(--text);
   font-size: 0.8125rem;
   font-weight: 500;
+}
+
+.options-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+  padding: 1rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 0.875rem;
+}
+
+.options-row .input-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  color: var(--text);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  min-width: 140px;
+}
+
+.options-row select,
+.options-row input[type='text'] {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg);
+  color: var(--text-h);
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  min-width: 120px;
+}
+
+.options-row select:hover,
+.options-row input[type='text']:hover {
+  border-color: var(--accent-border);
+}
+
+.options-row select:focus,
+.options-row input[type='text']:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
 }
 
 .row select,
@@ -5115,6 +5268,59 @@ header h1 .app-icon {
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 1.5rem;
+}
+
+.file-selector-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.file-selector-row label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  color: var(--text);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.file-selector-row select {
+  min-width: 280px;
+  padding: 0.625rem 0.875rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg-elevated);
+  color: var(--text-h);
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.file-selector-row select:hover {
+  border-color: var(--accent-border);
+}
+
+.file-selector-row select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+}
+
+.toolbar-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+}
+
+.no-file-hint {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  font-style: italic;
 }
 
 .file-list-header {

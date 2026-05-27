@@ -91,7 +91,8 @@ function DataTablesView({
   const dtColumns = useMemo(() =>
     columns.map((col) => ({
       title: col,
-      data: col,
+      data: (row) => row[col],
+      defaultContent: '',
     })),
   [columns])
 

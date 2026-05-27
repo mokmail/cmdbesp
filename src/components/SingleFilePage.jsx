@@ -31,6 +31,12 @@ export default function SingleFilePage({
   removeUploadedFile,
   error,
   tableStyle,
+  csvDelimiter,
+  setCsvDelimiter,
+  globalReplaceFrom,
+  setGlobalReplaceFrom,
+  globalReplaceTo,
+  setGlobalReplaceTo,
 }) {
   const fileInputRef = useRef(null)
   const dragCounter = useRef(0)
@@ -167,19 +173,79 @@ export default function SingleFilePage({
         </div>
       </div>
 
-      {selectedFileData && (
-        <button
-          type="button"
-          className="action-button"
-          onClick={() => {
-            setUniqueIdColumns([])
-            setGeneratedUniqueIds(null)
-            setShowUniqueIdModal(true)
-          }}
-        >
-          <Icon name="key" size={20} /> UniqueID Generator
-        </button>
-      )}
+      <div className="options-row">
+        <label className="input-label">
+          <span>CSV Delimiter</span>
+          <select value={csvDelimiter} onChange={(e) => setCsvDelimiter(e.target.value)}>
+            <option value="auto">Auto-detect</option>
+            <option value=";">Semicolon (;)</option>
+            <option value=",">Comma (,)</option>
+            <option value="\t">Tab</option>
+            <option value="|">Pipe (|)</option>
+          </select>
+        </label>
+        <label className="input-label">
+          <span>Replace</span>
+          <input
+            type="text"
+            value={globalReplaceFrom}
+            onChange={(e) => setGlobalReplaceFrom(e.target.value)}
+            placeholder="Search text"
+          />
+        </label>
+        <label className="input-label">
+          <span>With</span>
+          <input
+            type="text"
+            value={globalReplaceTo}
+            onChange={(e) => setGlobalReplaceTo(e.target.value)}
+            placeholder="Replacement"
+          />
+        </label>
+        {(globalReplaceFrom || globalReplaceTo) && (
+          <button
+            type="button"
+            className="small-button secondary"
+            onClick={() => {
+              setGlobalReplaceFrom('')
+              setGlobalReplaceTo('')
+            }}
+            style={{ alignSelf: 'flex-end' }}
+          >
+            <Icon name="close" size={14} /> Clear
+          </button>
+        )}
+      </div>
+
+      <div className="file-selector-row">
+        <label>
+          <span>Select file to view</span>
+          <select value={selectedFile} onChange={(e) => setSelectedFile(e.target.value)}>
+            <option value="">-- Choose a file --</option>
+            {uploadedFiles.map((file) => (
+              <option key={file.name} value={file.name}>{file.name}</option>
+            ))}
+          </select>
+        </label>
+      </div>
+
+      <div className="toolbar-row">
+        {selectedFileData ? (
+          <button
+            type="button"
+            className="action-button"
+            onClick={() => {
+              setUniqueIdColumns([])
+              setGeneratedUniqueIds(null)
+              setShowUniqueIdModal(true)
+            }}
+          >
+            <Icon name="key" size={20} /> UniqueID Generator
+          </button>
+        ) : (
+          <span className="no-file-hint">Select a file to enable UniqueID Generator</span>
+        )}
+      </div>
 
       {error && <div className="error-box"><Icon name="warning" size={20} /> {error}</div>}
 
