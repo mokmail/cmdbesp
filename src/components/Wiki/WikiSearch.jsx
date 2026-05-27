@@ -1,19 +1,13 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-
-const searchablePages = [
-  { path: '/getting-started/overview', title: 'Overview', section: 'Getting Started', keywords: ['intro', 'welcome', 'start'] },
-  { path: '/features/single-file', title: 'Single File View', section: 'Features', keywords: ['file', 'csv', 'browse', 'search', 'filter'] },
-  { path: '/features/compare-ids', title: 'Compare Unique IDs', section: 'Features', keywords: ['compare', 'unique', 'id', 'matching'] },
-  { path: '/features/uniqueid-generator', title: 'UniqueID Generator', section: 'Features', keywords: ['unique', 'id', 'generate', 'create'] },
-  { path: '/reference/file-formats', title: 'File Formats', section: 'Reference', keywords: ['file', 'format', 'csv', 'xlsx', 'columns'] },
-  { path: '/reference/troubleshooting', title: 'Troubleshooting', section: 'Reference', keywords: ['error', 'problem', 'fix', 'issue', 'help'] },
-]
+import { SEARCHABLE_PAGES } from './wiki-nav-data'
 
 export default function WikiSearch({ isOpen, onClose, onOpen, Icon }) {
   const [query, setQuery] = useState('')
   const [results, setResults] = useState([])
+  const [selectedIndex, setSelectedIndex] = useState(-1)
   const navigate = useNavigate()
+  const inputRef = useRef(null)
 
   const search = useCallback((searchQuery) => {
     if (!searchQuery.trim()) {
@@ -21,7 +15,7 @@ export default function WikiSearch({ isOpen, onClose, onOpen, Icon }) {
       return
     }
     const lower = searchQuery.toLowerCase()
-    const filtered = searchablePages.filter(page =>
+    const filtered = SEARCHABLE_PAGES.filter(page =>
       page.title.toLowerCase().includes(lower) ||
       page.section.toLowerCase().includes(lower) ||
       page.keywords.some(k => k.includes(lower))
@@ -65,19 +59,46 @@ export default function WikiSearch({ isOpen, onClose, onOpen, Icon }) {
     onClose()
   }
 
-  if (!isOpen) return null
+  const handleInputKeyDown = useCallback((e) => {
+  if (results.length === 0) return
 
-  return (
-    <div className="wiki-search-overlay" onClick={onClose}>
-      <div className="wiki-search-modal" onClick={(e) => e.stopPropagation()}>
+  if (e.key === 'ArrowDown') {
+    e.preventDefault()
+    setSelectedIndex(prev => (prev < results.length - 1 ? prev + 1 : 0))
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault()
+    setSelectedIndex(prev => (prev > 0 ? prev - 1 : results.length - 1))
+  } else if (e.key === 'Enter' && selectedIndex >= 0) {
+    e.preventDefault()
+    handleResultClick(results[selectedIndex].path)
+  }
+}, [results, selectedIndex])
+
+useEffect(() => {
+  setSelectedIndex(-1)
+}, [results])
+
+if (!isOpen) return null
+
+return (
+  <div className="wiki-search-overlay" onClick={onClose} role="presentation">
+    <div
+      className="wiki-search-modal"
+      onClick={(e) => e.stopPropagation()}
+      role="dialog"
+      aria-modal="true"
+      aria-label="Search documentation"
+    >
         <div className="wiki-search-header">
           <div className="wiki-search-input-wrap">
             <Icon name="search" size={18} />
             <input
+              ref={inputRef}
               type="text"
               placeholder="Search documentation..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
+              onKeyDown={handleInputKeyDown}
               autoFocus
             />
           </div>
@@ -109,5 +130,3 @@ export default function WikiSearch({ isOpen, onClose, onOpen, Icon }) {
     </div>
   )
 }
-
-export { searchablePages }

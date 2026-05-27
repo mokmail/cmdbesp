@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 import { useLocation } from 'react-router-dom'
 import mermaid from 'mermaid'
 import WikiBreadcrumb from './WikiBreadcrumb'
@@ -219,12 +219,12 @@ function WikiContent() {
   const location = useLocation()
   const doc = DOCS_CONTENT[location.pathname] || DOCS_CONTENT['/getting-started/overview']
 
-  const toggleSection = (index) => {
+  const toggleSection = useCallback((index) => {
     setCollapsedSections(prev => ({
       ...prev,
       [index]: !prev[index]
     }))
-  }
+  }, [])
 
   return (
     <article className="wiki-content">

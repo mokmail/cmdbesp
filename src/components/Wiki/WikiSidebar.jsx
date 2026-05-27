@@ -1,30 +1,12 @@
 import { useState } from 'react'
 import WikiNavItem from './WikiNavItem'
 import WikiSearch from './WikiSearch'
+import { WIKI_NAVIGATION } from './wiki-nav-data'
 
-const SECTIONS = [
-  {
-    title: 'Getting Started',
-    items: [
-      { path: '/getting-started/overview', label: 'Overview' },
-    ],
-  },
-  {
-    title: 'Features',
-    items: [
-      { path: '/features/single-file', label: 'Single File View' },
-      { path: '/features/compare-ids', label: 'Compare Unique IDs' },
-      { path: '/features/uniqueid-generator', label: 'UniqueID Generator' },
-    ],
-  },
-  {
-    title: 'Reference',
-    items: [
-      { path: '/reference/file-formats', label: 'File Formats' },
-      { path: '/reference/troubleshooting', label: 'Troubleshooting' },
-    ],
-  },
-]
+const SECTIONS = WIKI_NAVIGATION.map(nav => ({
+  title: nav.section,
+  items: nav.children.map(child => ({ path: child.path, label: child.title })),
+}))
 
 export default function WikiSidebar({ Icon }) {
   const [expandedSections, setExpandedSections] = useState(

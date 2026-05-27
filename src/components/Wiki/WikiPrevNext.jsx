@@ -1,13 +1,5 @@
 import { Link } from 'react-router-dom'
-
-const PAGE_ORDER = [
-  { path: '/getting-started/overview', section: 'Getting Started', title: 'Overview' },
-  { path: '/features/single-file', section: 'Features', title: 'Single File View' },
-  { path: '/features/compare-ids', section: 'Features', title: 'Compare Unique IDs' },
-  { path: '/features/uniqueid-generator', section: 'Features', title: 'UniqueID Generator' },
-  { path: '/reference/file-formats', section: 'Reference', title: 'File Formats' },
-  { path: '/reference/troubleshooting', section: 'Reference', title: 'Troubleshooting' },
-]
+import { PAGE_ORDER } from './wiki-nav-data'
 
 export default function WikiPrevNext({ currentPath }) {
   const currentIndex = PAGE_ORDER.findIndex(page => page.path === currentPath)
@@ -45,5 +37,3 @@ export default function WikiPrevNext({ currentPath }) {
     </nav>
   )
 }
-
-export { PAGE_ORDER }
