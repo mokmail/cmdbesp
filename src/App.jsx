@@ -4,14 +4,16 @@ import * as XLSX from 'xlsx'
 import SingleFilePage from './components/SingleFilePage'
 import CompareUniqueIdsPage from './components/CompareUniqueIdsPage'
 import InfoPage from './components/InfoPage'
+import WikiDocumentation from './components/Wiki/WikiDocumentation'
 import UniqueIdGeneratorModal from './components/UniqueIdGeneratorModal'
 import ExportMenu from './components/ExportMenu'
 import Table from './components/Table'
-import { generateUniqueIds, uniqueValues } from './components/shared'
+import { generateUniqueIds, uniqueValues, replaceUniqueIdValue } from './components/shared'
 import { AuthProvider, useAuth } from './context/AuthContext'
 import LoginPage from './components/LoginPage'
 import Logo from './assets/logo.png'
 import './App.css'
+import './components/Wiki/WikiContentStyles.css'
 
 const normalizeHeader = (header) => header?.trim() ?? ''
 
@@ -323,16 +325,26 @@ export const SectionHeading = ({ icon, children, className = '' }) => (
 const originalCsvSources = import.meta.glob('../uploads/*.csv', { query: '?raw', import: 'default' })
 const generatedCsvSources = import.meta.glob('../uploads/ID_generated/*.csv', { query: '?raw', import: 'default' })
 
-export const parseCsvText = (name, text) => {
+export const parseCsvText = (name, text, delimiter = 'auto') => {
   const normalizedText = normalizeText(text)
-  const parseText = (delimiter) =>
+  const parseText = (del) =>
     Papa.parse(normalizedText, {
       header: true,
-      delimiter,
+      delimiter: del,
       skipEmptyLines: true,
       transformHeader: normalizeHeader,
       encoding: 'UTF-8',
     })
+
+  if (delimiter !== 'auto') {
+    const parsed = parseText(delimiter)
+    return {
+      name,
+      rows: parsed.data,
+      columns: parsed.meta.fields || [],
+      errors: parsed.errors,
+    }
+  }
 
   let parsed = parseText(';')
   if (!parsed.meta.fields || parsed.meta.fields.length <= 1) {
@@ -528,26 +540,44 @@ function App({ logout }) {
   const [showUniqueIdModal, setShowUniqueIdModal] = useState(false)
   const [uploadedFiles, setUploadedFiles] = useState([])
   const [tableStyle, setTableStyle] = useState(() => localStorage.getItem('preferredTableStyle') || 'ag-grid')
+  const [csvDelimiter, setCsvDelimiter] = useState('auto')
+  const [globalReplaceFrom, setGlobalReplaceFrom] = useState('')
+  const [globalReplaceTo, setGlobalReplaceTo] = useState('')
 
   const handleTableStyleChange = (style) => {
     setTableStyle(style)
     localStorage.setItem('preferredTableStyle', style)
   }
 
-  const handleFileUpload = (event) => {
+  const handleFileUpload = async (event) => {
     const files = Array.from(event.target.files || [])
     if (!files.length) return
 
     const newUploaded = []
     const errors = []
 
+    const uploadToServer = async (file) => {
+      const formData = new FormData()
+      formData.append('file', file)
+      const res = await fetch('/api/upload', {
+        method: 'POST',
+        body: formData,
+        credentials: 'include',
+      })
+      const result = await res.json()
+      if (!result.ok) {
+        throw new Error(result.error || 'Upload failed')
+      }
+    }
+
     const processFiles = async () => {
       for (const file of files) {
         const ext = file.name.split('.').pop().toLowerCase()
         try {
+          await uploadToServer(file)
           if (ext === 'csv') {
             const text = await file.text()
-            const parsed = parseCsvText(file.name, text)
+            const parsed = parseCsvText(file.name, text, csvDelimiter)
             newUploaded.push(parsed)
           } else if (ext === 'xlsx' || ext === 'xls') {
             const buffer = await file.arrayBuffer()
@@ -557,7 +587,7 @@ function App({ logout }) {
             errors.push(`Unsupported file format: ${file.name}`)
           }
         } catch (e) {
-          errors.push(`Failed to parse ${file.name}: ${e}`)
+          errors.push(`Failed to upload ${file.name}: ${e}`)
         }
       }
 
@@ -565,7 +595,7 @@ function App({ logout }) {
       if (errors.length > 0) setError(errors.join('; '))
     }
 
-    processFiles()
+    await processFiles()
     event.target.value = ''
   }
 
@@ -608,8 +638,17 @@ function App({ logout }) {
         return selectedFileData.columns.some((column) => String(row[column] ?? '').toLowerCase().includes(search))
       })
     }
+    if (globalReplaceFrom || globalReplaceTo) {
+      rows = rows.map((row) => {
+        const newRow = { ...row }
+        selectedFileData.columns.forEach((col) => {
+          newRow[col] = replaceUniqueIdValue(row[col], globalReplaceFrom, globalReplaceTo)
+        })
+        return newRow
+      })
+    }
     return rows
-  }, [selectedFileData, filterColumn, filterValues, singleFilterText, singleSearchColumn])
+  }, [selectedFileData, filterColumn, filterValues, singleFilterText, singleSearchColumn, globalReplaceFrom, globalReplaceTo])
 
   const singleFilterStats = useMemo(() => {
     if (!selectedFileData) return null
@@ -736,11 +775,39 @@ function App({ logout }) {
   useEffect(() => {
     const loadCsvFiles = async () => {
       const parsedOriginalFiles = []
+      const parsedUploadedFiles = []
       const parsedGeneratedFiles = []
       const errors = []
 
+      try {
+        const res = await fetch('/api/read-uploaded')
+        const result = await res.json()
+        if (result.ok && result.files) {
+          for (const f of result.files) {
+            try {
+              if (f.ext === 'csv') {
+                const text = atob(f.content)
+                const parsed = parseCsvText(f.fileName, text)
+                parsedUploadedFiles.push(parsed)
+              } else if (f.ext === 'xlsx' || f.ext === 'xls') {
+                const buffer = Uint8Array.from(atob(f.content), c => c.charCodeAt(0)).buffer
+                const parsed = parseXlsxFile(f.fileName, buffer)
+                parsedUploadedFiles.push(parsed)
+              }
+            } catch (e) {
+              errors.push(`Failed to load uploaded file ${f.fileName}: ${e}`)
+            }
+          }
+        }
+      } catch (e) {
+        errors.push(`Failed to fetch uploaded files: ${e}`)
+      }
+
       for (const [path, loader] of Object.entries(originalCsvSources)) {
         const name = path.replace('../uploads/', '')
+        // Skip if already loaded from API to avoid duplicates
+        if (parsedUploadedFiles.some(f => f.name === name)) continue;
+        
         try {
           const text = await loader()
           const parsed = parseCsvText(name, text)
@@ -764,6 +831,7 @@ function App({ logout }) {
       }
 
       setOriginalFiles(parsedOriginalFiles)
+      setUploadedFiles(parsedUploadedFiles)
       setGeneratedFiles(parsedGeneratedFiles)
       if (errors.length > 0) setError(errors.join('; '))
     }
@@ -785,8 +853,17 @@ function App({ logout }) {
 
   return (
     <div className="app-shell">
-      <header>
-        <img src={Logo} alt="CIO Data Intelligence" className="header-logo" />
+      <header className="app-header">
+        <div className="header-brand">
+          <div className="header-logo-wrap">
+            <img src={Logo} alt="CIO Data Intelligence" className="header-logo" />
+          </div>
+          <div className="header-title-group">
+            <h1 className="header-title">CIO Data Intelligence</h1>
+            <span className="header-subtitle">Analytics Platform</span>
+          </div>
+          <div className="header-accent-line"></div>
+        </div>
         <div className="header-controls">
           <label className="table-style-selector">
             <span>Table Style</span>
@@ -849,6 +926,12 @@ function App({ logout }) {
               handleFileUpload={handleFileUpload}
               removeUploadedFile={removeUploadedFile}
               error={error}
+              csvDelimiter={csvDelimiter}
+              setCsvDelimiter={setCsvDelimiter}
+              globalReplaceFrom={globalReplaceFrom}
+              setGlobalReplaceFrom={setGlobalReplaceFrom}
+              globalReplaceTo={globalReplaceTo}
+              setGlobalReplaceTo={setGlobalReplaceTo}
             />
           )}
 
@@ -902,7 +985,7 @@ function App({ logout }) {
           )}
 
           {viewMode === VIEW_MODES[2].id && (
-            <InfoPage Icon={Icon} SectionHeading={SectionHeading} />
+            <WikiDocumentation Icon={Icon} />
           )}
         </main>
       </div>
