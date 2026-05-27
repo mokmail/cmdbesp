@@ -1,8 +1,6 @@
 import React from 'react'
 import { AgGridReact, AgGridProvider } from 'ag-grid-react'
-import { AllCommunityModule } from 'ag-grid-community'
-import 'ag-grid-community/styles/ag-grid.css'
-import 'ag-grid-community/styles/ag-theme-quartz.css'
+import { AllCommunityModule, themeQuartz } from 'ag-grid-community'
 
 const modules = [AllCommunityModule]
 
@@ -124,7 +122,7 @@ export default function AGGridView({
   }
 
   return (
-    <div className="ag-theme-quartz" style={{ width: '100%', height: '100%' }}>
+    <div style={{ width: '100%', height: '600px' }}>
       <AgGridProvider modules={modules}>
         <AgGridReact
           columnDefs={processedColumns}
@@ -137,7 +135,7 @@ export default function AGGridView({
           onSortChanged={onSortChanged}
           animateRows={true}
           suppressCellFocus={true}
-          theme="legacy"
+          theme={themeQuartz}
         />
       </AgGridProvider>
     </div>
