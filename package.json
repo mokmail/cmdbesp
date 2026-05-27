@@ -10,6 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tanstack/react-table": "^8.21.3",
+    "@tanstack/react-virtual": "^3.13.26",
+    "ag-grid-community": "^35.3.0",
+    "ag-grid-react": "^35.3.0",
+    "datatables.net-dt": "^2.3.8",
+    "datatables.net-react": "^1.0.2",
     "i18next": "^26.0.6",
     "mermaid": "^11.14.0",
     "papaparse": "^5.5.3",

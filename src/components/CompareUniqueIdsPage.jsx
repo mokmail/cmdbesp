@@ -46,12 +46,13 @@ export default function CompareUniqueIdsPage({
   sharesHasGeneratedId,
   espHasGeneratedId,
   shareFilterStats,
+  tableStyle,
 }) {
   return (
     <div className="mode-panel shares-esp-panel">
       <div className="row file-selection-row">
         <label>
-          <span className="input-icon"><InlineIcon name="folder" size={18} /></span> CMDB file
+          <span className="input-icon"><InlineIcon name="folder" size={18} /></span> Left file
           <select value={selectedSharesFile} onChange={(event) => { setSelectedSharesFile(event.target.value); setSharePage(1); }}>
             {generatedLoadedNames.map((name) => (
               <option key={name} value={name}>{name}</option>
@@ -59,7 +60,7 @@ export default function CompareUniqueIdsPage({
           </select>
         </label>
         <label>
-          <span className="input-icon"><InlineIcon name="chart" size={18} /></span> ESP file
+          <span className="input-icon"><InlineIcon name="chart" size={18} /></span> Right file
           <select value={selectedEspFile} onChange={(event) => { setSelectedEspFile(event.target.value); setSharePage(1); }}>
             {generatedLoadedNames.map((name) => (
               <option key={name} value={name}>{name}</option>
@@ -72,7 +73,7 @@ export default function CompareUniqueIdsPage({
         <div className="typ-checkbox-group">
           <div className="typ-checkbox-header">
             <div className="typ-checkbox-title-wrap">
-              <span className="typ-checkbox-title"><span className="input-icon"><InlineIcon name="tag" size={18} /></span> ESP Typ category</span>
+              <span className="typ-checkbox-title"><span className="input-icon"><InlineIcon name="tag" size={18} /></span> Category filter</span>
               <span className="typ-checkbox-count">{shareESPCategoriesSelected.length ? `${shareESPCategoriesSelected.length} selected` : `${shareESPCategories.length} available`}</span>
             </div>
             <div className="typ-checkbox-summary">
@@ -128,7 +129,7 @@ export default function CompareUniqueIdsPage({
             )) : <span className="typ-checkbox-empty">No Typ values found</span>}
           </div>
           <div className="typ-checkbox-footer">
-            Use these filters to narrow the ESP dataset before matching against CMDB.
+            Use these filters to narrow the right file dataset before matching against the left file.
           </div>
         </div>
         <div className="filter-stats">
@@ -141,12 +142,12 @@ export default function CompareUniqueIdsPage({
           <div className="stats-grid">
             <div className="stat-card">
               <div className="stat-value">{shareStats.totalA.toLocaleString()}</div>
-              <div className="stat-label">Rows in CMDB file</div>
+              <div className="stat-label">Rows in left file</div>
             </div>
             <div className="stat-card">
               <div className="stat-value">{shareStats.totalB.toLocaleString()}</div>
               <div className="stat-label">
-                {shareESPCategoriesSelected.length > 0 ? 'Rows in ESP file (Typ filtered)' : 'Rows in ESP file'}
+                {shareESPCategoriesSelected.length > 0 ? 'Rows in right file (filtered)' : 'Rows in right file'}
               </div>
             </div>
             <div className="stat-card success">
@@ -156,11 +157,11 @@ export default function CompareUniqueIdsPage({
             </div>
             <div className="stat-card accent">
               <div className="stat-value">{shareStats.onlyInA.toLocaleString()}</div>
-              <div className="stat-label">Only in CMDB</div>
+              <div className="stat-label">Only in left file</div>
             </div>
             <div className="stat-card accent">
               <div className="stat-value">{shareStats.onlyInB.toLocaleString()}</div>
-              <div className="stat-label">Only in ESP</div>
+              <div className="stat-label">Only in right file</div>
             </div>
           </div>
 
@@ -193,8 +194,8 @@ export default function CompareUniqueIdsPage({
                 <select value={shareFilterStatus} onChange={(e) => { setShareFilterStatus(e.target.value); setSharePage(1); }}>
                   <option value="all">All Statuses</option>
                   <option value="Both">Both</option>
-                  <option value="Only in CMDB">Only in CMDB</option>
-                  <option value="Only in right file">Only in ESP</option>
+                  <option value="Only in left file">Only in left file</option>
+                  <option value="Only in right file">Only in right file</option>
                 </select>
               </label>
             </div>
@@ -249,7 +250,7 @@ export default function CompareUniqueIdsPage({
             <Table
               columns={shareColumns}
               rows={sharePaginatedRows}
-              highlightColumns={['MatchStatus', 'CMDB_GeneratedUniqueID', 'ESP_GeneratedUniqueID']}
+              highlightColumns={['MatchStatus', 'left_GeneratedUniqueID', 'right_GeneratedUniqueID']}
               sortColumn={shareSortColumn}
               sortDirection={shareSortDirection}
               onSortChange={(column) => {
@@ -264,11 +265,12 @@ export default function CompareUniqueIdsPage({
               }}
               rowClass={(row) => {
                 if (row.MatchStatus === 'Both') return 'row-status-both'
-                if (row.MatchStatus === 'Only in CMDB') return 'row-status-left'
+                if (row.MatchStatus === 'Only in left file') return 'row-status-left'
                 if (row.MatchStatus === 'Only in right file') return 'row-status-right'
                 return undefined
               }}
               onRowClick={(row) => setSelectedShareRow(row)}
+              tableStyle={tableStyle}
             />
           </div>
 
@@ -381,7 +383,7 @@ function ShareDetailModal({ Icon, SectionHeading, selectedShareRow, onClose }) {
         <div className="modal-header">
           <div className="modal-title-section">
             <h2>Match Details & Analysis</h2>
-            <div className={`match-badge match-${selectedShareRow.MatchStatus === 'Both' ? 'both' : selectedShareRow.MatchStatus === 'Only in CMDB' ? 'left' : 'right'}`}>
+            <div className={`match-badge match-${selectedShareRow.MatchStatus === 'Both' ? 'both' : selectedShareRow.MatchStatus === 'Only in left file' ? 'left' : 'right'}`}>
               {selectedShareRow.MatchStatus}
             </div>
           </div>
@@ -393,7 +395,7 @@ function ShareDetailModal({ Icon, SectionHeading, selectedShareRow, onClose }) {
             <div className="match-summary-grid">
               <div className="summary-item">
                 <span className="label">Status</span>
-                <span className={`badge badge-${selectedShareRow.MatchStatus === 'Both' ? 'success' : selectedShareRow.MatchStatus === 'Only in CMDB' ? 'info' : 'error'}`}>
+                <span className={`badge badge-${selectedShareRow.MatchStatus === 'Both' ? 'success' : selectedShareRow.MatchStatus === 'Only in left file' ? 'info' : 'error'}`}>
                   {selectedShareRow.MatchStatus}
                 </span>
               </div>
@@ -402,12 +404,12 @@ function ShareDetailModal({ Icon, SectionHeading, selectedShareRow, onClose }) {
                 <span className="value">{selectedShareRow.MatchedSegments || 'None'}</span>
               </div>
               <div className="summary-item">
-                <span className="label">CMDB GeneratedUniqueID</span>
-                <code className="uid-code">{selectedShareRow.CMDB_GeneratedUniqueID || '—'}</code>
+                <span className="label">Left GeneratedUniqueID</span>
+                <code className="uid-code">{selectedShareRow.left_GeneratedUniqueID || '—'}</code>
               </div>
               <div className="summary-item">
-                <span className="label">ESP GeneratedUniqueID</span>
-                <code className="uid-code">{selectedShareRow.ESP_GeneratedUniqueID || '—'}</code>
+                <span className="label">Right GeneratedUniqueID</span>
+                <code className="uid-code">{selectedShareRow.right_GeneratedUniqueID || '—'}</code>
               </div>
             </div>
           </div>
@@ -415,33 +417,33 @@ function ShareDetailModal({ Icon, SectionHeading, selectedShareRow, onClose }) {
           <div className="modal-section">
             <SectionHeading icon="compare">Data Comparison</SectionHeading>
             <div className="comparison-grid">
-              <div className="comparison-side cmdb-side">
-                <div className="side-header"><Icon name="folder" size={18} /> CMDB Virtual Server</div>
+              <div className="comparison-side left-side">
+                <div className="side-header"><Icon name="folder" size={18} /> Left file data</div>
                 <div className="field-list">
                   {Object.entries(selectedShareRow)
-                    .filter(([key]) => key.startsWith('CMDB_'))
+                    .filter(([key]) => key.startsWith('left_') || (!key.startsWith('right_') && (key === 'GeneratedUniqueID' || key === 'MatchStatus' || key === 'MatchedSegments')))
                     .map(([key, value]) => (
                       <div key={key} className="comparison-field">
-                        <div className="field-label">{key.replace('CMDB_', '')}</div>
+                        <div className="field-label">{key.replace(/^(left_|right_)/, '')}</div>
                         <div className="field-value">{String(value) || '—'}</div>
                       </div>
                     ))}
                 </div>
               </div>
 
-              <div className="comparison-side esp-side">
-                <div className="side-header"><Icon name="chart" size={18} /> ESP Data</div>
+              <div className="comparison-side right-side">
+                <div className="side-header"><Icon name="chart" size={18} /> Right file data</div>
                 <div className="field-list">
                   {Object.entries(selectedShareRow)
-                    .filter(([key]) => key.startsWith('ESP_'))
+                    .filter(([key]) => key.startsWith('right_'))
                     .map(([key, value]) => (
                       <div key={key} className="comparison-field">
-                        <div className="field-label">{key.replace('ESP_', '')}</div>
+                        <div className="field-label">{key.replace('right_', '')}</div>
                         <div className="field-value">{String(value) || '—'}</div>
                       </div>
                     ))}
-                  {Object.entries(selectedShareRow).filter(([key]) => key.startsWith('ESP_')).length === 0 && (
-                    <div className="empty-state">No matching ESP data</div>
+                  {Object.entries(selectedShareRow).filter(([key]) => key.startsWith('right_')).length === 0 && (
+                    <div className="empty-state">No matching right file data</div>
                   )}
                 </div>
               </div>
@@ -462,18 +464,18 @@ function ShareDetailModal({ Icon, SectionHeading, selectedShareRow, onClose }) {
             </div>
           )}
 
-          {selectedShareRow.MatchStatus === 'Only in CMDB' && (
+          {selectedShareRow.MatchStatus === 'Only in left file' && (
             <div className="modal-section">
               <SectionHeading icon="warning">Left-Only Information</SectionHeading>
               <div className="mismatch-info-box">
                 <p>
-                  <strong>Finding:</strong> This CMDB Virtual Server entry exists but has no matching record in the ESP system.
+                  <strong>Finding:</strong> This entry exists only in the left file with no matching record in the right file.
                 </p>
                 <div className="action-suggestions">
                   <strong>Possible Actions:</strong>
                   <ul>
-                    <li>Review if this server should be added to ESP monitoring</li>
-                    <li>Verify if the server is still in use</li>
+                    <li>Review if this record should be added to the right file</li>
+                    <li>Verify if the record is still in use</li>
                     <li>Check if UniqueID format is consistent</li>
                   </ul>
                 </div>
@@ -486,7 +488,7 @@ function ShareDetailModal({ Icon, SectionHeading, selectedShareRow, onClose }) {
               <SectionHeading icon="warning">Right-Only Information</SectionHeading>
               <div className="mismatch-info-box">
                 <p>
-                  <strong>Finding:</strong> This ESP entry exists but has no matching record in the CMDB Virtual Server data.
+                  <strong>Finding:</strong> This entry exists only in the right file with no matching record in the left file.
                 </p>
                 <div className="action-suggestions">
                   <strong>Possible Actions:</strong>
@@ -504,7 +506,7 @@ function ShareDetailModal({ Icon, SectionHeading, selectedShareRow, onClose }) {
             <SectionHeading icon="file">All Fields</SectionHeading>
             <div className="fields-ref-grid">
               {Object.entries(selectedShareRow)
-                .filter(([key]) => !key.startsWith('CMDB_') && !key.startsWith('ESP_'))
+                .filter(([key]) => !key.startsWith('left_') && !key.startsWith('right_') && !['GeneratedUniqueID', 'MatchStatus', 'MatchedSegments'].includes(key))
                 .map(([key, value]) => (
                   <div key={key} className="ref-field">
                     <div className="ref-label">{key}</div>

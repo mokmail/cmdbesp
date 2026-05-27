@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from 'react'
 import Papa from 'papaparse'
 import * as XLSX from 'xlsx'
 import SingleFilePage from './components/SingleFilePage'
-import CompareFilesPage from './components/CompareFilesPage'
 import CompareUniqueIdsPage from './components/CompareUniqueIdsPage'
 import InfoPage from './components/InfoPage'
 import UniqueIdGeneratorModal from './components/UniqueIdGeneratorModal'
@@ -11,6 +10,7 @@ import Table from './components/Table'
 import { generateUniqueIds, uniqueValues } from './components/shared'
 import { AuthProvider, useAuth } from './context/AuthContext'
 import LoginPage from './components/LoginPage'
+import Logo from './assets/logo.png'
 import './App.css'
 
 const normalizeHeader = (header) => header?.trim() ?? ''
@@ -266,10 +266,16 @@ const ICONS = {
       <path d="M10 4V3h4v1" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
     </>
   ),
+  logout: (
+    <>
+      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      <path d="M16 17l5-5-5-5M21 12H9" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </>
+  ),
 }
 
 function AuthGate() {
-  const { user, loading } = useAuth()
+  const { user, loading, logout } = useAuth()
 
   if (loading) {
     return (
@@ -283,7 +289,7 @@ function AuthGate() {
     return <LoginPage />
   }
 
-  return <App />
+  return <App logout={logout} />
 }
 
 export const Icon = ({ name, size = 20, className = '' }) => (
@@ -393,7 +399,7 @@ export const compareMultiColumn = (fileA, fileB) => {
 
   const leftRows = rowsA.map((rowA) => {
     const comparableAItems = getComparableUniqueIdItems(rowA)
-    const cmdbOriginalDisplay = formatGeneratedUniqueId(rowA.GeneratedUniqueID)
+    const leftOriginalDisplay = formatGeneratedUniqueId(rowA.GeneratedUniqueID)
     const matchedSegments = new Set()
     const matchedRightRows = []
 
@@ -408,15 +414,15 @@ export const compareMultiColumn = (fileA, fileB) => {
       }
     })
 
-    const matchStatus = matchedRightRows.length > 0 ? 'Both' : 'Only in CMDB'
-    const espOriginalDisplay = matchedRightRows.length > 0
+    const matchStatus = matchedRightRows.length > 0 ? 'Both' : 'Only in left file'
+    const rightOriginalDisplay = matchedRightRows.length > 0
       ? formatGeneratedUniqueId(matchedRightRows[0].GeneratedUniqueID)
       : ''
 
-    const prefixedRow = { CMDB_GeneratedUniqueID: cmdbOriginalDisplay, ESP_GeneratedUniqueID: '' }
+    const prefixedRow = { left_GeneratedUniqueID: leftOriginalDisplay, right_GeneratedUniqueID: '' }
     colsA.forEach((col) => {
       if (col !== 'UniqueID' && col !== 'GeneratedUniqueID') {
-        prefixedRow[`CMDB_${col}`] = rowA[col] || ''
+        prefixedRow[`left_${col}`] = rowA[col] || ''
       }
     })
 
@@ -424,14 +430,14 @@ export const compareMultiColumn = (fileA, fileB) => {
       const firstMatchedRight = matchedRightRows[0]
       colsB.forEach((col) => {
         if (col !== 'UniqueID' && col !== 'GeneratedUniqueID') {
-          prefixedRow[`ESP_${col}`] = firstMatchedRight[col] || ''
+          prefixedRow[`right_${col}`] = firstMatchedRight[col] || ''
         }
       })
     }
 
     return {
       ...prefixedRow,
-      ESP_GeneratedUniqueID: espOriginalDisplay,
+      right_GeneratedUniqueID: rightOriginalDisplay,
       MatchStatus: matchStatus,
       MatchedSegments: Array.from(matchedSegments).sort().join(', '),
     }
@@ -439,11 +445,11 @@ export const compareMultiColumn = (fileA, fileB) => {
 
   const rightOnlyRows = rowsB.reduce((acc, rowB, idxB) => {
     if (!matchedBIndexes.has(idxB)) {
-      const espOriginalDisplay = formatGeneratedUniqueId(rowB.GeneratedUniqueID)
-      const prefixedRow = { CMDB_GeneratedUniqueID: '', ESP_GeneratedUniqueID: espOriginalDisplay }
+      const rightOriginalDisplay = formatGeneratedUniqueId(rowB.GeneratedUniqueID)
+      const prefixedRow = { left_GeneratedUniqueID: '', right_GeneratedUniqueID: rightOriginalDisplay }
       colsB.forEach((col) => {
         if (col !== 'UniqueID' && col !== 'GeneratedUniqueID') {
-          prefixedRow[`ESP_${col}`] = rowB[col] || ''
+          prefixedRow[`right_${col}`] = rowB[col] || ''
         }
       })
       acc.push({
@@ -461,7 +467,7 @@ export const compareMultiColumn = (fileA, fileB) => {
       totalA: rowsA.length,
       totalB: rowsB.length,
       both: leftRows.filter((row) => row.MatchStatus === 'Both').length,
-      onlyInA: leftRows.filter((row) => row.MatchStatus === 'Only in CMDB').length,
+      onlyInA: leftRows.filter((row) => row.MatchStatus === 'Only in left file').length,
       onlyInB: rightOnlyRows.length,
     },
   }
@@ -482,10 +488,9 @@ export const getEspTypValue = (row, columns = []) => {
   return String(fallback).trim()
 }
 
-function App() {
+function App({ logout }) {
   const VIEW_MODES = [
     { id: 'Single File', label: 'Single File', icon: 'file' },
-    { id: 'Compare Files', label: 'Compare Files', icon: 'compare' },
     { id: 'Compare Unique IDs', label: 'Compare Unique IDs', icon: 'link' },
     { id: 'Info', label: 'Info', icon: 'info' },
   ]
@@ -494,18 +499,10 @@ function App() {
   const [originalFiles, setOriginalFiles] = useState([])
   const [generatedFiles, setGeneratedFiles] = useState([])
   const [selectedFile, setSelectedFile] = useState('')
-  const [compareA, setCompareA] = useState('')
-  const [compareB, setCompareB] = useState('')
-  const [mergeColumn, setMergeColumn] = useState('')
   const [singleFilterText, setSingleFilterText] = useState('')
   const [singleSearchColumn, setSingleSearchColumn] = useState('all')
   const [filterColumn, setFilterColumn] = useState('')
   const [filterValues, setFilterValues] = useState([])
-  const [compareFilterA, setCompareFilterA] = useState('')
-  const [compareFilterB, setCompareFilterB] = useState('')
-  const [compareFilterValuesA, setCompareFilterValuesA] = useState([])
-  const [compareFilterValuesB, setCompareFilterValuesB] = useState([])
-  const [showDifferences, setShowDifferences] = useState(false)
   const [selectedSharesFile, setSelectedSharesFile] = useState('')
   const [selectedEspFile, setSelectedEspFile] = useState('')
   const [selectedShareRow, setSelectedShareRow] = useState(null)
@@ -524,6 +521,12 @@ function App() {
   const [generatedUniqueIds, setGeneratedUniqueIds] = useState(null)
   const [showUniqueIdModal, setShowUniqueIdModal] = useState(false)
   const [uploadedFiles, setUploadedFiles] = useState([])
+  const [tableStyle, setTableStyle] = useState(() => localStorage.getItem('preferredTableStyle') || 'ag-grid')
+
+  const handleTableStyleChange = (style) => {
+    setTableStyle(style)
+    localStorage.setItem('preferredTableStyle', style)
+  }
 
   const handleFileUpload = (event) => {
     const files = Array.from(event.target.files || [])
@@ -579,8 +582,6 @@ function App() {
   )
 
   const selectedFileData = originalFileMap[selectedFile]
-  const compareAData = generatedFileMap[compareA]
-  const compareBData = generatedFileMap[compareB]
   const sharesData = generatedFileMap[selectedSharesFile]
   const espData = generatedFileMap[selectedEspFile]
   const sharesHasGeneratedId = Boolean(sharesData?.columns?.includes('GeneratedUniqueID'))
@@ -613,83 +614,6 @@ function App() {
     return { totalRows, shownRows, hiddenRows, shownPercent }
   }, [selectedFileData, filteredSingleRows])
 
-  const filteredCompareARows = useMemo(() => {
-    if (!compareAData || !compareFilterA || !compareFilterValuesA.length) return compareAData?.rows || []
-    return compareAData.rows.filter((row) => compareFilterValuesA.includes(row[compareFilterA]))
-  }, [compareAData, compareFilterA, compareFilterValuesA])
-
-  const filteredCompareBRows = useMemo(() => {
-    if (!compareBData || !compareFilterB || !compareFilterValuesB.length) return compareBData?.rows || []
-    return compareBData.rows.filter((row) => compareFilterValuesB.includes(row[compareFilterB]))
-  }, [compareBData, compareFilterB, compareFilterValuesB])
-
-  const commonColumns = useMemo(() => {
-    if (!compareAData || !compareBData) return []
-    return compareAData.columns.filter((col) => compareBData.columns.includes(col))
-  }, [compareAData, compareBData])
-
-  const { mergeRows } = useMemo(() => {
-    const mergeRows = (rowsA, rowsB, mergeCol, fileA, fileB) => {
-      const mapB = new Map()
-      rowsB.forEach((row) => {
-        const key = String(row[mergeCol] ?? '')
-        if (!mapB.has(key)) mapB.set(key, [])
-        mapB.get(key).push(row)
-      })
-
-      const merged = []
-      const matchedB = new Set()
-      const commonCols = rowsA.length && rowsB.length ? Object.keys(rowsA[0]).filter((col) => Object.keys(rowsB[0]).includes(col)) : []
-      const suffixA = (col) => (commonCols.includes(col) && col !== mergeCol ? `${col} (${fileA})` : col)
-      const suffixB = (col) => (commonCols.includes(col) && col !== mergeCol ? `${col} (${fileB})` : col)
-
-      rowsA.forEach((rowA) => {
-        const key = String(rowA[mergeCol] ?? '')
-        const matches = mapB.get(key)
-        if (matches?.length) {
-          matches.forEach((rowB) => {
-            matchedB.add(key)
-            const mergedRow = {}
-            Object.keys(rowA).forEach((col) => { mergedRow[suffixA(col)] = rowA[col] })
-            Object.keys(rowB).forEach((col) => { mergedRow[suffixB(col)] = rowB[col] })
-            mergedRow[mergeCol] = key
-            mergedRow._merge = 'both'
-            merged.push(mergedRow)
-          })
-        } else {
-          const mergedRow = {}
-          Object.keys(rowA).forEach((col) => { mergedRow[suffixA(col)] = rowA[col] })
-          mergedRow[mergeCol] = key
-          mergedRow._merge = 'left_only'
-          merged.push(mergedRow)
-        }
-      })
-
-      rowsB.forEach((rowB) => {
-        const key = String(rowB[mergeCol] ?? '')
-        if (!matchedB.has(key)) {
-          const mergedRow = {}
-          Object.keys(rowB).forEach((col) => { mergedRow[suffixB(col)] = rowB[col] })
-          mergedRow[mergeCol] = key
-          mergedRow._merge = 'right_only'
-          merged.push(mergedRow)
-        }
-      })
-
-      const onlyInA = merged.filter((row) => row._merge === 'left_only')
-      const onlyInB = merged.filter((row) => row._merge === 'right_only')
-      const inBoth = merged.filter((row) => row._merge === 'both')
-
-      return { merged, onlyInA, onlyInB, inBoth }
-    }
-    return { mergeRows }
-  }, [])
-
-  const compareResults = useMemo(() => {
-    if (!compareAData || !compareBData || !mergeColumn) return null
-    return mergeRows(filteredCompareARows, filteredCompareBRows, mergeColumn, compareAData.name, compareBData.name)
-  }, [compareAData, compareBData, mergeColumn, filteredCompareARows, filteredCompareBRows, mergeRows])
-
   const shareComparison = useMemo(() => {
     if (!sharesData || !espData) return null
     if (!sharesHasGeneratedId || !espHasGeneratedId) return null
@@ -710,10 +634,10 @@ function App() {
     })
     const ordered = []
     const cols = Array.from(uniqueCols)
-    if (cols.includes('CMDB_GeneratedUniqueID')) ordered.push('CMDB_GeneratedUniqueID')
-    if (cols.includes('ESP_GeneratedUniqueID')) ordered.push('ESP_GeneratedUniqueID')
-    cols.filter((c) => c.startsWith('CMDB_') && c !== 'CMDB_GeneratedUniqueID').sort().forEach((c) => ordered.push(c))
-    cols.filter((c) => c.startsWith('ESP_') && c !== 'ESP_GeneratedUniqueID').sort().forEach((c) => ordered.push(c))
+    if (cols.includes('left_GeneratedUniqueID')) ordered.push('left_GeneratedUniqueID')
+    if (cols.includes('right_GeneratedUniqueID')) ordered.push('right_GeneratedUniqueID')
+    cols.filter((c) => c.startsWith('left_') && c !== 'left_GeneratedUniqueID').sort().forEach((c) => ordered.push(c))
+    cols.filter((c) => c.startsWith('right_') && c !== 'right_GeneratedUniqueID').sort().forEach((c) => ordered.push(c))
     const metadata = ['MatchStatus', 'MatchedSegments']
     metadata.forEach((c) => { if (cols.includes(c)) ordered.push(c) })
     return ordered
@@ -780,7 +704,7 @@ function App() {
       : (espData?.rows?.length || 0)
     const totalRows = statsRows.length
     const both = statsRows.filter((row) => row.MatchStatus === 'Both').length
-    const onlyInA = statsRows.filter((row) => row.MatchStatus === 'Only in CMDB').length
+    const onlyInA = statsRows.filter((row) => row.MatchStatus === 'Only in left file').length
     const onlyInB = statsRows.filter((row) => row.MatchStatus === 'Only in right file').length
     return {
       totalRows,
@@ -856,9 +780,20 @@ function App() {
   return (
     <div className="app-shell">
       <header>
-        <h1><Icon name="dashboard" size={32} /> CIO Data Intelligence</h1>
-        <div className="header-copy">
-          <p>Created by Mohammed Kmail and Christoph Püler from the CIO department to analyze the IT infrastructure.</p>
+        <img src={Logo} alt="CIO Data Intelligence" className="header-logo" />
+        <div className="header-controls">
+          <label className="table-style-selector">
+            <span>Table Style</span>
+            <select value={tableStyle} onChange={(e) => handleTableStyleChange(e.target.value)}>
+              <option value="ag-grid">AG Grid</option>
+              <option value="tanstack">TanStack Table</option>
+              <option value="datatables">DataTables</option>
+            </select>
+          </label>
+          <button className="logout-btn" type="button" onClick={logout} title="Sign out">
+            <Icon name="logout" size={18} />
+            <span>Sign out</span>
+          </button>
         </div>
       </header>
 
@@ -882,6 +817,7 @@ function App() {
           {viewMode === VIEW_MODES[0].id && (
             <SingleFilePage
               Icon={Icon}
+              tableStyle={tableStyle}
               originalLoadedNames={originalLoadedNames}
               selectedFile={selectedFile}
               setSelectedFile={setSelectedFile}
@@ -911,37 +847,9 @@ function App() {
           )}
 
           {viewMode === VIEW_MODES[1].id && (
-            <CompareFilesPage
-              Icon={Icon}
-              generatedLoadedNames={generatedLoadedNames}
-              compareA={compareA}
-              setCompareA={setCompareA}
-              compareB={compareB}
-              setCompareB={setCompareB}
-              compareAData={compareAData}
-              compareBData={compareBData}
-              filteredCompareARows={filteredCompareARows}
-              filteredCompareBRows={filteredCompareBRows}
-              commonColumns={commonColumns}
-              compareFilterA={compareFilterA}
-              setCompareFilterA={setCompareFilterA}
-              compareFilterValuesA={compareFilterValuesA}
-              setCompareFilterValuesA={setCompareFilterValuesA}
-              compareFilterB={compareFilterB}
-              setCompareFilterB={setCompareFilterB}
-              compareFilterValuesB={compareFilterValuesB}
-              setCompareFilterValuesB={setCompareFilterValuesB}
-              mergeColumn={mergeColumn}
-              setMergeColumn={setMergeColumn}
-              showDifferences={showDifferences}
-              setShowDifferences={setShowDifferences}
-              compareResults={compareResults}
-            />
-          )}
-
-          {viewMode === VIEW_MODES[2].id && (
             <CompareUniqueIdsPage
               Icon={Icon}
+              tableStyle={tableStyle}
               InlineIcon={InlineIcon}
               SectionHeading={SectionHeading}
               generatedLoadedNames={generatedLoadedNames}
@@ -987,7 +895,7 @@ function App() {
             />
           )}
 
-          {viewMode === VIEW_MODES[3].id && (
+          {viewMode === VIEW_MODES[2].id && (
             <InfoPage Icon={Icon} SectionHeading={SectionHeading} />
           )}
         </main>
