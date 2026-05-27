@@ -1,7 +1,10 @@
 import React from 'react'
-import { AgGridReact } from 'ag-grid-react'
+import { AgGridReact, AgGridProvider } from 'ag-grid-react'
+import { AllCommunityModule } from 'ag-grid-community'
 import 'ag-grid-community/styles/ag-grid.css'
 import 'ag-grid-community/styles/ag-theme-quartz.css'
+
+const modules = [AllCommunityModule]
 
 const highlightSegmentsInUID = (uid, matchedSegmentsStr) => {
   if (!uid || !matchedSegmentsStr) return uid
@@ -60,7 +63,7 @@ const MatchStatusCellRenderer = (params) => {
 
 const UIDCellRenderer = (params) => {
   const uid = params.value
-  const matchedSegmentsStr = params.data?.matchedSegments
+  const matchedSegmentsStr = params.data?.MatchedSegments
   if (!matchedSegmentsStr) return uid
   return highlightSegmentsInUID(uid, matchedSegmentsStr)
 }
@@ -91,15 +94,16 @@ export default function AGGridView({
 
   const processedColumns = columns.map((col) => {
     const colDef = {
-      ...col,
-      cellClass: getCellClass(col.field),
+      field: col,
+      headerName: col,
+      cellClass: getCellClass(col),
     }
 
-    if (col.field === 'MatchStatus') {
+    if (col === 'MatchStatus') {
       colDef.cellRenderer = MatchStatusCellRenderer
-    } else if (col.field === 'left_GeneratedUniqueID') {
+    } else if (col === 'left_GeneratedUniqueID') {
       colDef.cellRenderer = LeftUIDCellRenderer
-    } else if (col.field === 'right_GeneratedUniqueID') {
+    } else if (col === 'right_GeneratedUniqueID') {
       colDef.cellRenderer = RightUIDCellRenderer
     }
 
@@ -121,18 +125,20 @@ export default function AGGridView({
 
   return (
     <div className="ag-theme-quartz" style={{ width: '100%', height: '100%' }}>
-      <AgGridReact
-        columnDefs={processedColumns}
-        defaultColDef={defaultColDef}
-        rowData={rows}
-        pagination={pagination}
-        paginationPageSize={paginationPageSize}
-        getRowClass={getRowClass}
-        onRowClicked={onRowClick ? (params) => onRowClick(params.data) : undefined}
-        onSortChanged={onSortChanged}
-        animateRows={true}
-        suppressCellFocus={true}
-      />
+      <AgGridProvider modules={modules}>
+        <AgGridReact
+          columnDefs={processedColumns}
+          defaultColDef={defaultColDef}
+          rowData={rows}
+          pagination={pagination}
+          paginationPageSize={paginationPageSize}
+          getRowClass={getRowClass}
+          onRowClicked={onRowClick ? (params) => onRowClick(params.data) : undefined}
+          onSortChanged={onSortChanged}
+          animateRows={true}
+          suppressCellFocus={true}
+        />
+      </AgGridProvider>
     </div>
   )
 }
