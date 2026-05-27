@@ -9,6 +9,8 @@ import UniqueIdGeneratorModal from './components/UniqueIdGeneratorModal'
 import ExportMenu from './components/ExportMenu'
 import Table from './components/Table'
 import { generateUniqueIds, uniqueValues } from './components/shared'
+import { AuthProvider, useAuth } from './context/AuthContext'
+import LoginPage from './components/LoginPage'
 import './App.css'
 
 const normalizeHeader = (header) => header?.trim() ?? ''
@@ -264,6 +266,24 @@ const ICONS = {
       <path d="M10 4V3h4v1" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
     </>
   ),
+}
+
+function AuthGate() {
+  const { user, loading } = useAuth()
+
+  if (loading) {
+    return (
+      <div className="auth-loading">
+        <div className="spinner" />
+      </div>
+    )
+  }
+
+  if (!user) {
+    return <LoginPage />
+  }
+
+  return <App />
 }
 
 export const Icon = ({ name, size = 20, className = '' }) => (
@@ -990,4 +1010,10 @@ function App() {
   )
 }
 
-export default App
+export default function Root() {
+  return (
+    <AuthProvider>
+      <AuthGate />
+    </AuthProvider>
+  )
+}
