@@ -1,8 +1,10 @@
-import { createServer } from 'node:http';
+import { createServer, createRequire } from 'node:http';
 import { mkdir, writeFile, readdir, readFile } from 'node:fs/promises';
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { createHmac, timingSafeEqual } from 'node:crypto';
+
+const require = createRequire(import.meta.url);
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
@@ -284,6 +286,134 @@ const server = createServer(async (req, res) => {
       sendJson(res, 200, { ok: true, files: fileContents });
     } catch (error) {
       sendJson(res, 500, { ok: false, error: String(error) });
+    }
+    return;
+  }
+
+  const analyticsDb = require('./analytics-db');
+
+  const getStats = analyticsDb.prepare(`
+    SELECT 
+      COUNT(*) as total_sessions,
+      AVG(match_rate) as avg_match_rate,
+      SUM(total_rows) as total_rows_processed
+    FROM analytics_sessions
+  `);
+
+  const getSessionCount = analyticsDb.prepare('SELECT COUNT(*) as count FROM analytics_sessions');
+
+  const getSessions = analyticsDb.prepare(`
+    SELECT * FROM analytics_sessions 
+    ORDER BY session_date DESC 
+    LIMIT ? OFFSET ?
+  `);
+
+  const insertSession = analyticsDb.prepare(`
+    INSERT INTO analytics_sessions (left_file, right_file, total_rows, match_count, left_only_count, right_only_count, match_rate)
+    VALUES (?, ?, ?, ?, ?, ?, ?)
+  `);
+
+  const insertHistory = analyticsDb.prepare(`
+    INSERT INTO comparison_history (action, session_id, details)
+    VALUES ('comparison', ?, ?)
+  `);
+
+  const getMatchRates = analyticsDb.prepare(`
+    SELECT session_date, match_rate 
+    FROM analytics_sessions 
+    WHERE session_date >= datetime('now', '-${parseInt(30)} days')
+    ORDER BY session_date ASC
+  `);
+
+  const getHistory = analyticsDb.prepare(`
+    SELECT * FROM comparison_history 
+    ORDER BY session_date DESC 
+    LIMIT 100
+  `);
+
+  if (req.url === '/api/analytics' && req.method === 'GET') {
+    try {
+      const stats = getStats.get();
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ success: true, data: stats }));
+    } catch (error) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ success: false, error: { code: 'SERVER_ERROR', message: error.message } }));
+    }
+    return;
+  }
+
+  if (req.url === '/api/analytics/sessions' && req.method === 'GET') {
+    try {
+      const page = parseInt(req.query.page) || 1;
+      const limit = parseInt(req.query.limit) || 20;
+      const offset = (page - 1) * limit;
+      const sessions = getSessions.all(limit, offset);
+      const total = getSessionCount.get();
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ success: true, data: sessions, meta: { total: total.count, page, limit } }));
+    } catch (error) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ success: false, error: { code: 'SERVER_ERROR', message: error.message } }));
+    }
+    return;
+  }
+
+  if (req.url === '/api/analytics/sessions' && req.method === 'POST') {
+    let body = '';
+    req.on('data', (chunk) => { body += chunk; });
+    req.on('end', () => {
+      try {
+        const { left_file, right_file, total_rows, match_count, left_only_count, right_only_count } = JSON.parse(body);
+        const match_rate = total_rows > 0 ? ((match_count / total_rows) * 100).toFixed(2) : 0;
+        const result = insertSession.run(left_file, right_file, total_rows, match_count, left_only_count, right_only_count, match_rate);
+        insertHistory.run(result.lastInsertRowid, JSON.stringify({ left_file, right_file }));
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.end(JSON.stringify({ success: true, data: { id: result.lastInsertRowid } }));
+      } catch (error) {
+        res.statusCode = 500;
+        res.setHeader('Content-Type', 'application/json');
+        res.end(JSON.stringify({ success: false, error: { code: 'SERVER_ERROR', message: error.message } }));
+      }
+    });
+    return;
+  }
+
+  if (req.url === '/api/analytics/match-rates' && req.method === 'GET') {
+    try {
+      const days = parseInt(req.query.days) || 30;
+      const rates = analyticsDb.prepare(`
+        SELECT session_date, match_rate 
+        FROM analytics_sessions 
+        WHERE session_date >= datetime('now', '-${days} days')
+        ORDER BY session_date ASC
+      `).all();
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ success: true, data: rates }));
+    } catch (error) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ success: false, error: { code: 'SERVER_ERROR', message: error.message } }));
+    }
+    return;
+  }
+
+  if (req.url === '/api/analytics/history' && req.method === 'GET') {
+    try {
+      const history = getHistory.all();
+      res.statusCode = 200;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ success: true, data: history }));
+    } catch (error) {
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ success: false, error: { code: 'SERVER_ERROR', message: error.message } }));
     }
     return;
   }
