@@ -35,82 +35,144 @@ export default function SingleFilePage({
   const fileInputRef = useRef(null)
 
   const [pendingFiles, setPendingFiles] = useState([])
+  const [isDragging, setIsDragging] = useState(false)
+
+  const handleDragOver = (event) => {
+    event.preventDefault()
+    event.stopPropagation()
+    setIsDragging(true)
+  }
+
+  const handleDragLeave = (event) => {
+    event.preventDefault()
+    event.stopPropagation()
+    setIsDragging(false)
+  }
+
+  const handleDrop = (event) => {
+    event.preventDefault()
+    event.stopPropagation()
+    setIsDragging(false)
+    const files = Array.from(event.dataTransfer.files || [])
+    if (files.length > 0) {
+      setPendingFiles(prev => [...prev, ...files])
+    }
+  }
 
   return (
     <div className="mode-panel">
-      <div className="row">
-        <label>
-          Choose file
-          <select value={selectedFile} onChange={(event) => {
-            setSelectedFile(event.target.value)
-            setFilterColumn('')
-            setFilterValues([])
-            setSingleSearchColumn('all')
-            setSingleFilterText('')
-          }}>
-            <option value="">Select a file</option>
-            {originalLoadedNames.map((fileName) => (
-              <option key={fileName} value={fileName}>
-                {fileName}
-              </option>
-            ))}
-          </select>
-        </label>
-        <button type="button" className="action-button" onClick={() => fileInputRef.current?.click()}>
-          <Icon name="upload" size={20} /> Select file
+      <div className="upload-split-panel">
+        <div
+          className={`upload-zone ${isDragging ? 'dragging' : ''}`}
+          onDragOver={handleDragOver}
+          onDragLeave={handleDragLeave}
+          onDrop={handleDrop}
+          onClick={() => fileInputRef.current?.click()}
+        >
+          <div className="upload-zone-icon">
+            <Icon name="upload" size={28} />
+          </div>
+          <h3>Upload Area</h3>
+          <p>Drag & drop files here or click to browse</p>
+          <button type="button" className="upload-zone-browse">
+            Browse Files
+          </button>
           <input
             ref={fileInputRef}
             type="file"
             accept=".csv,.xlsx,.xls"
             multiple
             onChange={(event) => {
-              setPendingFiles(Array.from(event.target.files || []))
+              const files = Array.from(event.target.files || [])
+              if (files.length > 0) {
+                setPendingFiles(prev => [...prev, ...files])
+              }
               event.target.value = ''
             }}
             style={{ display: 'none' }}
           />
-        </button>
-        {pendingFiles.length > 0 && (
-          <button
-            type="button"
-            className="action-button"
-            onClick={() => {
-              if (pendingFiles.length) {
-                handleFileUpload({ target: { files: pendingFiles } })
-                setPendingFiles([])
-              }
-            }}
-          >
-            <Icon name="send" size={20} /> Send
-          </button>
-        )}
-        {selectedFileData && (
-          <button
-            type="button"
-            className="action-button"
-            onClick={() => {
-              setUniqueIdColumns([])
-              setGeneratedUniqueIds(null)
-              setShowUniqueIdModal(true)
-            }}
-          >
-            <Icon name="key" size={20} /> UniqueID Generator
-          </button>
-        )}
+        </div>
+
+        <div className="file-list-panel">
+          <div className="file-list-header">
+            <Icon name="folder" size={18} />
+            <h4>Uploaded Files</h4>
+            <span className="file-count">{uploadedFiles.length}</span>
+          </div>
+          
+          {uploadedFiles.length === 0 ? (
+            <div className="file-list-empty">
+              No files uploaded yet
+            </div>
+          ) : (
+            <div className="file-list">
+              {uploadedFiles.map((file) => (
+                <div key={file.name} className="file-item">
+                  <div className="file-item-info">
+                    <span className="file-item-icon">
+                      <Icon name="file" size={18} />
+                    </span>
+                    <span className="file-item-name">{file.name}</span>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                    <span className="file-status-badge ready">Ready</span>
+                    <button
+                      type="button"
+                      className="file-item-remove"
+                      onClick={() => removeUploadedFile(file.name)}
+                      title="Remove file"
+                    >
+                      <Icon name="close" size={16} />
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {pendingFiles.length > 0 && (
+            <div className="pending-files-section">
+              <div className="pending-files-header">
+                <h5>Pending Upload ({pendingFiles.length})</h5>
+              </div>
+              <div className="pending-files-list">
+                {pendingFiles.map((file, index) => (
+                  <span key={`${file.name}-${index}`} className="pending-file-tag">
+                    <Icon name="file" size={14} />
+                    {file.name}
+                  </span>
+                ))}
+              </div>
+              <button
+                type="button"
+                className="send-upload-btn"
+                style={{ marginTop: '1rem', width: '100%', justifyContent: 'center' }}
+                onClick={() => {
+                  if (pendingFiles.length > 0) {
+                    handleFileUpload({ target: { files: pendingFiles } })
+                    setPendingFiles([])
+                  }
+                }}
+              >
+                <Icon name="send" size={18} /> Upload {pendingFiles.length} File{pendingFiles.length > 1 ? 's' : ''}
+              </button>
+            </div>
+          )}
+        </div>
       </div>
 
-      {uploadedFiles.length > 0 && (
-        <div className="uploaded-files-list">
-          {uploadedFiles.map((file) => (
-            <span key={file.name} className="uploaded-file-tag">
-              <Icon name="file" size={14} />
-              {file.name}
-              <button type="button" className="remove-file-btn" onClick={() => removeUploadedFile(file.name)} title="Remove file">
-                <Icon name="close" size={14} />
-              </button>
-            </span>
-          ))}
-        </div>
+      {selectedFileData && (
+        <button
+          type="button"
+          className="action-button"
+          onClick={() => {
+            setUniqueIdColumns([])
+            setGeneratedUniqueIds(null)
+            setShowUniqueIdModal(true)
+          }}
+        >
+          <Icon name="key" size={20} /> UniqueID Generator
+        </button>
       )}
 
       {error && <div className="error-box"><Icon name="warning" size={20} /> {error}</div>}
