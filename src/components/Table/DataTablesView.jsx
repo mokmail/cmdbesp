@@ -1,6 +1,9 @@
 import React, { useEffect, useMemo, useRef } from 'react'
 import DataTable from 'datatables.net-react'
+import DT from 'datatables.net'
 import 'datatables.net-dt/css/dataTables.dataTables.css'
+
+DataTable.use(DT)
 
 const highlightSegmentsInUID = (uid, matchedSegmentsStr) => {
   if (!uid || !matchedSegmentsStr) return uid
@@ -109,8 +112,8 @@ function DataTablesView({
 
   useEffect(() => {
     if (dtRef.current) {
-      const dt = dtRef.current.dt
-      if (dt) {
+      const dt = typeof dtRef.current.dt === 'function' ? dtRef.current.dt() : dtRef.current.dt
+      if (dt && typeof dt.on === 'function') {
         dt.on('order', (e, settings) => {
           if (onSortChange && settings.aaSorting.length > 0) {
             const sortedColIdx = settings.aaSorting[0][0]

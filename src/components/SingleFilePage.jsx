@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import ExportMenu from './ExportMenu'
 import Table from './Table'
 import { uniqueValues } from './shared'
@@ -34,6 +34,8 @@ export default function SingleFilePage({
 }) {
   const fileInputRef = useRef(null)
 
+  const [pendingFiles, setPendingFiles] = useState([])
+
   return (
     <div className="mode-panel">
       <div className="row">
@@ -55,16 +57,33 @@ export default function SingleFilePage({
           </select>
         </label>
         <button type="button" className="action-button" onClick={() => fileInputRef.current?.click()}>
-          <Icon name="upload" size={20} /> Upload file
+          <Icon name="upload" size={20} /> Select file
           <input
             ref={fileInputRef}
             type="file"
             accept=".csv,.xlsx,.xls"
             multiple
-            onChange={handleFileUpload}
+            onChange={(event) => {
+              setPendingFiles(Array.from(event.target.files || []))
+              event.target.value = ''
+            }}
             style={{ display: 'none' }}
           />
         </button>
+        {pendingFiles.length > 0 && (
+          <button
+            type="button"
+            className="action-button"
+            onClick={() => {
+              if (pendingFiles.length) {
+                handleFileUpload({ target: { files: pendingFiles } })
+                setPendingFiles([])
+              }
+            }}
+          >
+            <Icon name="send" size={20} /> Send
+          </button>
+        )}
         {selectedFileData && (
           <button
             type="button"

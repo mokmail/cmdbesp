@@ -178,7 +178,7 @@ export const compareUniqueIdRows = (rowsA, rowsB, idField = 'GeneratedUniqueID')
     const items = parseGeneratedUniqueIdItems(row[idField])
     resultMap.set(key, {
       ...row,
-      MatchStatus: 'Only in CMDB',
+      MatchStatus: 'Only in left file',
       MatchedSegments: 0,
       _matchedSegmentsList: [],
     })
@@ -304,7 +304,7 @@ export const compareShareRows = (sharesRows, espRows) => {
           })
         } else {
           results.push({
-            MatchStatus: 'Only in CMDB',
+            MatchStatus: 'Only in left file',
             MatchedSegments: 0,
             ...shareRow,
           })

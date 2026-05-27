@@ -1,0 +1,51 @@
+<h2>Single File Page - Professional Redesign</h2>
+<p class="subtitle">Drag-and-drop file upload interface with modern card-based layout</p>
+
+<div class="options">
+  <div class="option" data-choice="minimal" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Minimal Drop Zone</h3>
+      <p>Clean dashed border drop zone centered on page. File list appears below as compact cards. Upload button appears only when files are selected.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="card" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Upload Card</h3>
+      <p>Large prominent card with icon, title, and description. Drag-drop zone with visual feedback on hover. File preview cards appear inline.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="split" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Split Panel</h3>
+      <p>Left panel for file upload area, right panel shows uploaded files as a list. Two-column layout with clear visual separation.</p>
+    </div>
+  </div>
+</div>
+
+<div class="mockup">
+  <div class="mockup-header">Preview: Option B - Upload Card</div>
+  <div class="mockup-body">
+    <div style="background: #f4f7fb; padding: 2rem; border-radius: 8px;">
+      <div style="background: white; border: 2px dashed #d9e2ec; border-radius: 12px; padding: 3rem; text-align: center; margin-bottom: 1.5rem;">
+        <div style="width: 48px; height: 48px; background: #eef4fb; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M12 16V4m0 0l-4 4m4-4l4 4"/><path d="M20 16v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2"/></svg>
+        </div>
+        <h4 style="margin: 0 0 0.5rem; color: #0f172a;">Drop files here or click to upload</h4>
+        <p style="margin: 0; color: #64748b; font-size: 0.875rem;">Supports CSV, XLSX, XLS files</p>
+      </div>
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <div style="background: white; border: 1px solid #d9e2ec; border-radius: 8px; padding: 0.75rem 1rem; display: flex; align-items: center; gap: 0.5rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <span style="font-size: 0.875rem; color: #334155;">data.csv</span>
+          <button style="background: none; border: none; cursor: pointer; color: #94a3b8;">✕</button>
+        </div>
+        <div style="background: #2563eb; color: white; border-radius: 8px; padding: 0.75rem 1.25rem; font-size: 0.875rem; font-weight: 500;">
+          Upload Files
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

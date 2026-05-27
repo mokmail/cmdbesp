@@ -24,6 +24,6 @@ RUN chmod +x /entrypoint.sh
 
 VOLUME /app/uploads
 
-EXPOSE 80
+EXPOSE 4455
 
 ENTRYPOINT ["/entrypoint.sh"]

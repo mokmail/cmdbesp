@@ -23,5 +23,5 @@ fi
 echo "Starting API server on port 3001..."
 node /app/server.js &
 
-echo "Starting nginx on port 80..."
+echo "Starting nginx on port 4455..."
 nginx -g 'daemon off;'

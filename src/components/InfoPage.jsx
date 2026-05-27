@@ -2,32 +2,32 @@ import { useRef, useEffect } from 'react'
 import mermaid from 'mermaid'
 
 const comparisonMermaidDefinition = `flowchart TD
-  subgraph CMDB[CMDB Source]
-    A1[CMDB CSV file rows]
-    A2[Select CMDB columns for matching\nServer, Share, Path]
-    A3[Build CMDB GeneratedUniqueID list\nsegment array per row]
+  subgraph Left[Left File]
+    A1[Left CSV file rows]
+    A2[Select columns for matching\nServer, Share, Path]
+    A3[Build GeneratedUniqueID list\nsegment array per row]
   end
-  subgraph ESP[ESP Source]
-    B1[ESP CSV file rows]
-    B2[Select ESP fields for matching\nUniqueID, Typ, Device]
-    B3[Build ESP GeneratedUniqueID list\nsegment array per row]
+  subgraph Right[Right File]
+    B1[Right CSV file rows]
+    B2[Select fields for matching\nUniqueID, Category, Device]
+    B3[Build GeneratedUniqueID list\nsegment array per row]
   end
   A1 --> A2 --> A3 --> Compare[Compare GeneratedUniqueID segment sets]
   B1 --> B2 --> B3 --> Compare
   Compare -->|Shared segments found| Both[Match: Both]
-  Compare -->|No shared segments| OnlyA[Only in CMDB]
-  Compare -->|No shared segments| OnlyB[Only in ESP]
+  Compare -->|No shared segments| OnlyA[Only in left file]
+  Compare -->|No shared segments| OnlyB[Only in right file]
   Both --> Highlight[Highlight matched segments\nand record matched row pairs]
   Highlight --> ResultBoth[Display both-side rows with status badges]
-  OnlyA --> ResultA[Display CMDB-only rows]
-  OnlyB --> ResultB[Display ESP-only rows]
+  OnlyA --> ResultA[Display left-only rows]
+  OnlyB --> ResultB[Display right-only rows]
   ResultBoth --> Detail[Open detail view with side-by-side fields]
   classDef matchNode fill:#dcfce7,stroke:#4ade80,stroke-width:1.5;
   classDef diffNode fill:#fef3c7,stroke:#f59e0b,stroke-width:1.5;
-  classDef espNode fill:#dbeafe,stroke:#3b82f6,stroke-width:1.5;
+  classDef rightNode fill:#dbeafe,stroke:#3b82f6,stroke-width:1.5;
   class Both matchNode;
   class OnlyA,OnlyB diffNode;
-  class ResultBoth,ResultA,ResultB,Detail espNode;
+  class ResultBoth,ResultA,ResultB,Detail rightNode;
 `
 
 function MermaidDiagram({ definition, id }) {
@@ -81,7 +81,7 @@ export default function InfoPage({ Icon, SectionHeading }) {
 
         <section className="info-section">
           <h3>Welcome to CIO Data Intelligence</h3>
-          <p>This platform helps you compare and analyze CMDB versus ESP data, uncovering mismatches and synchronization insights.</p>
+          <p>This platform helps you compare and analyze data from various sources, uncovering mismatches and synchronization insights.</p>
         </section>
 
         <section className="info-section">
@@ -92,12 +92,8 @@ export default function InfoPage({ Icon, SectionHeading }) {
               <p>Browse and search through individual CSV files. Filter data by columns and values to find specific records quickly.</p>
             </div>
             <div className="feature-item">
-              <strong><Icon name="compare" size={20} /> Compare Files:</strong>
-              <p>Compare two different CSV files side-by-side. See what records match, what's only in one file, and identify data inconsistencies.</p>
-            </div>
-            <div className="feature-item">
-              <strong><Icon name="link" size={20} /> Compare Unique IDs (CMDB vs ESP):</strong>
-              <p>Specialized comparison tool that matches records based on UniqueID field segments. Filter results by ESP equipment category for focused analysis.</p>
+              <strong><Icon name="compare" size={20} /> Compare Unique IDs:</strong>
+              <p>Specialized comparison tool that matches records based on UniqueID field segments. Filter results by category for focused analysis.</p>
             </div>
           </div>
         </section>
@@ -187,13 +183,13 @@ export default function InfoPage({ Icon, SectionHeading }) {
             <div className="step">
               <div className="step-number">1</div>
               <div className="step-content">
-                <strong>Select CMDB File:</strong> Choose which CMDB configuration file to analyze. The ESP_20260416_with_ID.csv file is automatically used as the comparison source.
+                <strong>Select Left File:</strong> Choose which file to analyze. The right file is automatically used as the comparison source.
               </div>
             </div>
             <div className="step">
               <div className="step-number">2</div>
               <div className="step-content">
-                <strong>Filter by Category:</strong> Select an ESP equipment category (if available) to focus on specific types of equipment. Choose "All categories" to see all records.
+                <strong>Filter by Category:</strong> Select a category (if available) to focus on specific types of records. Choose "All categories" to see all records.
               </div>
             </div>
             <div className="step">
@@ -201,9 +197,9 @@ export default function InfoPage({ Icon, SectionHeading }) {
               <div className="step-content">
                 <strong>Review Results:</strong> The comparison shows three types of records:
                 <ul>
-                  <li><span className="badge-both">Both</span> - Records found in both CMDB and ESP</li>
-                  <li><span className="badge-cmdb">Only in CMDB</span> - Records only in CMDB file</li>
-                  <li><span className="badge-esp">Only in ESP</span> - Records only in ESP file</li>
+                  <li><span className="badge-both">Both</span> - Records found in both files</li>
+                  <li><span className="badge-left">Only in left file</span> - Records only in left file</li>
+                  <li><span className="badge-right">Only in right file</span> - Records only in right file</li>
                 </ul>
               </div>
             </div>
@@ -218,7 +214,7 @@ export default function InfoPage({ Icon, SectionHeading }) {
 
         <section className="info-section">
           <SectionHeading icon="chart">Comparison Flow</SectionHeading>
-          <p>The diagram below explains how CMDB and ESP records are aligned through generated UniqueIDs, and how the tool categorizes matches.</p>
+          <p>The diagram below explains how records are aligned through generated UniqueIDs, and how the tool categorizes matches.</p>
           <MermaidDiagram definition={comparisonMermaidDefinition} id="comparison-flow" />
         </section>
 
@@ -266,14 +262,14 @@ export default function InfoPage({ Icon, SectionHeading }) {
           <SectionHeading icon="chart">Understanding the Results</SectionHeading>
           <div className="result-info">
             <div className="result-item">
-              <strong>Matched Segments:</strong> The system matches records by comparing parts of the UniqueID field (segments separated by underscores). When segments match between CMDB and ESP records, they are highlighted in yellow.
+              <strong>Matched Segments:</strong> The system matches records by comparing parts of the UniqueID field (segments separated by underscores). When segments match between records from both files, they are highlighted in yellow.
             </div>
             <div className="result-item">
               <strong>Match Status:</strong> Color-coded rows indicate match status:
               <ul>
                 <li><span className="status-dot status-both" /> Green - Found in both files (matched)</li>
-                <li><span className="status-dot status-left" /> Blue - Only in CMDB file</li>
-                <li><span className="status-dot status-right" /> Red - Only in ESP file</li>
+                <li><span className="status-dot status-left" /> Blue - Only in left file</li>
+                <li><span className="status-dot status-right" /> Red - Only in right file</li>
               </ul>
             </div>
             <div className="result-item">
@@ -286,7 +282,7 @@ export default function InfoPage({ Icon, SectionHeading }) {
           <SectionHeading icon="search">Filtering & Searching</SectionHeading>
           <div className="filter-info">
             <p><strong>Text Search:</strong> Search across all columns or select a specific column to filter results.</p>
-            <p><strong>Match Status Filter:</strong> Show only "Both" matches, "Only in CMDB", or "Only in ESP" records.</p>
+            <p><strong>Match Status Filter:</strong> Show only "Both" matches, "Only in left file", or "Only in right file" records.</p>
             <p><strong>Column Filter:</strong> Filter records based on specific column values.</p>
             <p><strong>Page Size:</strong> Adjust how many rows are shown per page (25, 50, 100, or 250).</p>
           </div>
@@ -300,7 +296,7 @@ export default function InfoPage({ Icon, SectionHeading }) {
 
               <Icon name="check" size={18} /> Use the detail modal to understand why records matched and what fields differ between systems.
 
-              <Icon name="check" size={18} /> Records with "Only in CMDB" or "Only in ESP" indicate data synchronization issues that may need attention.
+              <Icon name="check" size={18} /> Records with "Only in left file" or "Only in right file" indicate data synchronization issues that may need attention.
 
               <Icon name="check" size={18} /> The matched segments are the basis for record matching - more matched segments = stronger match.
 

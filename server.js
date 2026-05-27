@@ -29,8 +29,7 @@ const APP_USER = process.env.USER || fileEnv.USER || '';
 const APP_PASSWORD = process.env.PASSWORD || fileEnv.PASSWORD || '';
 
 if (!APP_USER || !APP_PASSWORD) {
-  console.error('FATAL: USER and PASSWORD must be set via env vars or .env file');
-  process.exit(1);
+  console.error('WARNING: USER and PASSWORD not set. All login attempts will fail.');
 }
 
 const COOKIE_SECRET = APP_PASSWORD;
@@ -100,6 +99,10 @@ function requireAuth(req, res) {
 }
 
 const server = createServer(async (req, res) => {
+  if (req.url === '/api/health' && req.method === 'GET') {
+    return sendJson(res, 200, { ok: true, uptime: process.uptime(), hasCredentials: !!(APP_USER && APP_PASSWORD) });
+  }
+
   if (req.url === '/api/login' && req.method === 'POST') {
     let body = '';
     req.on('data', (chunk) => { body += chunk; });

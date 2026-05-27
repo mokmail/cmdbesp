@@ -259,6 +259,12 @@ const ICONS = {
       <path d="M20 16v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
     </>
   ),
+  send: (
+    <>
+      <path d="M22 2L11 13" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M22 2l-7 20-4-9-9-4 20-7z" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </>
+  ),
   trash: (
     <>
       <path d="M4 7h16M10 11v6M14 11v6" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />

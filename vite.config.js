@@ -24,8 +24,7 @@ const registerSaveUniqueIdMiddleware = (middlewares) => {
   } catch {}
 
   if (!APP_USER || !APP_PASSWORD) {
-    console.error('FATAL: USER and PASSWORD must be set via env vars or .env file')
-    process.exit(1)
+    console.error('WARNING: USER and PASSWORD not set. All login attempts will fail.')
   }
 
   const COOKIE_SECRET = APP_PASSWORD

@@ -1,7 +1,10 @@
 import React from 'react'
 import { AgGridReact } from 'ag-grid-react'
+import { AllCommunityModule, ModuleRegistry } from 'ag-grid-community'
 import 'ag-grid-community/styles/ag-grid.css'
 import 'ag-grid-community/styles/ag-theme-quartz.css'
+
+ModuleRegistry.registerModules([AllCommunityModule])
 
 export default function AGGridView({
   columns,

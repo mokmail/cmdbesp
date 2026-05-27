@@ -86,11 +86,15 @@ export default function TanStackView({
   const activeSortDirection = isControlled ? sortDirection : localSortDirection
 
   const columnDefs = useMemo(() => {
-    return columns.map((col) => ({
-      accessorKey: col.field,
-      header: col.headerName || col.field,
-      enableResizing: true,
-    }))
+    return columns.map((col) => {
+      const field = typeof col === 'string' ? col : col.field
+      const header = typeof col === 'string' ? col : (col.headerName || col.field)
+      return {
+        accessorKey: field,
+        header: header,
+        enableResizing: true,
+      }
+    })
   }, [columns])
 
   const data = useMemo(() => rows || [], [rows])

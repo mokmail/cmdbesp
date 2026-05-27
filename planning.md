@@ -1,0 +1,5 @@
+- DONE   the tool will not only compare cmdp and esf file , it wil generally compare files from various sources , we need to renbrand the tool to be more generic 
+- DONE  the tab compare files is no longer need , remove it and delete all leftover code , be are here not to destroy the functionality of the other tabs , and be aware that more tabs are planed to be implmented 
+- remove all the distraction cards that provie an overload of information , keep the application as simple and intuitive as possible 
+- use the @src/asstes/logo.png as logo for the app 
+- use modern javascript / react tables library for viewing the tables such as grids.io or https://datatables.net 
