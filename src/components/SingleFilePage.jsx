@@ -33,6 +33,7 @@ export default function SingleFilePage({
   tableStyle,
 }) {
   const fileInputRef = useRef(null)
+  const dragCounter = useRef(0)
 
   const [pendingFiles, setPendingFiles] = useState([])
   const [isDragging, setIsDragging] = useState(false)
@@ -40,18 +41,23 @@ export default function SingleFilePage({
   const handleDragOver = (event) => {
     event.preventDefault()
     event.stopPropagation()
+    dragCounter.current++
     setIsDragging(true)
   }
 
   const handleDragLeave = (event) => {
     event.preventDefault()
     event.stopPropagation()
-    setIsDragging(false)
+    dragCounter.current--
+    if (dragCounter.current === 0) {
+      setIsDragging(false)
+    }
   }
 
   const handleDrop = (event) => {
     event.preventDefault()
     event.stopPropagation()
+    dragCounter.current = 0
     setIsDragging(false)
     const files = Array.from(event.dataTransfer.files || [])
     if (files.length > 0) {
