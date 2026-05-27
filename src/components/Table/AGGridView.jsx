@@ -79,10 +79,6 @@ export default function AGGridView({
   pagination = true,
   paginationPageSize = 100,
 }) {
-  const getCellClass = (column) => {
-    return highlightColumns.includes(column) ? 'highlighted-cell' : ''
-  }
-
   const defaultColDef = {
     resizable: true,
     sortable: true,
@@ -90,23 +86,10 @@ export default function AGGridView({
     minWidth: 80,
   }
 
-  const processedColumns = columns.map((col) => {
-    const colDef = {
-      field: col,
-      headerName: col,
-      cellClass: getCellClass(col),
-    }
-
-    if (col === 'MatchStatus') {
-      colDef.cellRenderer = MatchStatusCellRenderer
-    } else if (col === 'left_GeneratedUniqueID') {
-      colDef.cellRenderer = LeftUIDCellRenderer
-    } else if (col === 'right_GeneratedUniqueID') {
-      colDef.cellRenderer = RightUIDCellRenderer
-    }
-
-    return colDef
-  })
+  const processedColumns = columns.map((col) => ({
+    field: col,
+    headerName: col,
+  }))
 
   const getRowClass = (params) => {
     return rowClass ? rowClass(params.data) : undefined
