@@ -1,8 +1,36 @@
 import { createServer } from 'node:http';
 import { mkdir, writeFile, readdir, readFile } from 'node:fs/promises';
+import { readFileSync } from 'node:fs';
 import path from 'node:path';
+import { createHmac, timingSafeEqual } from 'node:crypto';
 
-const UPLOADS_DIR = path.join(process.cwd(), 'uploads');
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
+
+function loadEnv() {
+  const envPath = path.join(__dirname, '.env');
+  try {
+    const text = readFileSync(envPath, 'utf8');
+    const vars = {};
+    for (const line of text.split('\n')) {
+      const trimmed = line.trim();
+      if (!trimmed || trimmed.startsWith('#')) continue;
+      const eqIdx = trimmed.indexOf('=');
+      if (eqIdx === -1) continue;
+      vars[trimmed.slice(0, eqIdx).trim()] = trimmed.slice(eqIdx + 1).trim();
+    }
+    return vars;
+  } catch {
+    return {};
+  }
+}
+
+const env = loadEnv();
+const APP_USER = env.USER || '';
+const APP_PASSWORD = env.PASSWORD || '';
+const COOKIE_SECRET = APP_PASSWORD || 'fallback-secret';
+const SESSION_MAX_AGE = 7200;
+
+const UPLOADS_DIR = path.join(__dirname, 'uploads');
 const OUTPUT_DIR = path.join(UPLOADS_DIR, 'ID_generated');
 const PORT = parseInt(process.env.API_PORT || '3001', 10);
 
@@ -12,8 +40,98 @@ const sendJson = (res, statusCode, body) => {
   res.end(JSON.stringify(body));
 };
 
+function signSession(user) {
+  const expiry = Math.floor(Date.now() / 1000) + SESSION_MAX_AGE;
+  const payload = `${user}:${expiry}`;
+  const hmac = createHmac('sha256', COOKIE_SECRET).update(payload).digest('hex');
+  return Buffer.from(`${payload}:${hmac}`).toString('base64url');
+}
+
+function verifySession(token) {
+  try {
+    const decoded = Buffer.from(token, 'base64url').toString('utf8');
+    const lastColon = decoded.lastIndexOf(':');
+    if (lastColon === -1) return null;
+    const payload = decoded.slice(0, lastColon);
+    const signature = decoded.slice(lastColon + 1);
+    const expected = createHmac('sha256', COOKIE_SECRET).update(payload).digest('hex');
+    if (signature.length !== expected.length) return null;
+    if (!timingSafeEqual(Buffer.from(signature), Buffer.from(expected))) return null;
+    const userColon = payload.indexOf(':');
+    if (userColon === -1) return null;
+    const user = payload.slice(0, userColon);
+    const expiry = parseInt(payload.slice(userColon + 1), 10);
+    if (Date.now() / 1000 > expiry) return null;
+    return user;
+  } catch {
+    return null;
+  }
+}
+
+function parseCookies(req) {
+  const header = req.headers.cookie || '';
+  const cookies = {};
+  for (const pair of header.split(';')) {
+    const eqIdx = pair.indexOf('=');
+    if (eqIdx === -1) continue;
+    cookies[pair.slice(0, eqIdx).trim()] = pair.slice(eqIdx + 1).trim();
+  }
+  return cookies;
+}
+
+function getSessionUser(req) {
+  const cookies = parseCookies(req);
+  return verifySession(cookies.session || '');
+}
+
+function requireAuth(req, res) {
+  const user = getSessionUser(req);
+  if (!user) {
+    sendJson(res, 401, { ok: false, error: 'Unauthorized' });
+    return null;
+  }
+  return user;
+}
+
 const server = createServer(async (req, res) => {
+  if (req.url === '/api/login' && req.method === 'POST') {
+    let body = '';
+    req.on('data', (chunk) => { body += chunk; });
+    req.on('end', () => {
+      try {
+        const { user, password } = JSON.parse(body || '{}');
+        if (!user || !password || user !== APP_USER || password !== APP_PASSWORD) {
+          return sendJson(res, 401, { ok: false, error: 'Invalid credentials' });
+        }
+        const token = signSession(user);
+        res.statusCode = 200;
+        res.setHeader('Content-Type', 'application/json');
+        res.setHeader('Set-Cookie', `session=${token}; HttpOnly; SameSite=Strict; Path=/; Max-Age=${SESSION_MAX_AGE}`);
+        res.end(JSON.stringify({ ok: true, user }));
+      } catch (err) {
+        sendJson(res, 500, { ok: false, error: String(err) });
+      }
+    });
+    return;
+  }
+
+  if (req.url === '/api/me' && req.method === 'GET') {
+    const user = getSessionUser(req);
+    if (!user) return sendJson(res, 401, { ok: false, error: 'Unauthorized' });
+    return sendJson(res, 200, { ok: true, user });
+  }
+
+  if (req.url === '/api/logout' && req.method === 'POST') {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Set-Cookie', 'session=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0');
+    res.end(JSON.stringify({ ok: true }));
+    return;
+  }
+
   if (req.url === '/api/save-uniqueid' && req.method === 'POST') {
+    const user = requireAuth(req, res);
+    if (!user) return;
     let body = '';
     req.on('data', (chunk) => { body += chunk; });
     req.on('end', async () => {
@@ -41,6 +159,8 @@ const server = createServer(async (req, res) => {
   }
 
   if (req.url === '/api/read-generated' && req.method === 'GET') {
+    const user = requireAuth(req, res);
+    if (!user) return;
     try {
       await mkdir(OUTPUT_DIR, { recursive: true });
       const files = await readdir(OUTPUT_DIR);
